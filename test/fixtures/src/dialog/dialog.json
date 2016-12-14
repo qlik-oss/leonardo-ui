@@ -1,0 +1,19 @@
+{
+  "fixtures": {
+    "dialog": {},
+    "dialog-rtl": {
+      "rtl": true
+    },
+    "dialog-inverse": {
+      "isInverse": true,
+      "variantClass": "lui-dialog--inverse",
+      "backgroundClass": "lui-bg-inverse"
+    },
+    "dialog-inverse-rtl": {
+      "rtl": true,
+      "isInverse": true,
+      "variantClass": "lui-dialog--inverse",
+      "backgroundClass": "lui-bg-inverse"
+    }
+  }
+}

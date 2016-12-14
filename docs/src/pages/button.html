@@ -1,0 +1,297 @@
+<div class="component">
+  <h1>Buttons</h1>
+  <p>Regular buttons with support for a mix of text / icon content.</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "default"}}Default{{/example-tab}}
+      {{#example-tab "inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "default"}}
+      <button class="lui-button">Default</button>
+      <button class="lui-button  lui-button--gradient">Toolbar</button>
+      <button class="lui-button  lui-button--info">Info</button>
+      <button class="lui-button  lui-button--danger">Error</button>
+      <button class="lui-button  lui-button--warning">Warning</button>
+      <button class="lui-button  lui-button--success">Success</button>
+    {{/example-tab-content}}
+    {{#example-tab-content "inverse"}}
+      <button class="lui-button  lui-button--inverse">Inverse</button>
+      <button class="lui-button  lui-button--gradient-inverse">Toolbar</button>
+      <button class="lui-button  lui-button--info">Info</button>
+      <button class="lui-button  lui-button--danger">Error</button>
+      <button class="lui-button  lui-button--warning">Warning</button>
+      <button class="lui-button  lui-button--success">Success</button>
+    {{/example-tab-content}}
+  {{/example}}
+
+  <p>To create rounded buttons, add a variant class "lui-button--rounded".</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "default-rounded"}}Default{{/example-tab}}
+      {{#example-tab "inverse-rounded"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "default-rounded"}}
+      <button class="lui-button  lui-button--rounded">Default</button>
+      <button class="lui-button  lui-button--rounded  lui-button--info">Info</button>
+      <button class="lui-button  lui-button--rounded  lui-button--danger">Error</button>
+      <button class="lui-button  lui-button--rounded  lui-button--warning">Warning</button>
+      <button class="lui-button  lui-button--rounded  lui-button--success">Success</button>
+    {{/example-tab-content}}
+    {{#example-tab-content "inverse-rounded"}}
+      <button class="lui-button  lui-button--rounded  lui-button--inverse">Inverse</button>
+      <button class="lui-button  lui-button--rounded  lui-button--info">Info</button>
+      <button class="lui-button  lui-button--rounded  lui-button--danger">Error</button>
+      <button class="lui-button  lui-button--rounded  lui-button--warning">Warning</button>
+      <button class="lui-button  lui-button--rounded  lui-button--success">Success</button>
+    {{/example-tab-content}}
+  {{/example}}
+
+  <p>Buttons support adding the states active and disabled, which is done through the "lui-active" and "lui-disabled" classes.
+    It is recommended to use the "lui-disabled" class instead of the disabled attribute because the disabled attribute prevents
+    the element from receiving mouse events (needed for example when drag &amp; dropping) in Firefox. </p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "default-states"}}Default{{/example-tab}}
+      {{#example-tab "inverse-states"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "default-states"}}
+      <button class="lui-button  lui-active">Active</button>
+      <button class="lui-button  lui-button--gradient  lui-active">Active</button>
+      <button class="lui-button  lui-button--success  lui-active">Active</button>
+      <button class="lui-button  lui-disabled">Disabled</button>
+      <button class="lui-button  lui-button--gradient  lui-disabled">Disabled</button>
+      <button class="lui-button  lui-button--success  lui-disabled">Disabled</button>
+    {{/example-tab-content}}
+    {{#example-tab-content "inverse-states"}}
+      <button class="lui-button  lui-button--inverse  lui-active">Active</button>
+      <button class="lui-button  lui-button--gradient-inverse  lui-active">Active</button>
+      <button class="lui-button  lui-button--success  lui-active">Active</button>
+      <button class="lui-button  lui-button--inverse  lui-disabled">Disabled</button>
+      <button class="lui-button  lui-button--gradient-inverse  lui-disabled">Disabled</button>
+      <button class="lui-button  lui-button--success  lui-disabled">Disabled</button>
+    {{/example-tab-content}}
+  {{/example}}
+
+  <a id="ButtonsAndIcons"></a>
+  <h2>Buttons and icons</h2>
+  <p>Buttons can contain both text and icons. When combined, these requirements apply:</p>
+  <p>
+    <ul>
+      <li>The text must be enclosed within an element having the class <code>.lui-button__text</code>.</li>
+      <li>The elements representing icons must have the class <code>.lui-button__icon</code>.</li>
+      <li>The element representing a caret must have the class <code>.lui-button__caret</code>.</li>
+    </ul>
+  </p>
+  <p>Buttons support right-to-left, given that the <code>dir="rtl"</code> attribute is present on the button itself or any of its ancestors.</p>
+  <p class="lui-text-error">Don't place any spaces or line breaks between the elements in the button, since that will cause unwanted spacing to be added.</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "icons-default"}}Default{{/example-tab}}
+      {{#example-tab "icons-inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "icons-default"}}
+      <button class="lui-button">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span>
+      </button>
+      <button class="lui-button">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span><span class="lui-button__caret  lui-caret"></span>
+      </button>
+      <button class="lui-button  lui-button--rounded">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button  lui-button--rounded">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span><span class="lui-button__caret  lui-caret"></span>
+      </button>
+    {{/example-tab-content}}
+    {{#example-tab-content "icons-inverse"}}
+      <button class="lui-button  lui-button--inverse">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span>
+      </button>
+      <button class="lui-button  lui-button--inverse">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button  lui-button--inverse">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span><span class="lui-button__caret  lui-caret"></span>
+      </button>
+      <button class="lui-button  lui-button--rounded  lui-button--inverse">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button  lui-button--rounded  lui-button--inverse">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span><span class="lui-button__caret  lui-caret"></span>
+      </button>
+    {{/example-tab-content}}
+  {{/example}}
+
+  <a id="BlockButton"></a>
+  <h2>Block style button</h2>
+  <p>Block style buttons takes up as much space it can, adding ellipsis to text that does not fit on one line.</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "block-default"}}Default{{/example-tab}}
+      {{#example-tab "block-inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "block-default"}}
+      <button class="lui-button  lui-button--block" style="margin-bottom: 5px;">
+        <span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button  lui-button--block" style="margin-bottom: 5px;">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button  lui-button--block  lui-button--rounded" style="margin-bottom: 5px;">
+        <span class="lui-button__text">Add item</span><span class="lui-button__icon  lui-icon  lui-icon--plus"></span>
+      </button>
+    {{/example-tab-content}}
+    {{#example-tab-content "block-inverse"}}
+      <button class="lui-button  lui-button--inverse  lui-button--block" style="margin-bottom: 5px;">
+        <span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button  lui-button--inverse  lui-button--block" style="margin-bottom: 5px;">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button  lui-button--inverse  lui-button--block  lui-button--rounded" style="margin-bottom: 5px;">
+        <span class="lui-button__text">Add item</span><span class="lui-button__icon  lui-icon  lui-icon--plus"></span>
+      </button>
+    {{/example-tab-content}}
+  {{/example}}
+
+  <h2>Button sizing</h2>
+  <p>
+    You can control the size of buttons by adding a class. The following sizing options are available:
+    <ul>
+      <li>
+        default - 28px
+      </li>
+      <li>
+        large - 38px
+      </li>
+      <li>
+        extra large - 54px
+      </li>
+    </ul>
+  </p>
+  <p>
+    <button class="lui-button">Default</button>
+    <button class="lui-button  lui-button--large">Default</button>
+    <button class="lui-button  lui-button--x-large">Default</button>
+  </p>
+  <p>
+    {{#example-code}}
+    <button class="lui-button">Default</button>
+    <button class="lui-button  lui-button--large">Default</button>
+    <button class="lui-button  lui-button--x-large">Default</button>
+    {{/example-code}}
+  </p>
+
+  <a id="OverlayButtons"></a>
+  <h2>Overlay buttons</h2>
+  <p>The overlay button is special type of button that can be used on top of dynamic background images.</p>
+  <div class="example">
+    <div class="example-box  lui-bg-dynamic">
+      <button class="lui-overlay-button">Overlay button</button>
+      <button class="lui-overlay-button">
+        <span class="lui-overlay-button__icon  lui-icon  lui-icon--tick  lui-text-success"></span>
+      </button>
+      <button class="lui-overlay-button">
+        <span class="lui-overlay-button__icon  lui-icon  lui-icon--plus"></span>
+        <span class="lui-overlay-button__text">Text</span>
+        <span class="lui-overlay-button__caret  lui-caret"></span>
+      </button>
+      <button class="lui-overlay-button  lui-disabled">Overlay button</button>
+    </div>
+    {{#example-code}}
+      <button class="lui-overlay-button">Overlay button</button>
+      <button class="lui-overlay-button">
+        <span class="lui-overlay-button__icon  lui-icon  lui-icon--tick  lui-text-success"></span>
+      </button>
+      <button class="lui-overlay-button">
+        <span class="lui-overlay-button__icon  lui-icon  lui-icon--plus"></span>
+        <span class="lui-overlay-button__text">Text</span>
+        <span class="lui-overlay-button__caret  lui-caret"></span>
+      </button>
+      <button class="lui-overlay-button  lui-disabled">Overlay button</button>
+    {{/example-code}}
+  </div>
+
+  <a id="FadeButtons"></a>
+  <h2>Fade buttons</h2>
+  <p>Fade buttons are typically used inside other components like lists and popovers
+    to create functional layouts.</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "fade-default"}}Default{{/example-tab}}
+      {{#example-tab "fade-inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "fade-default"}}
+      <button class="lui-fade-button">Default</button>
+      <button class="lui-fade-button">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-active">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-disabled">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--warning">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--success">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--info">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--danger">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--large">
+        <span class="lui-fade-button__icon  lui-icon  lui-icon--large  lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--large  lui-active">
+        <span class="lui-fade-button__icon  lui-icon  lui-icon--large  lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button">
+        <span class="lui-fade-button__text">Text n </span>
+        <span class="lui-fade-button__icon  lui-icon  lui-icon--home"></span>
+      </button>
+    {{/example-tab-content}}
+    {{#example-tab-content "fade-inverse"}}
+      <button class="lui-fade-button  lui-fade-button--inverse">Inverse</button>
+      <button class="lui-fade-button  lui-fade-button--inverse">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--inverse  lui-active">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--inverse  lui-disabled">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--warning">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--success">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--info">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--danger">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--inverse  lui-fade-button--large">
+        <span class="lui-fade-button__icon  lui-icon  lui-icon--large  lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--inverse  lui-fade-button--large  lui-active">
+        <span class="lui-fade-button__icon  lui-icon  lui-icon--large  lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--inverse">
+        <span class="lui-fade-button__text">Text n </span>
+        <span class="lui-fade-button__icon  lui-icon  lui-icon--home"></span>
+      </button>
+    {{/example-tab-content}}
+  {{/example}}
+
+</div>

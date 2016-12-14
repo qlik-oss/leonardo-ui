@@ -1,0 +1,180 @@
+<div class="component">
+  <h1>Tabset</h1>
+  <p>Tabset component that by default allows the content to take up any space necessary.
+    Tabs does not include borders around them to be more flexible. If you want borders you
+    can use the following colors (same as for dividers) or any other color:
+    <ul>
+      <li>Default - fade(@greyscale-0, 10) or rgba(0, 0, 0, 0.1)</li>
+      <li>Inverse - fade(@greyscale-100, 15) or rgba(255, 255, 255, 0.15)</li>
+    </ul>
+  </p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "default"}}Default{{/example-tab}}
+      {{#example-tab "inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "default"}}
+      <ul class="lui-tabset" style="border: 1px solid rgba(0, 0, 0, 0.1);">
+        <li class="lui-tab">
+          <span class="lui-tab__text">Tab</span>
+        </li>
+        <li class="lui-tab">
+          <span class="lui-tab__text">Tab with aside</span>
+          <span class="lui-tab__aside lui-icon lui-icon--close"></span>
+        </li>
+        <li class="lui-tab lui-active">
+          <span class="lui-tab__text">Active</span>
+        </li>
+        <li class="lui-tab lui-focused">
+          <span class="lui-tab__text">Pressed</span>
+        </li>
+        <li class="lui-tab lui-hovered">
+          <span class="lui-tab__text">Hover</span>
+        </li>
+        <li class="lui-tab lui-disabled">
+          <span class="lui-tab__text">Disabled</span>
+        </li>
+      </ul>
+    {{/example-tab-content}}
+    {{#example-tab-content "inverse"}}
+      <ul class="lui-tabset" style="border: 1px solid rgba(255, 255, 255, 0.15);">
+        <li class="lui-tab lui-tab--inverse">
+          <span class="lui-tab__text">Tab</span>
+        </li>
+        <li class="lui-tab lui-tab--inverse">
+          <span class="lui-tab__text">Tab with aside</span>
+          <span class="lui-tab__aside lui-icon lui-icon--close"></span>
+        </li>
+        <li class="lui-tab lui-active lui-tab--inverse">
+          <span class="lui-tab__text">Active</span>
+        </li>
+        <li class="lui-tab lui-focused lui-tab--inverse">
+          <span class="lui-tab__text">Pressed</span>
+        </li>
+        <li class="lui-tab lui-hovered lui-tab--inverse">
+          <span class="lui-tab__text">Hover</span>
+        </li>
+        <li class="lui-tab lui-disabled lui-tab--inverse">
+          <span class="lui-tab__text">Disabled</span>
+        </li>
+      </ul>
+    {{/example-tab-content}}
+  {{/example}}
+
+  <a id="TabsetWithFill"></a>
+  <h2>Equal tab width</h2>
+  <p> With lui-tabset-fill, the tabset will set equal widths to tabs which will be centered and take up the full width of the tabset container.</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "fill-default"}}Default{{/example-tab}}
+      {{#example-tab "fill-inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "fill-default"}}
+      <ul class="lui-tabset lui-tabset--fill" style="border-top: 1px solid rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+        <li class="lui-tab">
+          <span class="lui-tab__text">Tab</span>
+        </li>
+        <li class="lui-tab">
+          <span class="lui-tab__text">Tab with aside</span>
+          <span class="lui-tab__aside lui-icon lui-icon--close"></span>
+        </li>
+        <li class="lui-tab lui-active">
+          <span class="lui-tab__text">Active</span>
+        </li>
+        <li class="lui-tab lui-focused">
+          <span class="lui-tab__text">Pressed</span>
+        </li>
+        <li class="lui-tab lui-hovered">
+          <span class="lui-tab__text">Hover</span>
+        </li>
+        <li class="lui-tab lui-disabled">
+          <span class="lui-tab__text">Disabled</span>
+        </li>
+      </ul>
+    {{/example-tab-content}}
+    {{#example-tab-content "fill-inverse"}}
+      <ul class="lui-tabset lui-tabset--fill" style="border-top: 1px solid rgba(255, 255, 255, 0.15); border-bottom: 1px solid rgba(255, 255, 255, 0.15);">
+        <li class="lui-tab lui-tab--inverse">
+          <span class="lui-tab__text">Tab</span>
+        </li>
+        <li class="lui-tab lui-tab--inverse">
+          <span class="lui-tab__text">Tab with aside</span>
+          <span class="lui-tab__aside lui-icon lui-icon--close"></span>
+        </li>
+        <li class="lui-tab lui-active lui-tab--inverse">
+          <span class="lui-tab__text">Active</span>
+        </li>
+        <li class="lui-tab lui-focused lui-tab--inverse">
+          <span class="lui-tab__text">Pressed</span>
+        </li>
+        <li class="lui-tab lui-hovered lui-tab--inverse">
+          <span class="lui-tab__text">Hover</span>
+        </li>
+        <li class="lui-tab lui-disabled lui-tab--inverse">
+          <span class="lui-tab__text">Disabled</span>
+        </li>
+      </ul>
+    {{/example-tab-content}}
+  {{/example}}
+
+  <h2>Tabset sizing</h2>
+  <p>
+    You can control the size of tabsets by adding a class. The following sizing options are available:
+    <ul>
+      <li>
+        (default) - 38px
+      </li>
+      <li>
+        large - 54px
+      </li>
+    </ul>
+  </p>
+  <p>
+    <ul class="lui-tabset  lui-tabset--large" style="border: 1px solid rgba(0, 0, 0, 0.1);">
+      <li class="lui-tab  lui-tab--large">
+        <span class="lui-tab__text  lui-tab__text--large">Tab</span>
+      </li>
+      <li class="lui-tab  lui-tab--large">
+        <span class="lui-tab__text  lui-tab__text--large">Tab with aside</span>
+        <span class="lui-tab__aside lui-icon lui-icon--close"></span>
+      </li>
+      <li class="lui-tab  lui-tab--large  lui-active">
+        <span class="lui-tab__text  lui-tab__text--large">Active</span>
+      </li>
+      <li class="lui-tab  lui-tab--large  lui-focused">
+        <span class="lui-tab__text  lui-tab__text--large">Pressed</span>
+      </li>
+      <li class="lui-tab  lui-tab--large  lui-hovered">
+        <span class="lui-tab__text  lui-tab__text--large">Hover</span>
+      </li>
+      <li class="lui-tab  lui-tab--large  lui-disabled">
+        <span class="lui-tab__text  lui-tab__text--large">Disabled</span>
+      </li>
+    </ul>
+  </p>
+  <p>
+    {{#example-code}}
+    <ul class="lui-tabset  lui-tabset--large" style="border: 1px solid rgba(0, 0, 0, 0.1);">
+      <li class="lui-tab  lui-tab--large">
+        <span class="lui-tab__text  lui-tab__text--large">Tab</span>
+      </li>
+      <li class="lui-tab  lui-tab--large">
+        <span class="lui-tab__text  lui-tab__text--large">Tab with aside</span>
+        <span class="lui-tab__aside lui-icon lui-icon--close"></span>
+      </li>
+      <li class="lui-tab  lui-tab--large  lui-active">
+        <span class="lui-tab__text  lui-tab__text--large">Active</span>
+      </li>
+      <li class="lui-tab  lui-tab--large  lui-focused">
+        <span class="lui-tab__text  lui-tab__text--large">Pressed</span>
+      </li>
+      <li class="lui-tab  lui-tab--large  lui-hovered">
+        <span class="lui-tab__text  lui-tab__text--large">Hover</span>
+      </li>
+      <li class="lui-tab  lui-tab--large  lui-disabled">
+        <span class="lui-tab__text  lui-tab__text--large">Disabled</span>
+      </li>
+    </ul>
+    {{/example-code}}
+  </p>
+</div>

@@ -1,0 +1,106 @@
+<div class="get-started">
+  <div class="wrap">
+    <h1>Get started</h1>
+    <section>
+      <h2>Using NPM</h2>
+      <p>Run the following command:</p>
+  {{#example-code}}
+    npm install --save leonardo-ui
+  {{/example-code}}
+      <p>
+        Add the following to your HTML:
+      </p>
+      <p>
+  {{#example-code}}
+    <head>
+      <link rel="stylesheet" href="node_modules/leonardo-ui/dist/leonardo-ui.css" type="text/css"/>
+    </head>
+    <body>
+      <!-- Page content -->
+      <script src="node_modules/leonardo-ui/dist/leonardo-ui.js" type="text/javascript"></script>
+    </body>
+  {{/example-code}}
+      </p>
+      <p>
+        To use the icon font (optional), add this to your CSS:
+      </p>
+      <p>
+  {{#example-code}}
+    @font-face {
+      font-family: "LUI icons";
+      src: url(node_modules/leonardo-ui/dist/lui-icons.woff) format('woff'),
+         url(node_modules/leonardo-ui/dist/lui-icons.ttf) format('truetype');
+    }
+  {{/example-code}}
+      </p>
+    </section>
+    <section>
+      <h2>Bundle</h2>
+      <p>
+        Alternatively, you can download a bundle and follow the instructions above. Replace the paths starting
+        with node_modules. The bundle includes the same artifacts as the NPM package plus some code examples.
+      </p>
+      <div class="center" style="margin-top: 30px; padding: 0 10px;">
+        <a href="https://www.npmjs.com/package/leonardo-ui/-/leonardo-ui-{{luiVersion}}.tgz">
+          <button class="lui-button  lui-button--info  lui-button--block  lui-button--x-large">Download Leonardo UI {{luiVersion}}</button>
+        </a>
+      </div>
+    </section>
+    <section>
+      <h2>Artifacts</h2>
+      <p>You may include any version of these artifacts. Notice that using Javascripts is optional and you are
+        free to provide your own custom implementation.</p>
+      <table class="options">
+        <thead>
+          <tr>
+            <th>Artifact</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>leonardo-ui.min.css</td>
+            <td>Minified CSS file to use in production</td>
+          </tr>
+          <tr>
+            <td>leonardo-ui.css</td>
+            <td>CSS</td>
+          </tr>
+          <tr>
+            <td>leonardo-ui.css.map</td>
+            <td>Source maps for CSS</td>
+          </tr>
+          <tr>
+            <td>leonardo-ui.min.js</td>
+            <td>Minified JS file to use in production</td>
+          </tr>
+          <tr>
+            <td>leonardo-ui.js</td>
+            <td>JS</td>
+          </tr>
+          <tr>
+            <td>leonardo-ui.js.map</td>
+            <td>Source maps for JS</td>
+          </tr>
+          <tr>
+            <td>colors.less</td>
+            <td>Color palette variables</td>
+          </tr>
+          <tr>
+            <td>variables.less</td>
+            <td>General variables plus component specific variables (work ongoing)</td>
+          </tr>
+          <tr>
+            <td>lui-icons.ttf</td>
+            <td>Truetype icon font</td>
+          </tr>
+          <tr>
+            <td>lui-icons.woff</td>
+            <td>WOFF icon font</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+</div>

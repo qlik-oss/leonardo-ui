@@ -1,0 +1,21 @@
+.lui-popover__arrow {
+  position: absolute;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+}
+
+.popover-arrow-mixin( left, right, top, bottom );
+.popover-arrow-mixin( right, left, top, bottom );
+.popover-arrow-mixin( top, bottom, left, right );
+.popover-arrow-mixin( bottom, top, left, right );

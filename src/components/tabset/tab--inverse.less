@@ -1,0 +1,14 @@
+@import "./_mixins";
+
+&.lui-tab--inverse {
+  .tab-mixin(
+    @text-color : @greyscale-100,
+    @background-color: transparent,
+    @hover-backgrund-color: fade(@greyscale-100, 10),
+    @active-backgrund-color: fade(@greyscale-100, 15),
+    @border-color: fade(@greyscale-100, 15),
+    @active-border-color: @orange,
+    @icon-color: fade(@greyscale-100, 80),
+    @icon-hover-color: @greyscale-100
+  );
+}

@@ -1,0 +1,67 @@
+@import "./_mixins";
+
+.lui-fade-button {
+  .button-reset-mixin();
+
+  vertical-align: middle;
+
+  height: 28px;
+  padding: 0 6px;
+  min-width: 40px;
+  border: 1px solid transparent;
+  background-color: transparent;
+
+  font-size: @button-font-size;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 24px;
+
+  position: relative;
+  outline: none;
+  cursor: pointer;
+
+  box-sizing: border-box;
+  .appearance(none);
+  .user-select(none);
+  border-radius: 3px;
+  transition: color 200ms ease-out;
+
+  &__text,
+  &__icon,
+  &__caret {
+    display: inline-block;
+    vertical-align: top;
+
+    &:not(:only-child) {
+      margin-left: 5px;
+      margin-right: 5px;
+
+      &:first-child {
+        min-width: 6px;
+        margin-left: 0px;
+
+        [dir="rtl"] & {
+          margin-left: 5px;
+          margin-right: 0px;
+        }
+      }
+
+      &:last-child {
+        min-width: 6px;
+        margin-right: 0px;
+
+        [dir="rtl"] & {
+          margin-left: 0px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .fade-button-mixin(
+    @active-background-color: fade(@greyscale-0, 5);
+    @text-color: fade(@greyscale-35, 80);
+    @hover-text-color: @greyscale-35;
+    @disabled-text-color: fade(@greyscale-35, 20);
+  );
+}

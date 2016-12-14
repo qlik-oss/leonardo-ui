@@ -1,0 +1,226 @@
+@import "./_colors";
+
+.background-image-gradient(@from-color, @to-color) {
+  background-color: @to-color;
+  background-image: linear-gradient(to bottom, @from-color, @to-color);
+}
+
+.user-select(@value: none) {
+  -webkit-user-select: @value;
+  -moz-user-select: @value;
+  -ms-user-select: @value;
+}
+
+.appearance(@value: none) {
+  -webkit-appearance: @value;
+  -moz-appearance: @value;
+}
+
+.placeholder-style(@color, @font-style: normal) {
+  &::-webkit-input-placeholder {
+    color: @color;
+    font-style: @font-style;
+    text-overflow: ellipsis !important; //Chrome sets style: text-overflow: clip on the placeholder element
+  }
+  &::-moz-placeholder {
+    color: @color;
+    font-style: @font-style;
+    text-overflow: ellipsis;
+  }
+  &:-ms-input-placeholder {
+    color: @color;
+    font-style: @font-style;
+    // Placeholder ellipsing not possible in IE
+  }
+}
+
+/*
+ * Set default focus styling
+ */
+.focus-style(@focus-color: @blue) {
+  border: 1px solid @focus-color;
+}
+
+
+/**
+* Mixin to harmonize button layout between browsers
+*/
+.button-reset-mixin() {
+
+  /* remove firefox dotted outline */
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+
+/**
+* Mixin to add content positioning for buttons.
+*/
+.button-content-positioning-mixin() {
+
+  &__caret:after {
+    vertical-align: top;
+    margin-bottom: -1px;
+    padding-top: 1px;
+  }
+
+  &__text,
+  &__icon,
+  &__caret {
+    display: inline-block;
+    vertical-align: top;
+
+    &:not(:only-child) {
+      margin-left: 5px;
+      margin-right: 5px;
+
+      &:first-child {
+        min-width: 6px;
+        margin-left: -6px;
+
+        [dir="rtl"] & {
+          margin-left: 5px;
+          margin-right: -6px;
+        }
+      }
+
+      &:last-child {
+        min-width: 6px;
+        margin-right: -6px;
+
+        [dir="rtl"] & {
+          margin-left: -6px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  &__text + &__caret:last-child {
+    margin-left: 15px;
+    margin-right: -6px;
+
+    [dir="rtl"] & {
+      margin-left: -6px;
+      margin-right: 15px;
+    }
+  }
+
+  &__icon,
+  &__caret {
+    &:only-child {
+      margin-left: -6px;
+      margin-right: -6px;
+      min-width: 18px; //Must not be smaller than 12px to cover the negative margin
+    }
+  }
+}
+
+/**
+* Mixin for content positioning using the block modifier
+*/
+.button--block-content-positioning-mixin(@button-selector) {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  white-space: nowrap;
+
+  //Override default icon positioning
+  &&& {
+    .@{button-selector}__text,
+    .@{button-selector}__icon,
+    .@{button-selector}__caret {
+      margin-left: 0;
+      margin-right: 0;
+      min-width: unset;
+    }
+  }
+
+  .@{button-selector}__text {
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    vertical-align: top;
+  }
+
+  .@{button-selector}__icon,
+  .@{button-selector}__caret {
+
+    &:not(:only-child) {
+
+      &:first-child {
+        position: absolute;
+        left: 10px;
+
+        [dir="rtl"] &,
+        [dir="rtl"]& {
+          left: auto;
+          right: 10px;
+        }
+      }
+
+      &:last-child {
+        position: absolute;
+        right: 10px;
+
+        [dir="rtl"] &,
+        [dir="rtl"]& {
+          left: 10px;
+          right: auto;
+        }
+      }
+    }
+  }
+}
+
+.input-mixin(
+  @text-color,
+  @background-color,
+  @border-color,
+  @hover-border-color,
+  @active-border-color,
+  @invalid-border-color,
+  @placeholder-color,
+  @disabled-text-color,
+  @disabled-background-color
+) {
+  color: @text-color;
+  background-color: @background-color;
+  border-color: @border-color;
+
+  .placeholder-style(@placeholder-color);
+
+  &:hover,
+  &.lui-hovered {
+    border-color: @hover-border-color;
+  }
+
+  // Input field shall not initially be showed as invalid therefore :invalid styling is left out.
+  &.lui-invalid {
+    border-color: @invalid-border-color;
+  }
+
+  &:focus,
+  &.lui-focused {
+    .focus-style();
+    transition: none;
+
+    // Input field shall not initially be showed as invalid therefore :invalid styling is left out.
+    &.lui-invalid {
+      .focus-style(@invalid-border-color);
+    }
+  }
+
+  &[disabled],
+  &.lui-disabled {
+    color: @disabled-text-color;
+    opacity: 1; // restore opacity on ipad
+    -webkit-text-fill-color: @disabled-text-color; // for iOS, to set alpha channnel on color since setting opacity is not enough
+    background-color: @disabled-background-color;
+    border-color: @border-color;
+  }
+}

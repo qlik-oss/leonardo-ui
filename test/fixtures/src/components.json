@@ -1,0 +1,20 @@
+[
+  "button",
+  "buttongroup",
+  "checkbox",
+  "dialog",
+  "fade-button",
+  "input",
+  "input-group",
+  "list",
+  "overlay-button",
+  "popover",
+  "radiobutton",
+  "search",
+  "select",
+  "switch",
+  "tabset",
+  "textarea",
+  "toast",
+  "tooltip"
+]

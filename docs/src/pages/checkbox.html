@@ -1,0 +1,70 @@
+<div class="component">
+  <h1>Checkbox</h1>
+  <p>Checkbox component.</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "default"}}Default{{/example-tab}}
+      {{#example-tab "inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "default"}}
+      <label class="lui-checkbox">
+        <input class="lui-checkbox__input" type="checkbox" aria-label="Label" />
+        <div class="lui-checkbox__check-wrap">
+          <span class="lui-checkbox__check"></span>
+          <span class="lui-checkbox__check-text">Label</span>
+        </div>
+      </label>
+      <label class="lui-checkbox">
+        <input class="lui-checkbox__input" type="checkbox" aria-label="Label" checked />
+        <div class="lui-checkbox__check-wrap">
+          <span class="lui-checkbox__check"></span>
+          <span class="lui-checkbox__check-text">Label</span>
+        </div>
+      </label>
+      <label class="lui-checkbox">
+        <input class="lui-checkbox__input" type="checkbox" aria-label="Label" disabled />
+        <div class="lui-checkbox__check-wrap">
+          <span class="lui-checkbox__check"></span>
+          <span class="lui-checkbox__check-text">Label</span>
+        </div>
+      </label>
+      <label class="lui-checkbox">
+        <input class="lui-checkbox__input" type="checkbox" aria-label="Label" disabled checked />
+        <div class="lui-checkbox__check-wrap">
+          <span class="lui-checkbox__check"></span>
+          <span class="lui-checkbox__check-text">Label</span>
+        </div>
+      </label>
+    {{/example-tab-content}}
+    {{#example-tab-content "inverse"}}
+      <label class="lui-checkbox  lui-checkbox--inverse">
+        <input class="lui-checkbox__input" type="checkbox" aria-label="Label" />
+        <div class="lui-checkbox__check-wrap">
+          <span class="lui-checkbox__check"></span>
+          <span class="lui-checkbox__check-text">Label</span>
+        </div>
+      </label>
+      <label class="lui-checkbox  lui-checkbox--inverse">
+        <input class="lui-checkbox__input" type="checkbox" aria-label="Label" checked />
+        <div class="lui-checkbox__check-wrap">
+          <span class="lui-checkbox__check"></span>
+          <span class="lui-checkbox__check-text">Label</span>
+        </div>
+      </label>
+      <label class="lui-checkbox  lui-checkbox--inverse">
+        <input class="lui-checkbox__input" type="checkbox" aria-label="Label" disabled />
+        <div class="lui-checkbox__check-wrap">
+          <span class="lui-checkbox__check"></span>
+          <span class="lui-checkbox__check-text">Label</span>
+        </div>
+      </label>
+      <label class="lui-checkbox  lui-checkbox--inverse">
+        <input class="lui-checkbox__input" type="checkbox" aria-label="Label" disabled checked />
+        <div class="lui-checkbox__check-wrap">
+          <span class="lui-checkbox__check"></span>
+          <span class="lui-checkbox__check-text">Label</span>
+        </div>
+      </label>
+    {{/example-tab-content}}
+  {{/example}}
+</div>

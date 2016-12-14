@@ -1,0 +1,11 @@
+{
+  "fixtures": {
+    "select": {
+      "backgroundClass": "lui-bg-default"
+    },
+    "select-inverse": {
+      "isInverse": true,
+      "backgroundClass": "lui-bg-inverse"
+    }
+  }
+}

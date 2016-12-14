@@ -1,0 +1,39 @@
+@import "./_mixins";
+
+@arrow-size: 8px;
+
+.lui-tooltip__arrow {
+  position: absolute;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+}
+
+.tooltip-arrow-mixin( left, right, top, bottom );
+.tooltip-arrow-mixin( right, left, top, bottom );
+.tooltip-arrow-mixin( top, bottom, left, right );
+.tooltip-arrow-mixin( bottom, top, left, right );
+
+.lui-tooltip {
+  min-height: 28px;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: @tooltip-font-size;
+  position: relative;
+  transition: opacity 50ms ease-out;
+  opacity: 1.0;
+  z-index: @tooltip-z-index;
+
+  color: @greyscale-100;
+  background-color: fade(@greyscale-0, 90);
+
+  &.lui-fade {
+    opacity: 0.0;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "fixtures": {
+    "button": {
+      "backgroundClass": "lui-bg-default"
+    },
+    "button-inverse": {
+      "isInverse": true,
+      "backgroundClass": "lui-bg-inverse"
+    },
+    "button-rounded": {
+      "isRounded": true,
+      "variantClass": "lui-button--rounded",
+      "backgroundClass": "lui-bg-default"
+    },
+    "button-rounded-inverse": {
+      "isInverse": true,
+      "isRounded": true,
+      "variantClass": "lui-button--rounded",
+      "backgroundClass": "lui-bg-inverse"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import "./_mixins";
+
+.lui-button--toolbar-inverse, // --toolbar class is deprecated in favor of --gradient
+.lui-button--gradient-inverse {
+  .toolbar-button-mixin(
+    @text-color: @greyscale-100;
+    @background-gradient-from: @greyscale-40;
+    @background-gradient-to: @greyscale-30;
+    @border-color: fade(@greyscale-0, 60);
+    @hover-box-shadow-color: fade(@greyscale-100, 8);
+  );
+}

@@ -1,0 +1,43 @@
+.lui-tag {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 24px;
+  min-width: 40px;
+  color: @text-color;
+  font-size: 13px;
+  border-radius: 12px;
+  background-color: @greyscale-90;
+  border: 1px solid @greyscale-80;
+  padding: 3px 10px;
+  margin: 1px;
+  list-style: none;
+  white-space: nowrap;
+
+  &.lui-matched {
+    background-color: @yellow;
+          color: @text-color;
+          border-color: @yellow;
+  }
+
+  .qv-tagCloud &{
+    padding-right: 26px;
+  }
+
+  .icon-trash {
+    cursor: pointer;
+    font-size: 14px;
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 1px;
+    color: fade(@text-color, 60);
+    &:active {
+      color: @text-color;
+    }
+    &:hover {
+      color: @text-color;
+    }
+  }
+
+}

@@ -1,0 +1,22 @@
+@import "./_mixins";
+
+.lui-switch--inverse {
+  .switch-mixin(
+    //Idle / "Off"
+    @button-gradient-from: @greyscale-100;
+    @button-gradient-to: @greyscale-90;
+    @button-border: fade(@greyscale-0, 10);
+    @normal-background: fade(@greyscale-100, 30);
+    @background-border: transparent;
+    //Active / "On"
+    @active-background: @orange;
+    //Pressed / Clicked
+    @pressed-background: fade(@greyscale-0, 60);
+    //Focused
+    @focus-border: @blue;
+    //Hovered
+    @hover-border: @greyscale-0;
+    //Disabled
+    @disabled-background: fade(@greyscale-100, 10);
+  );
+}

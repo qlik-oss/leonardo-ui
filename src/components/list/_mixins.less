@@ -1,0 +1,56 @@
+
+.minHeight( @height ) {
+  min-height: @height;
+
+  // fix for vertical alignment when using min-height in IE10-IE11:
+  &:after {
+    content: "";
+    min-height: @height;
+    display: block;
+  }
+}
+
+.list-mixin(
+  @text-color: @text-color,
+  @background-color: transparent,
+  @header-text-color: @text-color,
+  @header-border-color: fade(@greyscale-0, 10),
+  @header-background-color: fade(@greyscale-0, 05),
+  @item-border-color: fade(@greyscale-0, 10),
+  @item-disabled-color: fade(@text-color, 30),
+  @item-selected-color: @greyscale-95, // move to client?
+  @item-hover-color: fade(@greyscale-0, 05),
+  @item-active-color: fade(@greyscale-0, 10)
+) {
+
+  .lui-list__header {
+    border-bottom: 1px solid @header-border-color;
+    background-color: @header-background-color;
+    color: @header-text-color;
+  }
+
+  .lui-list__item {
+    border-bottom: 1px solid @item-border-color;
+    background-clip: padding-box;
+    background-color: @background-color;
+    color: @text-color;
+    transition: background-color 50ms ease-out;
+
+    &:hover, &.lui-hover {
+      background-color: @item-hover-color;
+    }
+
+    &.lui-disabled {
+      color: @item-disabled-color;
+      background-color: @background-color;
+    }
+
+    &.lui-selected {
+      background-color: @item-selected-color; // move to client?
+    }
+
+    &.lui-active {
+      background-color: @item-active-color;
+    }
+  }
+}

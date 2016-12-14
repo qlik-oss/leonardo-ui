@@ -1,0 +1,11 @@
+{
+  "fixtures": {
+    "textarea": {
+      "backgroundClass": "lui-bg-default"
+    },
+    "textarea-inverse": {
+      "backgroundClass": "lui-bg-inverse",
+      "variantClass": "lui-textarea--inverse"
+    }
+  }
+}

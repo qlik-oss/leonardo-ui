@@ -1,0 +1,11 @@
+{
+  "fixtures": {
+    "fade-button": {
+      "backgroundClass": "lui-bg-default"
+    },
+    "fade-button-inverse": {
+      "variantClass": "lui-fade-button--inverse",
+      "backgroundClass": "lui-bg-inverse"
+    }
+  }
+}

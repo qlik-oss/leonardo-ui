@@ -1,0 +1,50 @@
+.lui-buttongroup .lui-button, // deprecated usage
+.lui-buttongroup__button {
+  margin: 0;
+
+  &.lui-active,
+  &.lui-hovered,
+  &.lui-focused {
+    z-index: 1;
+  }
+
+  &:hover,
+  &:active {
+    z-index: 2;
+  }
+
+  &:focus {
+    z-index: 3;
+  }
+
+  &:first-child:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &:not(:last-child):not(:first-child) {
+    border-radius: 0;
+  }
+
+  &:not(:last-child) {
+    margin-right: -1px;
+  }
+
+  &:last-child:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  [dir="rtl"] &:first-child:not(:last-child) {
+    border-radius: 0 @border-radius @border-radius 0;
+  }
+
+  [dir="rtl"] &:not(:last-child) {
+    margin-right: 0;
+    margin-left: -1px;
+  }
+
+  [dir="rtl"] &:last-child:not(:first-child) {
+    border-radius: @border-radius 0 0 @border-radius;
+  }
+}

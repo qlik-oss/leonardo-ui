@@ -1,0 +1,96 @@
+@import "./_mixins";
+@import "./_variables";
+
+.lui-tab {
+  //Layout
+  display: flex;
+  overflow: hidden;
+  flex: 0 1 auto;
+
+  border-bottom: 2px solid transparent; // Always have a border so that height is calculated properly
+  transition: background-color 50ms ease-out;
+
+  //Measures
+  min-width: 100px;
+  max-width: 200px;
+  height: @tabset-height;
+  min-height: @tabset-height;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+
+  //Text
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  line-height: @line-height;
+  font-weight: bold;
+
+  // Interaction
+  cursor: pointer;
+  .user-select(none);
+
+  &[disabled],
+  &.lui-disabled {
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  .lui-tab__text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1 1 auto;
+    text-align: left;
+    font-size: 13px;
+    line-height: @line-height;
+    font-weight: bold;
+
+    &--large {
+      line-height: @line-height--large;
+      font-size: 14px;
+    }
+  }
+
+  .lui-tab__aside {
+    margin-right: 0;
+    padding: 3px;
+    margin-left: 20px;
+    font-size: 10px;
+    line-height: normal;
+    align-self: center;
+    flex: 0 0 auto;
+  }
+  
+  [dir='rtl'] & {
+    .lui-tab {
+      border-right: none;
+      border-left-width: 1px;
+      border-left-style: solid;
+      text-align: right;
+      .lui-tab__text {
+        text-align: right;
+      }
+      .lui-tab__aside {
+        margin-right: 20px;
+        margin-left: 0;
+      }
+      .lui-tab-transclusion {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .tab-mixin(
+    @text-color : @greyscale-35,
+    @background-color: transparent,
+    @hover-backgrund-color: fade(@greyscale-0, 3),
+    @active-backgrund-color: fade(@greyscale-0, 5),
+    @border-color: fade(@greyscale-0, 10),
+    @active-border-color: @orange,
+    @icon-color: fade(@greyscale-35, 80),
+    @icon-hover-color: @greyscale-35
+  );
+}

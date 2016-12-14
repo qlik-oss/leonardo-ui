@@ -1,0 +1,21 @@
+@import "./_mixins";
+
+.lui-radiobutton--inverse {
+  .radiobutton-mixin(
+    //Idle / "Off"
+    @normal-background: fade(@greyscale-100, 30),
+    @normal-border: transparent,
+    @label-color: @greyscale-100,
+    //Hover
+    @hover-border: @greyscale-100,
+    //Pressed / Clicked
+    @pressed-background: fade(@greyscale-0, 60),
+    //Active / "On"
+    @active-background: @orange,
+    //Disabled / "Greyed out"
+    @disabled-background: fade(@greyscale-100, 10),
+    @disabled-dot: fade(@greyscale-100, 20),
+    //Focus
+    @focus-border: @blue
+  );
+}

@@ -1,0 +1,17 @@
+*.rej
+*.tmp
+*.tgz
+
+npm-debug.log
+.DS_Store
+
+node_modules/
+dist/
+coverage/
+.idea/
+
+test/component/artifacts/diff
+test/component/artifacts/regression
+test/component/artifacts/screenshots
+test/component/artifacts/selenium.*
+test/component/artifacts/*-report-*

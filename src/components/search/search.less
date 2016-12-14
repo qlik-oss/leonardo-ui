@@ -1,0 +1,65 @@
+@import "./_mixins";
+
+.lui-search {
+  vertical-align: middle;
+  padding: 0;
+  height: 38px;
+  width: 100%;
+  display: flex;
+
+  box-sizing: border-box;
+
+  .lui-search__input {
+    height: 38px;
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font-size: @search-font-size;
+    outline: 0;
+    flex: 1 1 auto;
+    box-shadow: none;
+
+    border-radius: 0;
+    box-sizing: border-box;
+
+    /* Fix for IE duplicate remove icons */
+    &::-ms-clear {
+      display: none;
+    }
+  }
+
+  .lui-search__search-icon {
+    .lui-icon;
+    line-height: 38px;
+    flex: 0 0 32px;
+    text-align: center;
+    cursor: default;
+
+    &:before {
+      content: "F";
+    }
+  }
+
+  .lui-search__clear-icon {
+    .lui-icon;
+    line-height: 38px;
+    flex: 0 0 32px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+
+    &:before {
+      content: "‰"
+    }
+  }
+
+  .search-mixin(
+    @text-color: @greyscale-35;
+    @iconColor: @greyscale-35;
+    @placeholder-color: fade(@greyscale-35, 60);
+    @background-color: @greyscale-100;
+  );
+}

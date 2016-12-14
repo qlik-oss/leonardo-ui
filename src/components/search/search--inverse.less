@@ -1,0 +1,10 @@
+@import "./_mixins";
+
+.lui-search--inverse {
+  .search-mixin(
+    @text-color: @greyscale-100;
+    @iconColor: fade(@greyscale-100, 60);
+    @placeholder-color: fade(@greyscale-100, 60);
+    @background-color: fade(@greyscale-100, 30);
+  );
+}

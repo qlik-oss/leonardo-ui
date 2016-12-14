@@ -1,0 +1,72 @@
+<div class="component">
+  <h1>Button group</h1>
+  <p>The button group component can contain regular buttons. Note that fade-buttons and overlay-buttons are not supported.</p>
+
+  <div class="example">
+    {{#example-tabset}}
+      {{#example-tab "default"}}Default{{/example-tab}}
+      {{#example-tab "inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "default"}}
+      <div class="lui-buttongroup">
+        <button class="lui-button  lui-buttongroup__button">
+          First button
+        </button>
+        <button class="lui-button  lui-buttongroup__button">
+          Second button
+        </button>
+        <button class="lui-button  lui-buttongroup__button  lui-active">
+          Third button
+        </button>
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "inverse"}}
+      <div class="lui-buttongroup">
+        <button class="lui-button  lui-buttongroup__button  lui-button--inverse">
+          First button
+        </button>
+        <button class="lui-button  lui-buttongroup__button  lui-button--inverse">
+          Second button
+        </button>
+        <button class="lui-button  lui-buttongroup__button  lui-button--inverse  lui-active">
+          Third button
+        </button>
+      </div>
+    {{/example-tab-content}}
+  </div>
+
+  <p>Button groups can be used with different variants of buttons, including color and sizing variants.</p>
+
+  <div class="example">
+    {{#example-tabset}}
+      {{#example-tab "variants-default"}}Default{{/example-tab}}
+      {{#example-tab "variants-inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "variants-default"}}
+      <div class="lui-buttongroup">
+        <button class="lui-button  lui-buttongroup__button  lui-button--rounded">
+          <span class="lui-button__text">First button</span><span class="lui-button__icon  lui-icon  lui-icon--info"></span>
+        </button>
+        <button class="lui-button  lui-buttongroup__button  lui-button--rounded">
+          Second button
+        </button>
+        <button class="lui-button  lui-buttongroup__button  lui-button--rounded  lui-button--info">
+          Third button
+        </button>
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "variants-inverse"}}
+      <div class="lui-buttongroup">
+        <button class="lui-button  lui-buttongroup__button  lui-button--rounded  lui-button--inverse">
+          <span class="lui-button__text">First button</span><span class="lui-button__icon  lui-icon  lui-icon--info"></span>
+        </button>
+        <button class="lui-button  lui-buttongroup__button  lui-button--rounded  lui-button--inverse">
+          Second button
+        </button>
+        <button class="lui-button  lui-buttongroup__button  lui-button--rounded  lui-button--info">
+          Third button
+        </button>
+      </div>
+    {{/example-tab-content}}
+  </div>
+</div>

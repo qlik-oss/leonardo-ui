@@ -1,0 +1,13 @@
+@import "./_mixins";
+
+.lui-list--inverse {
+  .list-mixin(
+    @text-color: fade(@greyscale-100, 80),
+    @header-text-color: @greyscale-100,
+    @header-background-color: fade(@greyscale-100, 10),
+    @header-border-color: fade(@greyscale-100, 15),
+    @item-disabled-color: fade(@greyscale-100, 40),
+    @item-border-color: fade(@greyscale-100, 15),
+    @item-hover-color: fade(@greyscale-100, 05)
+  );
+}

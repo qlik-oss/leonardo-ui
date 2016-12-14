@@ -1,0 +1,60 @@
+<div class="component">
+  <h1>Input field</h1>
+  <p>Input field component. The default width is 100%, if a different width is wanted an override should be used.</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "default"}}Default{{/example-tab}}
+      {{#example-tab "inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "default"}}
+      <input class="lui-input"/>
+    {{/example-tab-content}}
+    {{#example-tab-content "inverse"}}
+      <input class="lui-input  lui-input--inverse"/>
+    {{/example-tab-content}}
+  {{/example}}
+
+  <h2>Labeled input</h2>
+   <p>Labeled Input field component. The default width is 100%, if a different width is wanted an override should be used.</p>
+   {{#example}}
+     {{#example-tabset}}
+       {{#example-tab "default-label"}}Default{{/example-tab}}
+       {{#example-tab "inverse-label"}}Inverse{{/example-tab}}
+     {{/example-tabset}}
+     {{#example-tab-content "default-label"}}
+      <label class="lui-label">Label</label>
+      <input class="lui-input"/>
+     {{/example-tab-content}}
+     {{#example-tab-content "inverse-label"}}
+      <label class="lui-label">Label</label>
+      <input class="lui-input  lui-input--inverse"/>
+     {{/example-tab-content}}
+   {{/example}}
+
+   <h2>Input sizing</h2>
+   <p>
+     You can control the size of inputs by adding a class. The following sizing options are available:
+     <ul>
+       <li>
+         default - 28px
+       </li>
+       <li>
+         large - 38px
+       </li>
+     </ul>
+   </p>
+   <p>
+     <label class="lui-label">Label</label>
+     <input class="lui-input"/>
+     <label class="lui-label">Label</label>
+     <input class="lui-input  lui-input--large"/>
+   </p>
+   <p>
+     {{#example-code}}
+     <label class="lui-label">Label</label>
+     <input class="lui-input"/>
+     <label class="lui-label">Label</label>
+     <input class="lui-input  lui-input--large"/>
+     {{/example-code}}
+   </p>
+</div>

@@ -1,0 +1,71 @@
+<div class="component">
+  <h1>List</h1>
+  <p>A list component with optional header and support for aligning items to any end.
+    Use the provided classes or take control of the entire content.
+  </p>
+
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "default"}}Default{{/example-tab}}
+      {{#example-tab "inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "default"}}
+      <ul class="lui-list">
+        <li class="lui-list__header">
+          <span class="lui-list__text">This is an optional list header</span>
+        </li>
+        <li class="lui-list__item">
+          <span class="lui-list__text">This item has a text</span>
+        </li>
+        <li class="lui-list__item">
+          <span class="lui-list__aside  lui-icon  lui-icon--star"></span>
+          <span class="lui-list__text">This item has an icon and text</span>
+        </li>
+        <li class="lui-list__item">
+          <span class="lui-list__text">This item has text and an icon to the side</span>
+          <span class="lui-list__aside">
+            <span class="lui-icon  lui-icon--star"></span>
+          </span>
+        </li>
+        <li class="lui-list__item  lui-active">
+          <span class="lui-list__text">This item is active</span>
+        </li>
+        <li class="lui-list__item  lui-disabled">
+          <span class="lui-list__text">This is a disabled item</span>
+        </li>
+        <li class="lui-list__item">
+          <!-- Empty item using all available space -->
+        </li>
+      </ul>
+    {{/example-tab-content}}
+    {{#example-tab-content "inverse"}}
+      <ul class="lui-list  lui-list--inverse">
+        <li class="lui-list__header">
+          <span class="lui-list__text">This is an optional list header</span>
+        </li>
+        <li class="lui-list__item">
+          <span class="lui-list__text">This item has a text</span>
+        </li>
+        <li class="lui-list__item">
+          <span class="lui-list__aside  lui-icon  lui-icon--star"></span>
+          <span class="lui-list__text">This item has an icon and text</span>
+        </li>
+        <li class="lui-list__item">
+          <span class="lui-list__text">This item has text and an icon to the side</span>
+          <span class="lui-list__aside">
+            <span class="lui-icon  lui-icon--star"></span>
+          </span>
+        </li>
+        <li class="lui-list__item  lui-active">
+          <span class="lui-list__text">This item is active</span>
+        </li>
+        <li class="lui-list__item  lui-disabled">
+          <span class="lui-list__text">This is a disabled item</span>
+        </li>
+        <li class="lui-list__item">
+          <!-- Empty item using all available space -->
+        </li>
+      </ul>
+    {{/example-tab-content}}
+  {{/example}}
+</div>

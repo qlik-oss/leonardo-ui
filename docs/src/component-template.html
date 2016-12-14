@@ -1,0 +1,33 @@
+<div class="component-container wrap">
+  <div class="component-sidebar">
+    <ul class="sidebar-list">
+      {{#each sections}}
+        <li>
+          <a>{{this.name}}</a>
+          <ul class="sidebar-sublist">
+            {{#each this.pages}}
+              <li>
+                <a href="{{this.template}}"{{#if this.selected}} class="selected"{{/if}}>{{this.name}}</a>
+              </li>
+            {{/each}}
+          </ul>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="component-content">
+    {{{this.content}}}
+  </div>
+</div>
+
+<script src="leonardo-ui/leonardo-ui.js"></script>
+
+<script>
+  (function() {
+    Array.prototype.slice.call( document.querySelectorAll( "[data-tabset]" ) ).forEach( function( tabsetElement ) {
+      leonardoui.tabset( {
+        element: tabsetElement
+      } );
+    } )
+  }());
+</script>

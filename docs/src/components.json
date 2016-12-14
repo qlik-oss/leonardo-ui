@@ -1,0 +1,74 @@
+[{
+  "name": "General",
+  "pages": [{
+    "name": "Icons",
+    "template": "icons.html"
+  }, {
+    "name": "Palette",
+    "template": "palette.html"
+  }, {
+    "name": "Classes",
+    "template": "classes.html"
+  }, {
+    "name": "List",
+    "template": "list.html"
+  }]
+},{
+  "name": "Buttons",
+  "pages": [{
+      "name": "Button",
+      "template": "button.html"
+    }, {
+      "name": "Button Group",
+      "template": "buttongroup.html"
+    },
+  {
+    "name": "Tabset",
+    "template": "tabset.html"
+  }]
+  }, {
+    "name": "Inputs",
+    "pages": [{
+      "name": "Input",
+      "template": "input.html"
+    }, {
+      "name": "Textarea",
+      "template": "textarea.html"
+    }, {
+      "name": "Input Group",
+      "template": "input-group.html"
+    }, {
+      "name": "Search",
+      "template": "search.html"
+    }]
+  }, {
+    "name": "Form Elements",
+    "pages": [{
+      "name": "Checkbox",
+      "template": "checkbox.html"
+    }, {
+      "name": "Radio Buttons",
+      "template": "radio-buttons.html"
+    }, {
+      "name": "Select",
+      "template": "select.html"
+    }, {
+      "name": "Switch",
+      "template": "switch.html"
+    }]
+  }, {
+    "name": "Dialogs",
+    "pages": [{
+      "name": "Dialog",
+      "template": "dialog.html"
+    }, {
+      "name": "Popover",
+      "template": "popover.html"
+    }, {
+      "name": "Toast",
+      "template": "toast.html"
+    }, {
+      "name": "Tooltip",
+      "template": "tooltip.html"
+    }]
+}]

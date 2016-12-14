@@ -1,0 +1,32 @@
+<div class="component">
+  <h1>Switch</h1>
+  <p>Switch component with a "toggled on" and "toggled off" state.</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "default"}}Default{{/example-tab}}
+      {{#example-tab "inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "default"}}
+      <div class="lui-switch">
+        <label class="lui-switch__label">
+          <input type="checkbox" class="lui-switch__checkbox" aria-label="Label"/>
+          <span class="lui-switch__wrap">
+            <span class="lui-switch__inner"></span>
+            <span class="lui-switch__switch"></span>
+          </span>
+        </label>
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "inverse"}}
+      <div class="lui-switch  lui-switch--inverse">
+        <label class="lui-switch__label">
+          <input type="checkbox" class="lui-switch__checkbox"  aria-label="Label"/>
+          <span class="lui-switch__wrap">
+            <span class="lui-switch__inner"></span>
+            <span class="lui-switch__switch"></span>
+          </span>
+        </label>
+      </div>
+    {{/example-tab-content}}
+  {{/example}}
+</div>

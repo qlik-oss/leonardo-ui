@@ -1,0 +1,20 @@
+.lui-button--rounded {
+  border-radius: 16px;
+
+  &__icon,
+  &__caret {
+    &:only-child {
+      margin-left: -8px;
+      margin-right: -8px;
+      min-width: 18px; //Must not be smaller than 16px to cover the negative margin
+    }
+  }
+
+  &.lui-button--large {
+    border-radius: 19px;
+  }
+
+  &.lui-button--x-large {
+    border-radius: 27px;
+  }
+}

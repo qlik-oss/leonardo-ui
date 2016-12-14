@@ -1,0 +1,19 @@
+<div class="component {{backgroundClass}}">
+  <div class="lui-dialog  {{variantClass}}" style="width: 200px; height: 200px; margin: 20px"  {{#if this.rtl}}dir="rtl"{{/if}}>
+    <div class="lui-dialog__header">
+      <div class="lui-dialog__title">
+        Dialog title
+      </div>
+    </div>
+    <div class="lui-dialog__body">
+      Dialog content
+    </div>
+    <div class="lui-dialog__footer">
+      {{#if isInverse}}
+        <button class="lui-button  lui-button--inverse">OK</button>
+      {{else}}
+        <button class="lui-button">OK</button>
+      {{/if}}
+    </div>
+  </div>
+</div>

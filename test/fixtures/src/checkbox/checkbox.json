@@ -1,0 +1,11 @@
+{
+  "fixtures": {
+    "checkbox": {
+      "backgroundClass": "lui-bg-default"
+    },
+    "checkbox-inverse": {
+      "backgroundClass": "lui-bg-inverse",
+      "variantClass": "lui-checkbox--inverse"
+    }
+  }
+}

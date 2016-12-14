@@ -1,0 +1,37 @@
+.tab-mixin( @text-color, @background-color, @hover-backgrund-color, @active-backgrund-color , @border-color, @active-border-color, @icon-color, @icon-hover-color ) {
+  background-color: @background-color;
+  border-right: 1px solid @border-color;
+  color: @text-color;
+  border-left-color: @border-color;
+
+  &:hover,
+  &.lui-hovered {
+    background-color: @hover-backgrund-color;
+  }
+
+  &.lui-active,
+  &:focus,
+  &.lui-focused {
+    background-color: @active-backgrund-color;
+    border-bottom: 2px solid @active-border-color;
+    transition: none;
+  }
+
+  .lui-tab__text {
+    color: @text-color;
+  }
+
+  .lui-icon {
+    color: @icon-color;
+  }
+
+  .lui-tab__aside {
+    &.lui-icon {
+      color: @icon-color;
+    }
+
+    &:hover {
+      color: @icon-hover-color;
+    }
+  }
+}

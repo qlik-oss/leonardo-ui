@@ -1,0 +1,69 @@
+.lui-overlay-button {
+  .button-reset-mixin();
+
+  vertical-align: middle;
+
+  height: 38px;
+  padding: 0 16px;
+  min-width: 38px;
+
+  font-size: @button-font-size;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 24px;
+
+  position: relative;
+  outline: none;
+  cursor: pointer;
+
+  box-sizing: border-box;
+  .appearance(none);
+  .user-select(none);
+  border-radius: 19px;
+
+  color: @greyscale-100;
+  background-color: fade(@greyscale-0, 40);
+  border: 2px solid fade(@greyscale-100, 70);
+  transition: all 200ms ease-out;
+
+  .button-content-positioning-mixin();
+
+  &__icon,
+  &__caret {
+    &:only-child {
+      margin-left: -8px;
+      margin-right: -8px;
+      min-width: 18px; //Must not be smaller than 16px to cover the negative margin
+    }
+  }
+
+  &:hover,
+  &.lui-hovered {
+    background-color: fade(@greyscale-0, 60);
+    border-color: @greyscale-100;
+  }
+
+  &:active,
+  &.lui-active {
+    color: @greyscale-100;
+    background-color: fade(@greyscale-0, 65);
+    border-color: transparent;
+    box-shadow: 0 1px 0 fade(@greyscale-100, 25);
+  }
+
+  &:focus,
+  &.lui-focused {
+    border: 2px solid @blue;
+    box-shadow: none;
+    transition: none;
+  }
+
+  &[disabled],
+  &.lui-disabled {
+    color: @greyscale-60;
+    border-color: fade(@greyscale-100, 70);
+    background-color: fade(@greyscale-0, 40);
+    cursor: default;
+    pointer-events: none;
+  }
+}

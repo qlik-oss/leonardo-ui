@@ -1,0 +1,75 @@
+.switch-mixin(
+  //Idle / "Off"
+  @button-gradient-from: @greyscale-100;
+  @button-gradient-to: @greyscale-90;
+  @button-border: @greyscale-80;
+  @normal-background: @greyscale-100;
+  @background-border: @greyscale-80;
+  //Active / "On"
+  @active-background;
+  //Pressed / Clicked
+  @pressed-background: @greyscale-35;
+  //Focused
+  @focus-border: @blue;
+  //Hovered
+  @hover-border: @greyscale-35;
+  //Disabled
+  @disabled-background;
+) {
+  .lui-switch__label {
+    border-color: @background-border;
+  }
+  .lui-switch__switch {
+    border-color: @button-border;
+    .background-image-gradient(@button-gradient-from, @button-gradient-to);
+    transition: border-color 200ms ease-out;
+  }
+  .lui-switch__inner:after {
+    background: @normal-background;
+  }
+
+  .lui-switch__inner:before {
+    background: @active-background;
+  }
+
+  // this depend on that lui-checked is added by javascript.
+  &.lui-checked .lui-switch__label {
+    border-color: transparent;
+  }
+
+  // active
+  &.lui-active, &:active {
+    .lui-switch__inner:after, .lui-switch__inner:before {
+      background-color: @pressed-background;
+    }
+  }
+
+  // focused
+  & .lui-switch__checkbox:focus + .lui-switch__wrap .lui-switch__switch,
+  &.lui-focused .lui-switch__checkbox + .lui-switch__wrap .lui-switch__switch {
+    border-color: @focus-border;
+    .focus-style(@focus-border);
+    transition: none;
+  }
+
+  // hovered
+  &:hover .lui-switch__switch,
+  &.lui-hovered .lui-switch__switch {
+    border-color: @hover-border;
+  }
+
+  // disabled
+  &.lui-disabled, &[disabled] {
+    .lui-switch__inner:before {
+      background: @disabled-background;
+    }
+
+    .lui-switch__inner:after {
+      background: @disabled-background;
+    }
+
+    &:hover .lui-switch__switch {
+      border-color: @button-border;
+    }
+  }
+}

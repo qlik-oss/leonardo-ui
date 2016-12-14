@@ -1,0 +1,38 @@
+<div class="component {{backgroundClass}}">
+
+  <div class="row">
+    <div class="lui-input-group  {{variantClass}}">
+      <button class="lui-input-group__item  lui-input-group__button  lui-button {{#if isInverse}}lui-button--inverse{{/if}}">
+        <span class="lui-button__icon  lui-icon  lui-icon--expression"></span>
+      </button>
+      <input class="lui-input-group__item  lui-input-group__input  lui-input {{#if isInverse}}lui-input--inverse{{/if}}" placeholder="Some text"/>
+      <button class="lui-input-group__item  lui-input-group__button  lui-button  lui-hovered  {{#if isInverse}}lui-button--inverse{{/if}}">
+        <span class="lui-button__caret  lui-caret"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="lui-input-group  {{variantClass}}">
+      <button class="lui-input-group__item  lui-input-group__button  lui-button  lui-active {{#if isInverse}}lui-button--inverse{{/if}}">
+        <span class="lui-button__icon  lui-icon  lui-icon--expression"></span>
+      </button>
+      <input class="lui-input-group__item  lui-input-group__input  lui-input lui-disabled {{#if isInverse}}lui-input--inverse{{/if}}" disabled="disabled"/>
+      <button class="lui-input-group__item  lui-input-group__button  lui-focused  lui-button {{#if isInverse}}lui-button--inverse{{/if}}">
+        <span class="lui-button__caret  lui-caret"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="row" dir="rtl">
+    <div class="lui-input-group  {{variantClass}}">
+      <button class="lui-input-group__item  lui-input-group__button  lui-button  {{#if isInverse}}lui-button--inverse{{/if}}">
+        <span class="lui-button__icon  lui-icon  lui-icon--expression"></span>
+      </button>
+      <input class="lui-input-group__item  lui-input-group__input  lui-input lui-focused {{#if isInverse}}lui-input--inverse{{/if}}" placeholder="RTL"/>
+      <button class="lui-input-group__item  lui-input-group__button  lui-disabled  lui-button {{#if isInverse}}lui-button--inverse{{/if}}">
+        <span class="lui-button__caret  lui-caret"></span>
+      </button>
+    </div>
+  </div>
+</div>

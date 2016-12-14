@@ -1,0 +1,14 @@
+@import "./_mixins";
+
+.lui-select--toolbar, // --toolbar class is deprecated in favor of --gradient
+.lui-select--gradient {
+  .select-mixin(
+    @text-color: @text-color;
+    @border-color: fade(@greyscale-0, 20);
+    @background-gradient-from: @greyscale-100;
+    @background-gradient-to: @greyscale-90;
+    @hover-border-color: fade(@greyscale-0, 60);
+    @disabled-text-color: @greyscale-75;
+    @arrow-url: @arrow-url-dark;
+  );
+}

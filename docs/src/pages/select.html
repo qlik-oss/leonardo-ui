@@ -1,0 +1,63 @@
+<div class="component">
+  <h1>Select</h1>
+  <p>Basic select component using the native select component of the browser.
+    The select component and its variants are styled as the button component.</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "default"}}Default{{/example-tab}}
+      {{#example-tab "inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "default"}}
+      <select class="lui-select">
+        <option value="1" selected>First</option>
+        <option value="2">Second</option>
+        <option value="3">Third</option>
+      </select>
+      <select class="lui-select  lui-select--gradient">
+        <option value="1" selected>First</option>
+        <option value="2">Second</option>
+        <option value="3">Third</option>
+      </select>
+    {{/example-tab-content}}
+    {{#example-tab-content "inverse"}}
+      <select class="lui-select  lui-select--inverse">
+        <option value="1" selected>First</option>
+        <option value="2">Second</option>
+        <option value="3">Third</option>
+      </select>
+      <select class="lui-select lui-select--gradient-inverse">
+        <option value="1" selected>First</option>
+        <option value="2">Second</option>
+        <option value="3">Third</option>
+      </select>
+    {{/example-tab-content}}
+  {{/example}}
+  <h2>Select sizing</h2>
+  <p>
+    You can control the size of selects by adding a class. The following sizing options are available:
+    <ul>
+      <li>
+        default - 28px
+      </li>
+      <li>
+        large - 38px
+      </li>
+    </ul>
+  </p>
+  <p>
+    <select class="lui-select  lui-select--large">
+      <option value="1" selected>First</option>
+      <option value="2">Second</option>
+      <option value="3">Third</option>
+    </select>
+  </p>
+  <p>
+    {{#example-code}}
+    <select class="lui-select  lui-select--large">
+      <option value="1" selected>First</option>
+      <option value="2">Second</option>
+      <option value="3">Third</option>
+    </select>
+    {{/example-code}}
+  </p>
+</div>

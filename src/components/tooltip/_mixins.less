@@ -1,0 +1,16 @@
+@import "./_mixins";
+
+.tooltip-arrow-mixin( @dir, @opposite-dir, @side1, @side2 ) {
+  .lui-tooltip__arrow--@{dir} {
+    @{dir}: 0;
+      @{side1}: 50%;
+
+    &:after {
+      @{side1}: -@arrow-size;
+      @{opposite-dir}: 0;
+      border-@{side1}: @arrow-size solid transparent;
+      border-@{side2}: @arrow-size solid transparent;
+      border-@{opposite-dir}: @arrow-size solid fade(@greyscale-0, 90);
+    }
+  }
+}

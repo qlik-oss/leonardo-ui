@@ -1,0 +1,76 @@
+.checkbox-mixin(
+  //Idle / "Off"
+  @normal-background,
+  @normal-border,
+  @normal-icon: @greyscale-100,
+  @label-color,
+
+  //Hover
+  @hover-border,
+
+  //Pressed / Clicked
+  @pressed-background,
+
+  //Active / "On"
+  @active-background,
+
+  //Disabled / "Greyed out"
+  @disabled-background: fade(@greyscale-0, 10),
+  @disabled-icon: @greyscale-100,
+
+  //Focus
+  @focus-border: @blue
+) {
+  .lui-checkbox__check {
+    border-color: @normal-border;
+    background: @normal-background;
+    color: @normal-icon;
+    transition: border-color 200ms ease-out;
+  }
+  .lui-checkbox__check-text {
+    color: @label-color;
+    .user-select(none);
+  }
+
+  // checked
+  .lui-checkbox__input:checked + .lui-checkbox__check-wrap .lui-checkbox__check,
+  .lui-checkbox__input:indeterminate + .lui-checkbox__check-wrap .lui-checkbox__check {
+    background: @active-background;
+    border-color: transparent;
+  }
+
+  // active
+  // use the same class multiple times in some selector
+  // to get all state to the same specificity
+  &&&.lui-active .lui-checkbox__check,
+  &&&:active .lui-checkbox__check,
+  &&& .lui-checkbox__check:active // IE specific ( don't capture presson on label ( IE bug ) )
+  {
+    background: @pressed-background;
+    border-color: transparent;
+  }
+
+  // hovered
+  &&&:hover .lui-checkbox__check,
+  &&&.lui-hovered .lui-checkbox__check
+  {
+    border-color: @hover-border;
+  }
+
+  // focused
+  .lui-checkbox__input:focus + .lui-checkbox__check-wrap .lui-checkbox__check,
+  &&&.lui-focused .lui-checkbox__check
+  {
+    border-color: @focus-border;
+    .focus-style(@focus-border);
+    transition: none;
+  }
+
+  // disabled
+  &&&.lui-disabled .lui-checkbox__check,
+  .lui-checkbox__input:disabled + .lui-checkbox__check-wrap .lui-checkbox__check {
+    background: @disabled-background;
+    border-color: transparent;
+    color: @disabled-icon;
+  }
+}

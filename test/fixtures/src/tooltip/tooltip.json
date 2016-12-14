@@ -1,0 +1,7 @@
+{
+  "fixtures": {
+    "tooltip": {
+      "backgroundClass": "lui-bg-default"
+    }
+  }
+}

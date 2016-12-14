@@ -1,0 +1,29 @@
+@import "./_variables";
+
+.lui-popover__footer {
+  height: @header-footer-height;
+  padding: @header-footer-padding;
+  text-align: right;
+  border-bottom-left-radius: @border-radius;
+  border-bottom-right-radius: @border-radius;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+
+  // Add button margins
+  .lui-button {
+    margin: 0 3px;
+
+    &:last-child {
+      margin-right: 0;
+
+      [dir="rtl"] & {
+        margin-right: 3px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  [dir="rtl"] & {
+    text-align: left;
+  }
+}

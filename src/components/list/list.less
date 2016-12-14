@@ -1,0 +1,61 @@
+@import "./_mixins";
+
+.lui-list {
+  @padding-vertical: 12px;
+  @padding-horizontal: 10px;
+  @header-height: 23px; // 24px - 1px border
+  @item-height: 37px;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__header {
+    display: flex;
+    font-weight: bold;
+    .minHeight(@header-height);
+  }
+
+  &__item {
+    display: flex;
+    .minHeight(@item-height);
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    align-self: center;
+    padding: 0 @padding-horizontal;
+  }
+
+  &__aside {
+    flex: 0 0 auto;
+    align-self: center;
+    padding: 0 @padding-horizontal;
+  }
+
+  &__text--ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__aside + .lui-list__text {
+    padding-left: 0;
+  }
+
+  &__text + .lui-list__aside {
+    padding-left: 0;
+  }
+
+  [dir="rtl"] &__aside + .lui-list__text {
+    padding-left: @padding-horizontal;
+    padding-right: 0;
+  }
+
+  [dir="rtl"] &__text + .lui-list__aside {
+    padding-left: @padding-horizontal;
+    padding-right: 0;
+  }
+
+  .list-mixin();
+}

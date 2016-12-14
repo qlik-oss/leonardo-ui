@@ -1,0 +1,36 @@
+@import "./_mixins";
+
+.lui-tabset--fill {
+  .lui-tab {
+    max-width: none;
+    min-width: 50px;
+    flex: 1 1 auto;
+    justify-content: center;
+    width: 150px;
+
+    &:last-child {
+      border-right: none;
+    }
+    .lui-tab__text {
+      flex: 0 1 auto;
+      text-align: center;
+    }
+  }
+
+  .lui-tab__aside {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  [dir='rtl'] & .lui-tabset--fill {
+    .lui-tab {
+      &:last-child {
+        border-left: none;
+      }
+      .lui-tab__aside {
+        margin-right: 10px;
+        margin-left: 0;
+      }
+    }
+  }
+}

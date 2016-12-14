@@ -1,0 +1,130 @@
+@import "./_mixins";
+
+.lui-switch {
+  vertical-align: middle;
+  position: relative;
+  max-width: 40px;
+  min-width: 40px;
+  height: 22px;
+  padding-top: 5px;
+  .user-select(none);
+  box-sizing: border-box;
+
+  &__checkbox {
+    //Fixes tab order and scroll into view without showing the element
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  // Normal state
+  &__label {
+    // outer rectangle
+    box-sizing: border-box;
+    height: 12px;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 11px;
+  }
+
+  &__inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    /*transition: margin 0.3s ease-in 0s;*/
+
+    [dir="rtl"] & {
+      margin-left: unset;
+      margin-right: -100%;
+    }
+  }
+
+  &__inner:before, &__inner:after {
+    float: left;
+    width: 50%;
+    height: 22px;
+    padding: 0;
+    font-size: 12px;
+
+    [dir="rtl"] & {
+      float: right;
+    }
+  }
+
+  &__switch {
+    box-sizing: border-box;
+    background-clip: padding-box;
+    border-radius: 12px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: -1px;
+    right: 19px;
+    border-width: 1px;
+    border-style: solid;
+
+    [dir="rtl"] & {
+      left: 19px;
+      right: unset;
+    }
+  }
+
+  &__checkbox:checked + &__wrap &__inner {
+    margin-left: 0;
+
+    [dir="rtl"] & {
+      margin-right: 0;
+    }
+  }
+  &__checkbox:checked + &__wrap &__switch {
+    right: -1px;
+
+    [dir="rtl"] & {
+      left: -1px;
+      right: unset;
+    }
+  }
+
+  &__inner:before {
+    content: "";
+  }
+  &__inner:after {
+    content: "";
+    text-align: right;
+
+    [dir="rtl"] & {
+      text-align: left;
+    }
+  }
+}
+
+@import "./_mixins";
+
+.lui-switch {
+  .switch-mixin(
+    //Idle / "Off"
+    @button-gradient-from: @greyscale-100;
+    @button-gradient-to: @greyscale-90;
+    @button-border: @greyscale-80;
+    @normal-background: @greyscale-100;
+    @background-border: @greyscale-80;
+    //Active / "On"
+    @active-background: @orange-lighten-15;
+    //Pressed / Clicked
+    @pressed-background: @greyscale-35;
+    //Focused
+    @focus-border: @blue;
+    //Hovered
+    @hover-border: @greyscale-35;
+    //Disabled
+    @disabled-background: @greyscale-90;
+  );
+}

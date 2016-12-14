@@ -1,0 +1,32 @@
+.lui-textarea {
+  vertical-align: middle;
+  width: 100%;
+  display: block;
+  outline: none;
+  font-size: @input-font-size;
+  height: inherit;
+  min-height: 28px;
+  padding: 6px 6px 4px 6px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  .appearance(none);
+  box-sizing: border-box;
+  box-shadow: none;
+  transition: border-color 200ms ease-out;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  resize: vertical;
+
+  .input-mixin(
+    @text-color: @greyscale-35;
+    @background-color: @greyscale-100;
+    @border-color: @greyscale-70;
+    @hover-border-color: @greyscale-40;
+    @active-border-color: @blue;
+    @invalid-border-color: @red;
+    @placeholder-color: fade(@greyscale-35, 60);
+    @disabled-text-color: fade(@greyscale-35, 80);
+    @disabled-background-color: @greyscale-90;
+  );
+}

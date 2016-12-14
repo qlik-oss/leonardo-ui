@@ -1,0 +1,15 @@
+.input-group-mixin(@text-color, @background-color, @border-color, @hover-border-color, @dividerColor, @buttonTextColor) {
+
+  .lui-input-group__button {
+    .button-mixin(
+      @text-color: @buttonTextColor;
+      @background-color: @background-color;
+      @border-color: @border-color;
+      @hover-border-color: @hover-border-color;
+    );
+  }
+
+  .lui-input-group__input {
+    color: @text-color;
+  }
+}

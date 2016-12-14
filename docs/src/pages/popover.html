@@ -1,0 +1,243 @@
+<div class="component">
+  <h1>Popover</h1>
+  <p>Popover that will dock to an element or a point, displaying an arrow against its docking position. Styling is very similar to the dialog
+    component with the main difference being the outer shadow. Popovers are typically used without the header and/or footer.</p>
+  <p>The popover component is typically used when displaying complementary content. It's easy to dismiss so it should only contain
+    simple actions and not be used to edit a lot of content because the user may loose changes when its closed.</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "inline-default"}}Default{{/example-tab}}
+      {{#example-tab "inline-inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "inline-default"}}
+      <div class="lui-popover" style="width: 400px;">
+        <div class="lui-popover__header">
+          <div class="lui-popover__title">Popover title</div>
+        </div>
+        <div class="lui-popover__body">
+          Bacon ipsum dolor amet ham hock pork short loin, cow bacon doner jerky pork loin hamburger. Pork chop biltong chuck turkey, cow meatloaf corned beef fatback pancetta drumstick landjaeger jowl.
+        </div>
+        <div class="lui-popover__footer">
+          <button class="lui-button  lui-popover__button">Cancel</button>
+          <button class="lui-button  lui-popover__button  close-button">OK</button>
+        </div>
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "inline-inverse"}}
+      <div class="lui-popover  lui-popover--inverse" style="width: 400px;">
+        <div class="lui-popover__header">
+          <div class="lui-popover__title">Popover title</div>
+        </div>
+        <div class="lui-popover__body">
+          Bacon ipsum dolor amet ham hock pork short loin, cow bacon doner jerky pork loin hamburger. Pork chop biltong chuck turkey, cow meatloaf corned beef fatback pancetta drumstick landjaeger jowl.
+        </div>
+        <div class="lui-popover__footer">
+          <button class="lui-button  lui-popover__button  lui-button--inverse">Cancel</button>
+          <button class="lui-button  lui-popover__button  lui-button--inverse  close-button">OK</button>
+        </div>
+      </div>
+    {{/example-tab-content}}
+  {{/example}}
+
+
+  <h2>Popover JS</h2>
+
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "default"}}Default{{/example-tab}}
+      {{#example-tab "inverse"}}Inverse{{/example-tab}}
+      {{#example-tab "js"}}JS{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "default"}}
+      <button class="lui-button  popover-trigger">Open popover (light)</button>
+      <div class="popover-content" style="display: none;">
+        <div class="lui-popover" style="width: 400px;">
+          <div class="lui-popover__header">
+            <div class="lui-popover__title">Popover title</div>
+          </div>
+          <div class="lui-popover__body">
+            Bacon ipsum dolor amet ham hock pork short loin, cow bacon doner jerky pork loin hamburger. Pork chop biltong chuck turkey, cow meatloaf corned beef fatback pancetta drumstick landjaeger jowl.
+          </div>
+          <div class="lui-popover__footer">
+            <button class="lui-button  lui-popover__button">Cancel</button>
+            <button class="lui-button  lui-popover__button  close-button">OK</button>
+          </div>
+        </div>
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "inverse"}}
+      <button class="lui-button  lui-button--inverse  popover-trigger">Open popover (dark)</button>
+      <div class="popover-content" style="display: none;">
+        <div class="lui-popover  lui-popover--inverse" style="width: 400px;">
+          <div class="lui-popover__header">
+            <div class="lui-popover__title">Popover title</div>
+          </div>
+          <div class="lui-popover__body">
+            Bacon ipsum dolor amet ham hock pork short loin, cow bacon doner jerky pork loin hamburger. Pork chop biltong chuck turkey, cow meatloaf corned beef fatback pancetta drumstick landjaeger jowl.
+          </div>
+          <div class="lui-popover__footer">
+            <button class="lui-button  lui-popover__button  lui-button--inverse">Cancel</button>
+            <button class="lui-button  lui-popover__button  lui-button--inverse  close-button">OK</button>
+          </div>
+        </div>
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "js"}}
+      <script>
+        var popoverTriggers = document.querySelectorAll( ".example-box .popover-trigger" );
+        popoverTriggers = [].slice.apply( popoverTriggers ); // convert to array
+        popoverTriggers.forEach( function ( element, idx ) {
+          element.addEventListener( "click", function() {
+            var popover = leonardoui.popover( {
+              content: element.nextElementSibling.innerHTML,
+              closeOnEscape: true,
+              dock: idx === 0 ? "bottom" : "right",
+              alignTo: element
+            } );
+            // Popover was shown
+            var closeButton = popover.element.querySelectorAll( ".close-button" )[0];
+            closeButton.addEventListener( "click", function() {
+              popover.close();
+            } );
+          } );
+        } );
+      </script>
+    {{/example-tab-content}}
+  {{/example}}
+
+  <h3>Options</h3>
+
+  <table class="options">
+    <thead>
+      <th>Option</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>content</td>
+        <td>string | Element</td>
+        <td>HTML content as a string or a Element element</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>dock</td>
+        <td>string | Array</td>
+        <td>Dock to side. Can be a string or an array of "top", "right", "bottom", "left".</td>
+        <td>"bottom"</td>
+      </tr>
+      <tr>
+        <td>alignTo</td>
+        <td>Element / point</td>
+        <td>Element or point (Object with top, left) to dock the popover to.</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>closeOnEscape</td>
+        <td>boolean</td>
+        <td>Close the popover with escape key</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>onClose</td>
+        <td>function</td>
+        <td>Callback fired when the popover is closing</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Custom content</h2>
+  <p>You can remove the padding on the header, content and footer to easier customize content.
+    This example shows how a menu can be implemented and how the footer can be transformed into
+    a button bar.</p>
+
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "custom-default"}}Default{{/example-tab}}
+      {{#example-tab "custom-inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "custom-default"}}
+      <div class="lui-popover" style="width: 250px;">
+        <div class="lui-popover__header">
+          Select an item
+        </div>
+        <div class="lui-popover__body lui-nopad">
+          <ul class="lui-list">
+            <li class="lui-list__item">
+              <span class="lui-list__text lui-list__action">Menu item 1</span>
+            </li>
+            <li class="lui-list__item">
+              <span class="lui-list__text lui-list__action">Menu item 2</span>
+            </li>
+            <li class="lui-list__item">
+              <span class="lui-list__text lui-list__action">Menu item 3</span>
+            </li>
+            <li class="lui-list__item">
+              <span class="lui-list__text lui-list__action">Menu item 4</span>
+            </li>
+            <li class="lui-list__item">
+              <span class="lui-list__text lui-list__action">Menu item 5</span>
+            </li>
+          </ul>
+        </div>
+        <div class="lui-popover__footer lui-nopad" style="display: flex; justify-content: space-around;">
+          <button class="lui-fade-button  lui-fade-button--large">
+            <span class="lui-fade-button__icon  lui-icon  lui-icon--plus"></span>
+          </button>
+          <button class="lui-fade-button  lui-fade-button--large">
+            <span class="lui-fade-button__icon  lui-icon  lui-icon--edit"></span>
+          </button>
+          <button class="lui-fade-button  lui-fade-button--large">
+            <span class="lui-fade-button__icon  lui-icon  lui-icon--bin"></span>
+          </button>
+          <button class="lui-fade-button  lui-fade-button--large">
+            <span class="lui-fade-button__icon  lui-icon  lui-icon--drop"></span>
+          </button>
+        </div>
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "custom-inverse"}}
+      <div class="lui-popover lui-popover--inverse"  style="width: 250px;">
+        <div class="lui-popover__header">
+          Select an item
+        </div>
+        <div class="lui-popover__body lui-nopad">
+          <ul class="lui-list  lui-list--inverse">
+            <li class="lui-list__item">
+              <span class="lui-list__text lui-list__action">Menu item 1</span>
+            </li>
+            <li class="lui-list__item">
+              <span class="lui-list__text lui-list__action">Menu item 2</span>
+            </li>
+            <li class="lui-list__item">
+              <span class="lui-list__text lui-list__action">Menu item 3</span>
+            </li>
+            <li class="lui-list__item">
+              <span class="lui-list__text lui-list__action">Menu item 4</span>
+            </li>
+            <li class="lui-list__item">
+              <span class="lui-list__text lui-list__action">Menu item 5</span>
+            </li>
+          </ul>
+        </div>
+        <div class="lui-popover__footer lui-nopad" style="display: flex; justify-content: space-around;">
+          <button class="lui-fade-button  lui-fade-button--inverse  lui-fade-button--large">
+            <span class="lui-fade-button__icon  lui-icon  lui-icon--plus"></span>
+          </button>
+          <button class="lui-fade-button  lui-fade-button--inverse  lui-fade-button--large">
+            <span class="lui-fade-button__icon  lui-icon  lui-icon--edit"></span>
+          </button>
+          <button class="lui-fade-button  lui-fade-button--inverse  lui-fade-button--large">
+            <span class="lui-fade-button__icon  lui-icon  lui-icon--bin"></span>
+          </button>
+          <button class="lui-fade-button  lui-fade-button--inverse  lui-fade-button--large">
+            <span class="lui-fade-button__icon  lui-icon  lui-icon--drop"></span>
+          </button>
+        </div>
+      </div>
+    {{/example-tab-content}}
+  {{/example}}
+
+</div>

@@ -1,0 +1,31 @@
+<div class="component">
+  <h1>Search</h1>
+  <p>Search field with a clear icon that is shown when the user has entered text.
+    The component does not provide borders to be more flexible. If you want borders, 
+    use for example the following colors:
+    <ul>
+      <li>Default - fade(@greyscale-0, 10) or rgba(0, 0, 0, 0.1)</li>
+      <li>Inverse - fade(@greyscale-100, 15) or rgba(255, 255, 255, 0.15)</li>
+    </ul>
+  </p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "default"}}Default{{/example-tab}}
+      {{#example-tab "inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "default"}}
+      <div class="lui-search">
+        <span class="lui-search__search-icon"></span>
+        <input class="lui-search__input" maxlength="255" spellcheck="false" type="text" placeholder="Search"/>
+        <span class="lui-search__clear-icon"></span>
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "inverse"}}
+      <div class="lui-search  lui-search--inverse">
+        <span class="lui-search__search-icon"></span>
+        <input class="lui-search__input" maxlength="255" spellcheck="false" type="text" placeholder="Search"/>
+        <span class="lui-search__clear-icon"></span>
+      </div>
+    {{/example-tab-content}}
+  {{/example}}
+</div>

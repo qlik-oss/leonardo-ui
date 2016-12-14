@@ -1,0 +1,217 @@
+<div class="component">
+  <h1>Dialog</h1>
+  <p>Modal dialog that will show its content at the center of the page.</p>
+  <p>Typical usage is to display important messages which may or may not require the user to take an action or to provide a
+    way of manipulating content on the page without leaving the current context.</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "inline-default"}}Default{{/example-tab}}
+      {{#example-tab "inline-inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "inline-default"}}
+      <div class="lui-modal-background"></div>
+      <div class="lui-dialog" style="width: 400px;">
+        <div class="lui-dialog__header">
+          <div class="lui-dialog__title">Dialog title</div>
+        </div>
+        <div class="lui-dialog__body">
+          Bacon ipsum dolor amet ham hock pork short loin, cow bacon doner jerky pork loin hamburger. Pork chop biltong chuck turkey, cow meatloaf corned beef fatback pancetta drumstick landjaeger jowl.
+        </div>
+        <div class="lui-dialog__footer">
+          <button class="lui-button  lui-dialog__button">Cancel</button>
+          <button class="lui-button  lui-dialog__button  close-button">OK</button>
+        </div>
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "inline-inverse"}}
+      <div class="lui-modal-background"></div>
+      <div class="lui-dialog  lui-dialog--inverse" style="width: 400px;">
+        <div class="lui-dialog__header">
+          <div class="lui-dialog__title">Dialog title</div>
+        </div>
+        <div class="lui-dialog__body">
+          Bacon ipsum dolor amet ham hock pork short loin, cow bacon doner jerky pork loin hamburger. Pork chop biltong chuck turkey, cow meatloaf corned beef fatback pancetta drumstick landjaeger jowl.
+        </div>
+        <div class="lui-dialog__footer">
+          <button class="lui-button  lui-dialog__button  lui-button--inverse">Cancel</button>
+          <button class="lui-button  lui-dialog__button  lui-button--inverse  close-button">OK</button>
+        </div>
+      </div>
+    {{/example-tab-content}}
+  {{/example}}
+
+  <h2>Dialog JS</h2>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "default"}}Default{{/example-tab}}
+      {{#example-tab "inverse"}}Inverse{{/example-tab}}
+      {{#example-tab "js"}}JS{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "default"}}
+      <button class="lui-button  dialog-trigger">Open dialog (light)</button>
+      <div class="dialog-content" style="display: none;">
+        <div class="lui-dialog" style="width: 400px;">
+          <div class="lui-dialog__header">
+            <div class="lui-dialog__title">Dialog title</div>
+          </div>
+          <div class="lui-dialog__body">
+            Bacon ipsum dolor amet ham hock pork short loin, cow bacon doner jerky pork loin hamburger. Pork chop biltong chuck turkey, cow meatloaf corned beef fatback pancetta drumstick landjaeger jowl.
+          </div>
+          <div class="lui-dialog__footer">
+            <button class="lui-button  lui-dialog__button">Cancel</button>
+            <button class="lui-button  lui-dialog__button  close-button">OK</button>
+          </div>
+        </div>
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "inverse"}}
+      <button class="lui-button  lui-button--inverse  dialog-trigger">Open dialog (dark)</button>
+      <div class="dialog-content" style="display: none;">
+        <div class="lui-dialog  lui-dialog--inverse" style="width: 400px;">
+          <div class="lui-dialog__header">
+            <div class="lui-dialog__title">Dialog title</div>
+          </div>
+          <div class="lui-dialog__body">
+            Bacon ipsum dolor amet ham hock pork short loin, cow bacon doner jerky pork loin hamburger. Pork chop biltong chuck turkey, cow meatloaf corned beef fatback pancetta drumstick landjaeger jowl.
+          </div>
+          <div class="lui-dialog__footer">
+            <button class="lui-button  lui-dialog__button  lui-button--inverse">Cancel</button>
+            <button class="lui-button  lui-dialog__button  lui-button--inverse  close-button">OK</button>
+          </div>
+        </div>
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "js"}}
+      <script>
+        var dialogTriggers = document.querySelectorAll( ".example-box .dialog-trigger" );
+        dialogTriggers = [].slice.apply( dialogTriggers ); // convert to array
+        dialogTriggers.forEach( function ( element ) {
+          element.addEventListener( "click", function() {
+            var dialog = leonardoui.dialog( {
+              content: element.nextElementSibling.innerHTML,
+              closeOnEscape: true
+            } );
+            // Dialog was shown
+            var closeButton = dialog.element.querySelectorAll( ".close-button" )[0];
+            closeButton.focus();
+            closeButton.addEventListener( "click", function() {
+              dialog.close();
+            } );
+          } );
+        } );
+      </script>
+    {{/example-tab-content}}
+  {{/example}}
+
+  <h3>Options</h3>
+
+  <table class="options">
+    <thead>
+      <th>Option</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>content</td>
+        <td>string | Element</td>
+        <td>HTML content as a string or a Element element</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>closeOnEscape</td>
+        <td>boolean</td>
+        <td>Close the dialog with escape key</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>onClose</td>
+        <td>function</td>
+        <td>Callback fired when the dialog is closing</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Mobile header</h2>
+  <p>Use a mobile variant on the header and fade buttons to style the header as commonly seen on mobile devices.</p>
+  <p class="lui-text-danger">Experimental</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "action-default"}}Default{{/example-tab}}
+      {{#example-tab "action-inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "action-default"}}
+      <div class="lui-modal-background"></div>
+      <div class="lui-dialog" style="width: 400px;">
+        <div class="lui-dialog__header  lui-header__header  lui-dialog__header--mobile">
+          <button class="lui-fade-button">Action 1</button>
+          <div class="lui-dialog__title">Dialog title</div>
+          <button class="lui-fade-button">Action 2</button>
+        </div>
+        <div class="lui-dialog__body">
+          Bacon ipsum dolor amet ham hock pork short loin, cow bacon doner jerky pork loin hamburger. Pork chop biltong chuck turkey, cow meatloaf corned beef fatback pancetta drumstick landjaeger jowl.
+        </div>
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "action-inverse"}}
+      <div class="lui-modal-background"></div>
+      <div class="lui-dialog  lui-dialog--inverse" style="width: 400px;">
+        <div class="lui-dialog__header  lui-header__header  lui-dialog__header--mobile">
+          <button class="lui-fade-button  lui-fade-button--inverse">Action 1</button>
+          <div class="lui-dialog__title">Dialog title</div>
+          <button class="lui-fade-button  lui-fade-button--inverse">Action 2</button>
+        </div>
+        <div class="lui-dialog__body">
+          Bacon ipsum dolor amet ham hock pork short loin, cow bacon doner jerky pork loin hamburger. Pork chop biltong chuck turkey, cow meatloaf corned beef fatback pancetta drumstick landjaeger jowl.
+        </div>
+      </div>
+    {{/example-tab-content}}
+  {{/example}}
+
+  <h2>Mobile content and footer</h2>
+  <p>To get a typical mobile styling of the content with buttons in the footer, add the following markup:</p>
+  <p class="lui-text-danger">Experimental</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "mobile-default"}}Default{{/example-tab}}
+      {{#example-tab "mobile-inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "mobile-default"}}
+      <div class="lui-modal-background"></div>
+      <div class="lui-dialog" style="width: 400px;">
+        <div class="lui-dialog__body">
+          <h2 align="center">Dialog Title</h2>
+          Bacon ipsum dolor amet ham hock pork short loin, cow bacon doner jerky pork loin hamburger. Pork chop biltong chuck turkey, cow meatloaf corned beef fatback pancetta drumstick landjaeger jowl.
+        </div>
+        <div class="lui-dialog__footer  lui-dialog__footer--mobile">
+          <button class="lui-button  lui-dialog__button  lui-dialog__button--mobile">
+            <span class="lui-button__text">Cancel</span>
+          </button>
+          <button class="lui-button  lui-dialog__button  lui-dialog__button--mobile">
+            <span class="lui-button__text">OK</span>
+          </button>
+        </div>
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "mobile-inverse"}}
+      <div class="lui-modal-background"></div>
+      <div class="lui-dialog  lui-dialog--inverse" style="width: 400px;">
+        <div class="lui-dialog__body">
+          <h2 align="center">Dialog Title</h2>
+          Bacon ipsum dolor amet ham hock pork short loin, cow bacon doner jerky pork loin hamburger. Pork chop biltong chuck turkey, cow meatloaf corned beef fatback pancetta drumstick landjaeger jowl.
+        </div>
+        <div class="lui-dialog__footer  lui-dialog__footer--mobile">
+          <button class="lui-button  lui-dialog__button  lui-dialog__button--mobile  lui-button--inverse">
+            <span class="lui-button__text">Cancel</span>
+          </button>
+          <button class="lui-button  lui-dialog__button  lui-dialog__button--mobile  lui-button--inverse">
+            <span class="lui-button__text">OK</span>
+          </button>
+        </div>
+      </div>
+    {{/example-tab-content}}
+  {{/example}}
+
+</div>

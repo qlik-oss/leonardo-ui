@@ -1,0 +1,12 @@
+@import "./_mixins";
+
+.lui-input-group--inverse {
+  .input-group-mixin(
+    @text-color: @greyscale-100;
+    @background-color: fade(@greyscale-100, 30);
+    @border-color: transparent;
+    @hover-border-color: @greyscale-100;
+    @dividerColor: fade(@greyscale-100, 30);
+    @buttonTextColor: fade(@greyscale-100, 60);
+  );
+}

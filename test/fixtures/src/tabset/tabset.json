@@ -1,0 +1,24 @@
+{
+  "fixtures": {
+  "tabset": {
+    "tabActive" : "lui-active",
+    "tabHover":"lui-hovered",
+    "tabDisabled" :"lui-disabled",
+      "backgroundClass": "lui-bg-default"
+  },
+  "tab-inverse": {
+    "tabVariantClass": "lui-tab--inverse",
+    "tabActive" : "lui-active",
+    "tabHover":"lui-hovered",
+    "tabDisabled" :"lui-disabled",
+    "backgroundClass": "lui-bg-inverse"
+  },
+  "tabset-fill": {
+    "variantClass": "lui-tabset--fill",
+    "tabActive" : "lui-active",
+    "tabHover":"lui-hovered",
+    "tabDisabled" :"lui-disabled",
+    "backgroundClass": "lui-bg-default"
+  }
+  }
+}

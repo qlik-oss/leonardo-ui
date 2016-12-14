@@ -1,0 +1,29 @@
+.dialog-mixin(
+  @background-color;
+  @text-color;
+  @border-color;
+  @shadow-color;
+  @headerFooterBackgroundColor;
+  @headerFooterDividerColor
+) {
+  color: @text-color;
+  background-color: @background-color;
+  border-color: @border-color;
+  box-shadow: 0 2px 25px @shadow-color;
+
+  .lui-dialog__header, .lui-dialog__footer {
+    background-color: @headerFooterBackgroundColor;
+  }
+
+  .lui-dialog__header {
+    border-bottom: 1px solid @headerFooterDividerColor;
+  }
+
+  .lui-dialog__footer, .lui-dialog__footer--mobile {
+    border-top: 1px solid @headerFooterDividerColor;
+  }
+
+  .lui-dialog__button--mobile {
+    border-top: 1px solid @headerFooterDividerColor;
+  }
+}

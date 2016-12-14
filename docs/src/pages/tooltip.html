@@ -1,0 +1,110 @@
+<div class="component">
+  <h1>Tooltip</h1>
+  <p>The tooltip component can display a simple text or more advanced HTML content.
+    It is typically used to display a small amount of complementary information.</p>
+
+  <div class="example">
+    <div class="example-box">
+      <div class="lui-tooltip">
+        Simple tooltip
+        <div class="lui-tooltip__arrow lui-tooltip__arrow--right"></div>
+      </div>
+      <div class="lui-tooltip" style="width: 200px;">
+        This tooltip has <b>HTML content</b> and is displayed over multiple lines.
+        <div class="lui-tooltip__arrow lui-tooltip__arrow--right"></div>
+      </div>
+    </div>
+    {{#example-code}}
+      <div class="lui-tooltip">
+        Simple tooltip
+        <div class="lui-tooltip__arrow lui-tooltip__arrow--right"></div>
+      </div>
+      <div class="lui-tooltip" style="width: 200px;">
+        This tooltip has <b>HTML content</b> and is displayed over multiple lines.
+        <div class="lui-tooltip__arrow lui-tooltip__arrow--right"></div>
+      </div>
+    {{/example-code}}
+  </div>
+
+  <h2>Tooltip JS</h2>
+
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "markup"}}Markup{{/example-tab}}
+      {{#example-tab "js"}}JS{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "markup"}}
+      <div>
+        <a class="tooltip-trigger" aria-haspopup="true" title="This is the tooltip text to be displayed">Hover me (top)</a>
+      </div>
+      <div>
+        <a class="tooltip-trigger" aria-haspopup="true" title="This is the tooltip text to be displayed">Hover me (right)</a>
+      </div>
+      <div>
+        <a class="tooltip-trigger" aria-haspopup="true" title="This is the tooltip text to be displayed">Hover me (bottom)</a>
+      </div>
+      <div>
+        <a class="tooltip-trigger" aria-haspopup="true" title="This is the tooltip text to be displayed">Hover me (left)</a>
+      </div>
+      <div>
+        <a class="tooltip-trigger" aria-haspopup="true">Hover me (HTML content)</a>
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "js"}}
+      <script>
+        var docks = ["top", ["right", "left"], "bottom", ["left", "right"], "right"];
+        var tooltipTriggers = Array.prototype.slice.apply( document.querySelectorAll( ".tooltip-trigger" ) );
+        tooltipTriggers.forEach( function( element, idx ) {
+          var dock = docks[idx];
+          var tooltip;
+          element.addEventListener( "mouseover", function() {
+            var options = {
+              alignTo: element,
+              dock: dock
+            };
+            if ( idx === 4 ) {
+              options.content = "<span>This text is bold and italic: <b><i>1337</i></b></span>"
+            }
+            tooltip = leonardoui.tooltip( options );
+          } );
+          element.addEventListener( "mouseout", function() {
+            if ( tooltip ) {
+              tooltip.close();
+            }
+          } );
+        } );
+      </script>
+    {{/example-tab-content}}
+  {{/example}}
+
+  <h3>Options</h3>
+
+  <table class="options">
+    <thead>
+      <th>Option</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>alignTo</td>
+        <td>Element / point</td>
+        <td>Element or point (Object with top, left) to dock the tooltip to.</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>dock</td>
+        <td>string | Array</td>
+        <td>Dock to side. Can be a string or an array of "top", "right", "bottom", "left".</td>
+        <td>"bottom"</td>
+      </tr>
+      <tr>
+        <td>content</td>
+        <td>string | Element</td>
+        <td>HTML content as a string or a Element element. If left empty, the title attribute of the alignTo element will be used.</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,11 @@
+{
+  "fixtures": {
+    "radiobutton": {
+      "backgroundClass": "lui-bg-default"
+    },
+    "radiobutton-inverse": {
+      "variantClass": "lui-radiobutton--inverse",
+      "backgroundClass": "lui-bg-inverse"
+    }
+  }
+}

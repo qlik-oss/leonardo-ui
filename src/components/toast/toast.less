@@ -1,0 +1,64 @@
+@import "./_variables";
+
+.lui-toast {
+	min-height: 28px;
+	max-width: 400px;
+	display: flex;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+	border-radius: 3px;
+	font-size: @toast-font-size;
+	position: relative;
+	transition: opacity 50ms ease-out;
+	opacity: 1.0;
+	z-index: @toast-z-index;
+	justify-content: center;
+	color: fade(@greyscale-100,80);
+	background-color: @greyscale-5;
+}
+
+.lui-toast__text {
+	display: flex;
+	flex: 1 1 100%;
+	align-items: center;
+	padding: 5px 10px;
+	cursor: default;
+}
+
+.lui-toast__aside {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	border-left: 1px solid fade(@greyscale-100, 15);
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.lui-toast-service {
+	visibility: hidden;
+	position: fixed;
+	bottom: 30px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.animate(@transition, @opacity, @visibility, @transformation ) {
+	transition: @transition;
+	transform: @transformation;
+
+	opacity: @opacity;
+	visibility: @visibility;
+}
+
+.lui-toast-show-animation {
+	.animate(@animationTime, 1, visible, @animationUp);
+}
+
+.lui-toast-prepare-animation {
+	.animate(@setUpTime, 0, hidden, @startPosition);
+}
+
+.lui-toast-hide-animation {
+	.animate(@animationTime, 0, hidden, @animationUp);
+}

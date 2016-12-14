@@ -1,0 +1,89 @@
+@import "./_mixins";
+
+.lui-select {
+  box-sizing: border-box;
+  border: solid 1px;
+
+  height: 28px;
+  width: 100%;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  line-height: 24px;
+  padding: 1px 25px 1px 10px;
+  min-width: 44px;
+
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  font-size: @select-font-size;
+  font-weight: bold;
+
+  .appearance(none);
+  .user-select(none);
+  background-clip: border-box;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 200ms ease-out;
+
+  &::-moz-focus-inner/* remove firefox dotted outline */ {
+    border: 0;
+  }
+
+  // normal background
+  background-size: 8px 5.5px, auto auto;
+  background-origin: border-box, padding-box;
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 10px top 50%, left top;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:active,
+  &.lui-active {
+    background-size: 8px 5.5px;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+  }
+
+  &[disabled],
+  &.lui-disabled {
+    cursor: default;
+    background-size: 8px 5.5px, auto auto;
+    background-origin: border-box, padding-box;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 10px top 50%, left top;
+  }
+
+  option, optgroup {
+    color: @text-color;
+    background: @greyscale-100;
+  }
+  option {
+    font-weight: normal; // only used firefox
+    padding: 1px 9px; // only used firefox
+  }
+
+  &--large {
+    height: 38px;
+    font-size: 14px;
+  }
+}
+
+.lui-select {
+  .select-mixin(
+    @text-color: @text-color;
+    @border-color: @greyscale-70;
+    @background-gradient-from: transparent;
+    @background-gradient-to: transparent;
+    @hover-border-color: @greyscale-40;
+    @disabled-text-color: @greyscale-75;
+    @arrow-url: @arrow-url-dark;
+  );
+}

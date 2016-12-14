@@ -1,0 +1,11 @@
+{
+  "fixtures": {
+    "switch": {
+      "backgroundClass": "lui-bg-default"
+    },
+    "switch-inverse": {
+      "variantClass": "lui-switch--inverse",
+      "backgroundClass": "lui-bg-inverse"
+    }
+  }
+}

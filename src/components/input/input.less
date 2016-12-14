@@ -1,0 +1,27 @@
+.lui-input {
+  vertical-align: middle;
+  width: 100%;
+  height: 28px;
+  display: block;
+  outline: none;
+  font-size: @input-font-size;
+  padding: 3px 6px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  .appearance(none);
+  box-sizing: border-box;
+  box-shadow: none;
+  transition: border-color 200ms ease-out;
+
+  .input-mixin(
+    @text-color: @greyscale-35;
+    @background-color: @greyscale-100;
+    @border-color: @greyscale-70;
+    @hover-border-color: @greyscale-40;
+    @active-border-color: @blue;
+    @invalid-border-color: @red;
+    @placeholder-color: fade(@greyscale-35, 60);
+    @disabled-text-color: fade(@greyscale-35, 80);
+    @disabled-background-color: @greyscale-90;
+  );
+}

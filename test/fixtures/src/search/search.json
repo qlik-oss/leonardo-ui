@@ -1,0 +1,11 @@
+{
+  "fixtures": {
+    "search": {
+      "backgroundClass": "lui-bg-default"
+    },
+    "search-inverse": {
+      "backgroundClass": "lui-bg-inverse",
+      "variantClass": "lui-search--inverse"
+    }
+  }
+}

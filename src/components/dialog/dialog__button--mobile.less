@@ -1,0 +1,27 @@
+.lui-dialog__button--mobile.lui-button {
+  .button--block-content-positioning-mixin(@button-selector: lui-dialog__button--mobile);
+
+  height: 54px;
+  font-size: 16px;
+  margin: 0;
+
+  &:first-child:not(:last-child) {
+    border-top: none;
+    border-left: hidden;
+    border-right: hidden;
+    border-bottom: hidden;
+    border-radius: 0;
+  }
+
+  &:last-child:not(:first-child) {
+    border-left: hidden;
+    border-right: hidden;
+    border-bottom: hidden;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  [dir="rtl"] & {
+    margin: 0;
+  }
+}

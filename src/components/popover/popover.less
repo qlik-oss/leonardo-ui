@@ -1,0 +1,28 @@
+@import "./_mixins";
+@import "./_variables";
+
+.lui-popover {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: @border-radius;
+  margin: auto;
+  min-width: 250px;
+  border: 1px solid transparent;
+  transition: opacity 200ms ease-out;
+  opacity: 1.0;
+  z-index: @popover-z-index;
+
+  &.lui-fade {
+    opacity: 0;
+  }
+
+  .popover-mixin(
+    @background-color: @greyscale-100;
+    @text-color: @greyscale-35;
+    @border-color: @greyscale-50;
+    @shadow-color: fade(@greyscale-0, 40);
+    @headerFooterBackgroundColor: @greyscale-98;
+    @headerFooterDividerColor: fade(@greyscale-0, 20);
+  );
+}

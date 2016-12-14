@@ -1,0 +1,85 @@
+@import "./_mixins";
+
+.lui-input-group {
+  @paddingTopBottom: 4px;
+  @paddingLeftRight: 7px;
+  @height: 28px;
+  @borderRadius: 3px;
+
+  vertical-align: middle;
+
+  height: @height;
+  width: 100%;
+  outline: none;
+
+  box-sizing: border-box;
+  display: flex;
+
+  font-size: 0;
+
+  .lui-input-group__item {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    margin: 0;
+    border-radius: 0;
+
+    &:invalid,
+    &.lui-invalid {
+      z-index: 1;
+    }
+
+    &.lui-active,
+    &.lui-hovered,
+    &.lui-focused {
+      z-index: 2;
+    }
+
+    &:hover,
+    &:active {
+      z-index: 3;
+    }
+
+    &:focus {
+      z-index: 4;
+    }
+
+    &:first-child {
+      border-radius: @borderRadius 0 0 @borderRadius;
+    }
+
+    &:last-child {
+      border-radius: 0 @borderRadius @borderRadius 0;
+    }
+
+    &:not(:last-child) {
+      margin-right: -1px;
+    }
+
+    [dir="rtl"] &:first-child {
+      border-radius: 0 @borderRadius @borderRadius 0;
+    }
+
+    [dir="rtl"] &:last-child {
+      border-radius: @borderRadius 0 0 @borderRadius;
+    }
+
+    [dir="rtl"] &:not(:last-child) {
+      margin-right: 0;
+      margin-left: -1px;
+    }
+  }
+
+  .lui-input-group__input {
+    min-width: 44px;
+    flex: 1 1 auto;
+  }
+
+  .input-group-mixin(
+    @text-color: @greyscale-35;
+    @background-color: @greyscale-100;
+    @border-color: @greyscale-70;
+    @hover-border-color: @greyscale-40;
+    @dividerColor: @greyscale-70;
+    @buttonTextColor: @greyscale-35;
+  );
+}

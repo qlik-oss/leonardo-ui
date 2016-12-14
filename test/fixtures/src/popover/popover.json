@@ -1,0 +1,26 @@
+{
+  "fixtures": {
+    "popover": {
+      "backgroundClass": "lui-bg-default"
+    },
+    "popover-inverse": {
+      "isInverse": true,
+      "variantClass": "lui-popover--inverse",
+      "backgroundClass": "lui-bg-inverse"
+    },
+    "popover-nopadding": {
+      "backgroundClass": "lui-bg-default",
+      "isNopad": true
+    },
+    "popover-rtl": {
+      "rtl": true,
+      "backgroundClass": "lui-bg-default"
+    },
+    "popover-inverse-rtl": {
+      "rtl": true,
+      "isInverse": true,
+      "variantClass": "lui-popover--inverse",
+      "backgroundClass": "lui-bg-inverse"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+<div class="component">
+  <h1>Radio buttons</h1>
+  <p>Radio button component. Use it when the user need to select a value from multiple choises (typically 3-7).</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "default"}}Default{{/example-tab}}
+      {{#example-tab "inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "default"}}
+      <label class="lui-radiobutton">
+        <input class="lui-radiobutton__input" type="radio" aria-label="First button" name="myradio" value="1" checked>
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">First button</span>
+        </div>
+      </label>
+      <label class="lui-radiobutton">
+        <input class="lui-radiobutton__input" type="radio" aria-label="Second button" name="myradio" value="2">
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">Second button</span>
+        </div>
+      </label>
+      <label class="lui-radiobutton">
+        <input class="lui-radiobutton__input" type="radio" aria-label="Third button" name="myradiodisabled" value="3" disabled checked>
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">Third button</span>
+        </div>
+      </label>
+      <label class="lui-radiobutton">
+        <input class="lui-radiobutton__input" type="radio" aria-label="Fourth button" name="myradiodisabled" value="4" disabled>
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">Fourth button</span>
+        </div>
+      </label>
+    {{/example-tab-content}}
+    {{#example-tab-content "inverse"}}
+      <label class="lui-radiobutton  lui-radiobutton--inverse">
+        <input class="lui-radiobutton__input" type="radio" aria-label="First button" name="mydarkradio" value="1" checked>
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">First button</span>
+        </div>
+      </label>
+      <label class="lui-radiobutton  lui-radiobutton--inverse">
+        <input class="lui-radiobutton__input" type="radio" aria-label="Second button" name="mydarkradio" value="2">
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">Second button</span>
+        </div>
+      </label>
+      <label class="lui-radiobutton  lui-radiobutton--inverse">
+        <input class="lui-radiobutton__input" type="radio" aria-label="Third button" name="mydarkradiodisabled" value="3" disabled checked>
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">Third button</span>
+        </div>
+      </label>
+      <label class="lui-radiobutton  lui-radiobutton--inverse">
+        <input class="lui-radiobutton__input" type="radio" aria-label="Fourth button" name="mydarkradiodisabled" value="4" disabled>
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">Fourth button</span>
+        </div>
+      </label>
+    {{/example-tab-content}}
+  {{/example}}
+</div>

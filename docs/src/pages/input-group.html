@@ -1,0 +1,32 @@
+<div class="component">
+  <h1>Input group</h1>
+  <p>Input group with ability to handle multiple items on the left and right.</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "default"}}Default{{/example-tab}}
+      {{#example-tab "inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "default"}}
+      <div class="lui-input-group">
+        <button class="lui-input-group__item  lui-input-group__button  lui-button">
+          <span class="lui-button__icon  lui-icon  lui-icon--expression"></span>
+        </button>
+        <input class="lui-input-group__item  lui-input-group__input  lui-input"/>
+        <button class="lui-input-group__item  lui-input-group__button  lui-button">
+          <span class="lui-button__icon  lui-icon  lui-icon--expression"></span>
+        </button>
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "inverse"}}
+      <div class="lui-input-group  lui-input-group--inverse">
+        <button class="lui-input-group__item  lui-input-group__button  lui-button  lui-button--inverse">
+          <span class="lui-button__icon  lui-icon  lui-icon--expression"></span>
+        </button>
+        <input class="lui-input-group__item  lui-input-group__input  lui-input  lui-input--inverse"/>
+        <button class="lui-input-group__item  lui-input-group__button  lui-button  lui-button--inverse">
+          <span class="lui-button__icon  lui-icon  lui-icon--expression"></span>
+        </button>
+      </div>
+    {{/example-tab-content}}
+  {{/example}}
+</div>

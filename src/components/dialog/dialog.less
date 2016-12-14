@@ -1,0 +1,43 @@
+@import "./_mixins";
+@import "./_variables";
+
+.lui-dialog {
+  position: relative;
+  border-radius: @border-radius;
+  margin: auto;
+  min-width: 250px;
+  max-height: 100%;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  z-index: @dialog-z-index;
+
+  &.lui-fade {
+    opacity: 0;
+  }
+
+  .dialog-mixin(
+    @background-color: @greyscale-100;
+    @text-color: @greyscale-35;
+    @border-color: @greyscale-50;
+    @shadow-color: fade(@greyscale-0, 40);
+    @headerFooterBackgroundColor: @greyscale-98;
+    @headerFooterDividerColor: fade(@greyscale-0, 20);
+  );
+}
+
+.lui-dialog-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: opacity 200ms ease-out;
+  opacity: 1.0;
+  z-index: @dialog-z-index;
+}

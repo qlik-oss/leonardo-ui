@@ -1,0 +1,11 @@
+{
+  "fixtures": {
+    "input": {
+      "backgroundClass": "lui-bg-default"
+    },
+    "input-inverse": {
+      "backgroundClass": "lui-bg-inverse",
+      "variantClass": "lui-input--inverse"
+    }
+  }
+}

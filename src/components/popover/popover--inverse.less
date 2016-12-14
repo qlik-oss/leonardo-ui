@@ -1,0 +1,12 @@
+@import "./_mixins";
+
+.lui-popover--inverse {
+  .popover-mixin(
+    @background-color: @greyscale-25;
+    @text-color: @greyscale-100;
+    @border-color: @greyscale-20;
+    @shadow-color: fade(@greyscale-0, 60);
+    @headerFooterBackgroundColor: @greyscale-28;
+    @headerFooterDividerColor: fade(@greyscale-0, 30);
+  );
+}

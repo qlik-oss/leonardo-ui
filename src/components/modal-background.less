@@ -1,0 +1,16 @@
+
+.lui-modal-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0.3;
+  background-color: @greyscale-0;
+  z-index: @modal-bg-z-index;
+  transition: opacity 200ms ease-out;
+
+  &.lui-fade {
+    opacity: 0;
+  }
+}

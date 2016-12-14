@@ -1,0 +1,44 @@
+.select-mixin(
+  @text-color, @border-color, @arrow-url, @background-gradient-from, @background-gradient-to,
+  @hover-border-color, @disabled-text-color) {
+
+  color: @text-color;
+  border-color: @border-color;
+  background-color: @background-gradient-to; // fallback color if gradients are not supported
+  background-image: @arrow-url, -webkit-linear-gradient(top, @background-gradient-from, @background-gradient-to); // For Chrome and Safari
+  background-image: @arrow-url, linear-gradient(to bottom, @background-gradient-from, @background-gradient-to); // Standard syntax; must be last
+
+  &:hover,
+  &.lui-hovered {
+    border-color: @hover-border-color;
+  }
+
+  &:active,
+  &.lui-active {
+    color: @greyscale-100;
+    border-color: transparent;
+    background-color: fade(@greyscale-0, 65);
+    background-image: @arrow-url-light;
+  }
+
+  &:focus,
+  &.lui-focused {
+    .focus-style();
+    transition: none;
+
+    // avoid blue square in IE
+    &::-ms-value {
+      background: none;
+      color: @text-color;
+    }
+  }
+
+  &[disabled],
+  &.lui-disabled {
+    border: solid 1px @border-color;
+    color: @disabled-text-color;
+    background-color: @background-gradient-to; // fallback color if gradients are not supported
+    background-image: @arrow-url-grey, -webkit-linear-gradient(top, @background-gradient-from, @background-gradient-to); // For Chrome and Safari
+    background-image: @arrow-url-grey, linear-gradient(to bottom, @background-gradient-from, @background-gradient-to); // Standard syntax; must be last
+  }
+}

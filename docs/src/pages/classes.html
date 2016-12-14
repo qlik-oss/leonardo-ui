@@ -1,0 +1,118 @@
+<div class="component">
+  <h1>Utility classes</h1>
+
+  <h2>Text highlight</h2>
+  <p>Highlight a part of a text.</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "highlight-default"}}Default{{/example-tab}}
+      {{#example-tab "highlight-inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "highlight-default"}}
+      This is a text and <span class="lui-texthighlight">this part</span> should be highlighted.
+    {{/example-tab-content}}
+    {{#example-tab-content "highlight-inverse"}}
+      This is a text and <span class="lui-texthighlight">this part</span> should be highlighted.
+    {{/example-tab-content}}
+  {{/example}}
+
+  <h2>Text classes</h2>
+  <p>Set the foreground color of an element.</p>
+  {{#example}}
+    {{#example-tabset}}
+      {{#example-tab "text-default"}}Default{{/example-tab}}
+      {{#example-tab "text-inverse"}}Inverse{{/example-tab}}
+    {{/example-tabset}}
+    {{#example-tab-content "text-default"}}
+      <div class="lui-text-default">
+        lui-text-default
+      </div>
+      <div class="lui-text-info">
+        lui-text-info
+      </div>
+      <div class="lui-text-danger">
+        lui-text-danger
+      </div>
+      <div class="lui-text-warning">
+        lui-text-warning
+      </div>
+      <div class="lui-text-success">
+        lui-text-success
+      </div>
+    {{/example-tab-content}}
+    {{#example-tab-content "text-inverse"}}
+      <div class="lui-text-inverse">
+        lui-text-inverse
+      </div>
+      <div class="lui-text-info">
+        lui-text-info
+      </div>
+      <div class="lui-text-danger">
+        lui-text-danger
+      </div>
+      <div class="lui-text-warning">
+        lui-text-warning
+      </div>
+      <div class="lui-text-success">
+        lui-text-success
+      </div>
+    {{/example-tab-content}}
+  {{/example}}
+
+  <h2>Background classes</h2>
+  <p>Set the background and foreground colors of an element.</p>
+  <div class="example"></div>
+    <div class="example-box">
+      <div class="lui-bg-default" style="padding: 5px;">
+        lui-bg-default
+      </div>
+      <div class="lui-bg-alt" style="padding: 5px;">
+        lui-bg-alt
+      </div>
+      <div class="lui-bg-inverse" style="padding: 5px;">
+        lui-bg-inverse
+      </div>
+      <div class="lui-bg-inverse-alt" style="padding: 5px;">
+        lui-bg-inverse-alt
+      </div>
+      <div class="lui-bg-info" style="padding: 5px;">
+        lui-bg-info
+      </div>
+      <div class="lui-bg-danger" style="padding: 5px;">
+        lui-bg-danger
+      </div>
+      <div class="lui-bg-warning" style="padding: 5px;">
+        lui-bg-warning
+      </div>
+      <div class="lui-bg-success" style="padding: 5px;">
+        lui-bg-success
+      </div>
+    </div>
+    {{#example-code}}
+      <div class="lui-bg-default" style="padding: 5px;">
+        lui-bg-default
+      </div>
+      <div class="lui-bg-alt" style="padding: 5px;">
+        lui-bg-alt
+      </div>
+      <div class="lui-bg-inverse" style="padding: 5px;">
+        lui-bg-inverse
+      </div>
+      <div class="lui-bg-inverse-alt" style="padding: 5px;">
+        lui-bg-inverse-alt
+      </div>
+      <div class="lui-bg-info" style="padding: 5px;">
+        lui-bg-info
+      </div>
+      <div class="lui-bg-danger" style="padding: 5px;">
+        lui-bg-danger
+      </div>
+      <div class="lui-bg-warning" style="padding: 5px;">
+        lui-bg-warning
+      </div>
+      <div class="lui-bg-success" style="padding: 5px;">
+        lui-bg-success
+      </div>
+    {{/example-code}}
+  </div>
+</div>

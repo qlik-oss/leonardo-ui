@@ -1,0 +1,23 @@
+.fade-button-mixin(@active-background-color, @text-color, @hover-text-color, @disabled-text-color) {
+  color: @text-color;
+
+  &:hover,
+  &.lui-hovered,
+  &:active,
+  &:focus,
+  &.lui-focused {
+    color: @hover-text-color;
+  }
+
+  &.lui-active {
+    background-color: @active-background-color;
+    transition: none;
+  }
+
+  &[disabled],
+  &.lui-disabled {
+    color: @disabled-text-color;
+    cursor: default;
+    pointer-events: none;
+  }
+}

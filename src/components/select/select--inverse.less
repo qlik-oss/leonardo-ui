@@ -1,0 +1,39 @@
+@import "./_mixins";
+
+.lui-select--inverse {
+  .select-mixin(
+    @text-color: @greyscale-100;
+    @border-color: @greyscale-65;
+    @background-gradient-from: transparent;
+    @background-gradient-to: transparent;
+    @hover-border-color: @greyscale-95;
+    @disabled-text-color: @greyscale-60;
+    @arrow-url: @arrow-url-light;
+  );
+}
+
+.lui-select--toolbar, // --toolbar class is deprecated in favor of --gradient
+.lui-select--gradient {
+  .select-mixin(
+    @text-color: @text-color;
+    @border-color: fade(@greyscale-0, 20);
+    @background-gradient-from: @greyscale-100;
+    @background-gradient-to: @greyscale-90;
+    @hover-border-color: fade(@greyscale-0, 60);
+    @disabled-text-color: @greyscale-75;
+    @arrow-url: @arrow-url-dark;
+  );
+}
+
+.lui-select--toolbar-inverse, // --toolbar class is deprecated in favor of --gradient
+.lui-select--gradient-inverse {
+  .select-mixin(
+    @text-color: @greyscale-100;
+    @border-color: fade(@greyscale-0, 60);
+    @background-gradient-from: @greyscale-40;
+    @background-gradient-to: @greyscale-30;
+    @hover-border-color: fade(@greyscale-0, 80);
+    @disabled-text-color: fade(@greyscale-100, 20);
+    @arrow-url: @arrow-url-light;
+  );
+}

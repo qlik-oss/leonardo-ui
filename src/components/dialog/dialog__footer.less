@@ -1,0 +1,15 @@
+@import "./_variables";
+
+.lui-dialog__footer {
+  height: @header-footer-height;
+  padding: @header-footer-padding;
+  text-align: right;
+  border-bottom-left-radius: @border-radius;
+  border-bottom-right-radius: @border-radius;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+
+  [dir="rtl"] & {
+    text-align: left;
+  }
+}

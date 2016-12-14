@@ -1,0 +1,10 @@
+@import "./_mixins"; 
+
+.lui-fade-button--success {
+  .fade-button-mixin(
+    @active-background-color: fade(@greyscale-100, 10);
+    @text-color: fade(@green, 80);
+    @hover-text-color: @green;
+    @disabled-text-color: fade(@green, 20);
+  );
+}

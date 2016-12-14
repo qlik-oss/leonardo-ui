@@ -1,0 +1,11 @@
+{
+  "fixtures": {
+    "buttongroup": {
+      "backgroundClass": "lui-bg-default"
+    },
+    "buttongroup-inverse": {
+      "backgroundClass": "lui-bg-inverse",
+      "variantClass": "lui-button--inverse"
+    }
+  }
+}

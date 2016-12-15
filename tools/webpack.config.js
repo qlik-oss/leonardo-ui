@@ -35,8 +35,8 @@ const createConfig = function createConfig(isDebug) {
         include: [srcDir],
         exclude: [
           path.resolve(srcDir, 'leonardo-ui.less'),
-          path.resolve(srcDir, 'colors.less'),
-          path.resolve(srcDir, 'variables.less')
+          path.resolve(srcDir, '_colors.less'),
+          path.resolve(srcDir, '_variables.less')
         ]
       }, {
         test: /\.less$/,

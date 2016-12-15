@@ -4,6 +4,8 @@
 
 A UI component framework with a slim and modern look & feel. Use it to enhance the UI of your web app! Works well with popular frameworks such as Bootstrap and Foundation.
 
+[![CircleCI](https://circleci.com/gh/qlik-oss/leonardo-ui/tree/master.svg?style=shield)](https://circleci.com/gh/qlik-oss/leonardo-ui/tree/master)
+
 ## Get started
 
 Run the following command:

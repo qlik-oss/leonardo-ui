@@ -4,7 +4,7 @@ const extend = require('extend');
 delete baseConfig.multiCapabilities;
 
 const config = extend(true, baseConfig, {
-  chromeDriver: '../node_modules/after-work.js/node_modules/protractor/selenium/chromedriver_2.24',
+  chromeDriver: '../node_modules/after-work.js/node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_2.24',
   directConnect: true,
   capabilities: {
     browserName: 'chrome',

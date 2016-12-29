@@ -21,7 +21,8 @@
     "test": "aw-test-runner ./test/unit",
     "test:ci": "node ./tools/build-fixtures.js && node node_modules/after-work.js/node_modules/protractor/bin/webdriver-manager update --standalone false --versions.chrome 2.24 && aw-webdriver-test-runner ./test/circle.js --specs ./test/component/*.spec.js",
     "start": "node tools/start.js",
-    "coverage": "aw-test-coverage -- test/unit"
+    "coverage": "aw-test-coverage -- test/unit",
+    "docs": "node ./tools/build-docs.js"
   },
   "devDependencies": {
     "after-work.js": "^1.0.0",

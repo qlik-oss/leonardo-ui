@@ -44,4 +44,4 @@ Example using a button
 
 ## Contributing
 
-Please follow the instructions in [CONTRIBUTING.md](CONTRIBUTING.md).
+Please follow the instructions in [CONTRIBUTING.md](.github/CONTRIBUTING.md).

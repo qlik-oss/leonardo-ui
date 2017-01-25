@@ -122,26 +122,33 @@
     <div class="example-box">
       <div style="padding: 5px;">Simple Button</div>
       <div style="padding: 5px;">
-        <button class="lui-button lui-corner">Default</button>
+        <button class="lui-button lui-no-rounded-corner">Default</button>
       </div>
       <div style="padding: 5px;">Group buttons</div>
       <div class="lui-buttongroup" style="padding: 5px;">
-        <button class="lui-button lui-corner lui-buttongroup__button">
+        <button class="lui-button lui-no-rounded-corner lui-buttongroup__button">
           First button
         </button>
         <button class="lui-button lui-buttongroup__button">
           Second button
         </button>
-        <button class="lui-button lui-corner lui-buttongroup__button  lui-active">
+        <button class="lui-button lui-no-rounded-corner lui-buttongroup__button  lui-active">
           Third button
         </button>
       </div>
       <div style="padding: 5px;">Input</div>
       <div style="padding: 5px;">
-        <input class="lui-input lui-corner"/>
+        <input class="lui-input lui-no-rounded-corner"/>
       </div>
       <div style="padding: 5px;">Checkbox</div>
       <div style="padding: 5px;">
+        <label class="lui-checkbox">
+          <input class="lui-checkbox__input" type="checkbox" aria-label="Label" checked/>
+          <div class="lui-checkbox__check-wrap">
+            <span class="lui-checkbox__check lui-no-rounded-corner"></span>
+            <span class="lui-checkbox__check-text lui-no-rounded-corner">Label</span>
+          </div>
+        </label>
       </div>
       <div style="padding: 5px;">Radio buttons</div>
       <div style="padding: 5px;">
@@ -149,7 +156,7 @@
           <label class="lui-radiobutton">
             <input class="lui-radiobutton__input" type="radio" aria-label="First button" name="myradio" value="1" checked>
             <div class="lui-radiobutton__radio-wrap">
-              <span class="lui-radiobutton__radio lui-corner"></span>
+              <span class="lui-radiobutton__radio lui-no-rounded-corner"></span>
               <span class="lui-radiobutton__radio-text">First button</span>
             </div>
           </label>
@@ -158,7 +165,7 @@
       <div style="padding: 5px;">Select</div>
       <div style="padding: 5px;">
           <span class="lui-checkbox__check-text">
-            <select class="lui-select lui-corner">
+            <select class="lui-select lui-no-rounded-corner">
               <option value="1" selected>First</option>
               <option value="2">Second</option>
               <option value="3">Third</option>
@@ -172,28 +179,28 @@
               <input type="checkbox" class="lui-switch__checkbox" aria-label="Label"/>
               <span class="lui-switch__wrap">
                 <span class="lui-switch__inner"></span>
-                <span class="lui-switch__switch lui-corner"></span>
+                <span class="lui-switch__switch lui-no-rounded-corner"></span>
               </span>
             </label>
           </div>
         </div>
     </div>
     {{#example-code}}
-      <button class="lui-button lui-corner">Default</button>
+      <button class="lui-button lui-no-rounded-corner">Default</button>
       
       <div class="lui-buttongroup">
-        <button class="lui-button lui-corner lui-buttongroup__button">
+        <button class="lui-button lui-no-rounded-corner lui-buttongroup__button">
           First button
         </button>
         <button class="lui-button lui-buttongroup__button">
           Second button
         </button>
-        <button class="lui-button lui-corner lui-buttongroup__button  lui-active">
+        <button class="lui-button lui-no-rounded-corner lui-buttongroup__button  lui-active">
           Third button
         </button>
       </div>
       
-      <input class="lui-input lui-corner"/>
+      <input class="lui-input lui-no-rounded-corner"/>
     {{/example-code}}
   </div>
 </div>

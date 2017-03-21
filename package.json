@@ -19,7 +19,7 @@
     "build": "webpack --config ./tools/webpack.config.js",
     "lint": "eslint .",
     "test": "aw-test-runner ./test/unit",
-    "test:ci": "node ./tools/build-fixtures.js && node node_modules/after-work.js/node_modules/protractor/bin/webdriver-manager update --standalone false && aw-webdriver-test-runner ./test/circle.js --specs ./test/component/*.spec.js",
+    "test:ci": "node ./tools/build-fixtures.js && webdriver-manager update --standalone false && aw-webdriver-test-runner ./test/circle.js --specs ./test/component/*.spec.js",
     "start": "node tools/start.js",
     "coverage": "aw-test-coverage -- test/unit",
     "docs": "node ./tools/build-docs.js"

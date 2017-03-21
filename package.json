@@ -25,7 +25,7 @@
     "docs": "node ./tools/build-docs.js"
   },
   "devDependencies": {
-    "after-work.js": "^1.0.0",
+    "after-work.js": "^2.0.0",
     "autoprefixer": "^6.2.3",
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
@@ -43,6 +43,7 @@
     "less": "^2.5.0",
     "less-loader": "^2.2.1",
     "postcss-loader": "^1.1.0",
+    "protractor": "^5.1.1",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.2"

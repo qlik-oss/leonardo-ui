@@ -19,13 +19,13 @@
     "build": "webpack --config ./tools/webpack.config.js",
     "lint": "eslint .",
     "test": "aw-test-runner ./test/unit",
-    "test:ci": "node ./tools/build-fixtures.js && node node_modules/after-work.js/node_modules/protractor/bin/webdriver-manager update --standalone false --versions.chrome 2.24 && aw-webdriver-test-runner ./test/circle.js --specs ./test/component/*.spec.js",
+    "test:ci": "node ./tools/build-fixtures.js && webdriver-manager update --standalone false && aw-webdriver-test-runner ./test/circle.js --specs ./test/component/*.spec.js",
     "start": "node tools/start.js",
     "coverage": "aw-test-coverage -- test/unit",
     "docs": "node ./tools/build-docs.js"
   },
   "devDependencies": {
-    "after-work.js": "^1.0.0",
+    "after-work.js": "^2.0.0",
     "autoprefixer": "^6.2.3",
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
@@ -43,6 +43,7 @@
     "less": "^2.5.0",
     "less-loader": "^2.2.1",
     "postcss-loader": "^1.1.0",
+    "protractor": "^5.1.1",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.2"

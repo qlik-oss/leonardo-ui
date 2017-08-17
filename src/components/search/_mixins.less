@@ -1,13 +1,31 @@
-.search-mixin(@text-color, @iconColor, @placeholder-color, @background-color) {
+.search-mixin(
+  @text-color,
+  @icon-color,
+  @clear-color,
+  @clear-color-active,
+  @placeholder-color,
+  @background-color
+) {
   color: @text-color;
   background-color: @background-color;
 
   .lui-search__input {
+    color: @text-color;
     .placeholder-style(@placeholder-color, italic);
   }
 
   .lui-search__search-icon,
   .lui-search__clear-icon {
-    color: @iconColor;
+    color: @icon-color;
+  }
+
+  .lui-search__clear-button {
+    color: @clear-color;
+
+    &:hover,
+    &:active,
+    &:focus{
+      color: @clear-color-active;
+    }
   }
 }

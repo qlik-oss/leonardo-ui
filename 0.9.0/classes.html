@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="leonardo-ui/leonardo-ui.css" type="text/css" />
+  <link rel="stylesheet" href="styles/docs.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <link rel="icon" href="resources/favicon.ico">
+  <title> UI Overview | Leonardo </title>
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="wrap">
+        <div class="logo">
+          <a href="index.html">
+            <img src="resources/logo.png" alt="LUI">
+            <span>Leonardo UI</span>
+          </a>
+        </div>
+        <div class="nav">
+          <ul class="navbar">
+            <li><a href="get-started.html" >Get started</a></li>
+            <li><a href="components.html"  class="selected" >Components</a></li>
+            <li><a href="https://github.com/qlik-oss/leonardo-ui">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="component-container wrap">
+  <div class="component-sidebar">
+    <ul class="sidebar-list">
+        <li>
+          <a>General</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="icons.html">Icons</a>
+              </li>
+              <li>
+                <a href="palette.html">Palette</a>
+              </li>
+              <li>
+                <a href="classes.html" class="selected">Classes</a>
+              </li>
+              <li>
+                <a href="list.html">List</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Buttons</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="button.html">Button</a>
+              </li>
+              <li>
+                <a href="buttongroup.html">Button Group</a>
+              </li>
+              <li>
+                <a href="tabset.html">Tabset</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Inputs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="input.html">Input</a>
+              </li>
+              <li>
+                <a href="textarea.html">Textarea</a>
+              </li>
+              <li>
+                <a href="input-group.html">Input Group</a>
+              </li>
+              <li>
+                <a href="search.html">Search</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Form Elements</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="checkbox.html">Checkbox</a>
+              </li>
+              <li>
+                <a href="radio-buttons.html">Radio Buttons</a>
+              </li>
+              <li>
+                <a href="select.html">Select</a>
+              </li>
+              <li>
+                <a href="switch.html">Switch</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Dialogs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="dialog.html">Dialog</a>
+              </li>
+              <li>
+                <a href="popover.html">Popover</a>
+              </li>
+              <li>
+                <a href="toast.html">Toast</a>
+              </li>
+              <li>
+                <a href="tooltip.html">Tooltip</a>
+              </li>
+          </ul>
+        </li>
+    </ul>
+  </div>
+  <div class="component-content">
+    <div class="component">
+  <h1>Utility classes</h1>
+
+  <h2>Text highlight</h2>
+  <p>Highlight a part of a text.</p>
+<div class='example'><div class="example-tabset">
+      <ul class="lui-tabset" data-tabset>
+              <li class="lui-tab" data-tab-id="highlight-default">
+      <span class="lui-tab__text">
+        Default
+      </span>
+    </li>
+      <li class="lui-tab" data-tab-id="highlight-inverse">
+      <span class="lui-tab__text">
+        Inverse
+      </span>
+    </li>
+
+      </ul>
+    </div><div data-tab-content="highlight-default" style="display: none;">
+      <div class="example-box" style="">
+              This is a text and <span class="lui-texthighlight">this part</span> should be highlighted.
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>This is a text and &lt;span class&#x3D;&quot;lui-texthighlight&quot;&gt;this part&lt;/span&gt; should be highlighted.
+</code></pre></div>
+      </div>
+    </div><div data-tab-content="highlight-inverse" style="display: none;">
+      <div class="example-box lui-bg-inverse" style="">
+              This is a text and <span class="lui-texthighlight">this part</span> should be highlighted.
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>This is a text and &lt;span class&#x3D;&quot;lui-texthighlight&quot;&gt;this part&lt;/span&gt; should be highlighted.
+</code></pre></div>
+      </div>
+    </div></div>
+  <h2>Text classes</h2>
+  <p>Set the foreground color of an element.</p>
+<div class='example'><div class="example-tabset">
+      <ul class="lui-tabset" data-tabset>
+              <li class="lui-tab" data-tab-id="text-default">
+      <span class="lui-tab__text">
+        Default
+      </span>
+    </li>
+      <li class="lui-tab" data-tab-id="text-inverse">
+      <span class="lui-tab__text">
+        Inverse
+      </span>
+    </li>
+
+      </ul>
+    </div><div data-tab-content="text-default" style="display: none;">
+      <div class="example-box" style="">
+              <div class="lui-text-default">
+        lui-text-default
+      </div>
+      <div class="lui-text-info">
+        lui-text-info
+      </div>
+      <div class="lui-text-danger">
+        lui-text-danger
+      </div>
+      <div class="lui-text-warning">
+        lui-text-warning
+      </div>
+      <div class="lui-text-success">
+        lui-text-success
+      </div>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;div class&#x3D;&quot;lui-text-default&quot;&gt;
+  lui-text-default
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-text-info&quot;&gt;
+  lui-text-info
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-text-danger&quot;&gt;
+  lui-text-danger
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-text-warning&quot;&gt;
+  lui-text-warning
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-text-success&quot;&gt;
+  lui-text-success
+&lt;/div&gt;
+</code></pre></div>
+      </div>
+    </div><div data-tab-content="text-inverse" style="display: none;">
+      <div class="example-box lui-bg-inverse" style="">
+              <div class="lui-text-inverse">
+        lui-text-inverse
+      </div>
+      <div class="lui-text-info">
+        lui-text-info
+      </div>
+      <div class="lui-text-danger">
+        lui-text-danger
+      </div>
+      <div class="lui-text-warning">
+        lui-text-warning
+      </div>
+      <div class="lui-text-success">
+        lui-text-success
+      </div>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;div class&#x3D;&quot;lui-text-inverse&quot;&gt;
+  lui-text-inverse
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-text-info&quot;&gt;
+  lui-text-info
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-text-danger&quot;&gt;
+  lui-text-danger
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-text-warning&quot;&gt;
+  lui-text-warning
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-text-success&quot;&gt;
+  lui-text-success
+&lt;/div&gt;
+</code></pre></div>
+      </div>
+    </div></div>
+  <h2>Background classes</h2>
+  <p>Set the background and foreground colors of an element.</p>
+  <div class="example"></div>
+    <div class="example-box">
+      <div class="lui-bg-default" style="padding: 5px;">
+        lui-bg-default
+      </div>
+      <div class="lui-bg-alt" style="padding: 5px;">
+        lui-bg-alt
+      </div>
+      <div class="lui-bg-inverse" style="padding: 5px;">
+        lui-bg-inverse
+      </div>
+      <div class="lui-bg-inverse-alt" style="padding: 5px;">
+        lui-bg-inverse-alt
+      </div>
+      <div class="lui-bg-info" style="padding: 5px;">
+        lui-bg-info
+      </div>
+      <div class="lui-bg-danger" style="padding: 5px;">
+        lui-bg-danger
+      </div>
+      <div class="lui-bg-warning" style="padding: 5px;">
+        lui-bg-warning
+      </div>
+      <div class="lui-bg-success" style="padding: 5px;">
+        lui-bg-success
+      </div>
+    </div>
+<div class='example-code  has-border'><pre><code class='html'>&lt;div class&#x3D;&quot;lui-bg-default&quot; style&#x3D;&quot;padding: 5px;&quot;&gt;
+  lui-bg-default
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-bg-alt&quot; style&#x3D;&quot;padding: 5px;&quot;&gt;
+  lui-bg-alt
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-bg-inverse&quot; style&#x3D;&quot;padding: 5px;&quot;&gt;
+  lui-bg-inverse
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-bg-inverse-alt&quot; style&#x3D;&quot;padding: 5px;&quot;&gt;
+  lui-bg-inverse-alt
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-bg-info&quot; style&#x3D;&quot;padding: 5px;&quot;&gt;
+  lui-bg-info
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-bg-danger&quot; style&#x3D;&quot;padding: 5px;&quot;&gt;
+  lui-bg-danger
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-bg-warning&quot; style&#x3D;&quot;padding: 5px;&quot;&gt;
+  lui-bg-warning
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-bg-success&quot; style&#x3D;&quot;padding: 5px;&quot;&gt;
+  lui-bg-success
+&lt;/div&gt;
+</code></pre></div>  </div>
+</div>
+
+  </div>
+</div>
+
+<script src="leonardo-ui/leonardo-ui.js"></script>
+
+<script>
+  (function() {
+    Array.prototype.slice.call( document.querySelectorAll( "[data-tabset]" ) ).forEach( function( tabsetElement ) {
+      leonardoui.tabset( {
+        element: tabsetElement
+      } );
+    } )
+  }());
+</script>
+
+    </div>
+    <div class="footer">
+      <div class="wrap">
+        <h2 class="footer-title">License and attributions</h2>
+        <p>Leonardo UI 0.9.0. © 2016 QlikTech International AB</p>
+        <p>Licensed under MIT</p>
+      </div>
+    </div>
+  </div>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

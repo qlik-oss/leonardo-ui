@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="leonardo-ui/leonardo-ui.css" type="text/css" />
+  <link rel="stylesheet" href="styles/docs.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <link rel="icon" href="resources/favicon.ico">
+  <title> UI Overview | Leonardo </title>
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="wrap">
+        <div class="logo">
+          <a href="index.html">
+            <img src="resources/logo.png" alt="LUI">
+            <span>Leonardo UI</span>
+          </a>
+        </div>
+        <div class="nav">
+          <ul class="navbar">
+            <li><a href="get-started.html" >Get started</a></li>
+            <li><a href="components.html" >Components</a></li>
+            <li><a href="https://github.com/qlik-oss/leonardo-ui">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="intro">
+  <div class="cover">
+    <div class="showcase">
+      <img class="device-image" src="resources/intro-device-2x.gif"/>
+      <div class="overlay">
+        <span class="text">Where the stuff happens</span>
+      </div>
+    </div>
+  </div>
+
+    <div class="wrap">
+    <h1 class="center">Leonardo UI</h1>
+    <section class="center">
+      Leonardo UI is a UI component framework with a slim design that adds awesome looking components to your web page.
+      All components are cross-browser and ready-to-use in modern browsers. They work well together with other popular frameworks,
+      such as Bootstrap and Foundation.
+    </section>
+
+    <section>
+      <div class="columns">
+        <div class="column">
+          <div class="icon">
+            <span class="lui-icon  lui-icon--slide-show"></span>
+          </div>
+          <h2>Flexible</h2>
+          <p>Use as is with the provided vanilla JS, with a framework implementation
+            or with your own custom implementation.</p>
+        </div>
+        <div class="column">
+          <div class="icon">
+            <span class="lui-icon  lui-icon--script-ok"></span>
+          </div>
+          <h2>Unobtrusive</h2>
+          <p>Leonardo UI will not set any global stylings but will use your page defaults. This minimizes the
+            risk of conflicting styles when used together with other frameworks.</p>
+        </div>
+        <div class="column">
+          <div class="icon">
+            <span class="lui-icon  lui-icon--debug"></span>
+          </div>
+          <h2>Developer focus</h2>
+          <p>The developer is always in full control over what's going on. Utilization of BEM classes makes components
+            self-contained and easy-to-use.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <p>Example of a button</p>
+      <button class="lui-button" style="margin-bottom: 10px;">Default</button>
+<div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-button&quot;&gt;Default&lt;/button&gt;
+</code></pre></div>    </section>
+    <section>
+      <p>Example of a switch</p>
+      <div class="lui-switch" style="margin-bottom: 10px;">
+        <label class="lui-switch__label">
+          <input type="checkbox" class="lui-switch__checkbox"/>
+          <span class="lui-switch__wrap">
+            <span class="lui-switch__inner"></span>
+            <span class="lui-switch__switch"></span>
+          </span>
+        </label>
+      </div>
+<div class='example-code  has-border'><pre><code class='html'>&lt;div class&#x3D;&quot;lui-switch&quot;&gt;
+  &lt;label class&#x3D;&quot;lui-switch__label&quot;&gt;
+    &lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;lui-switch__checkbox&quot;/&gt;
+    &lt;span class&#x3D;&quot;lui-switch__wrap&quot;&gt;
+      &lt;span class&#x3D;&quot;lui-switch__inner&quot;&gt;&lt;/span&gt;
+      &lt;span class&#x3D;&quot;lui-switch__switch&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre></div>    </section>
+
+  </div>
+
+</div>
+
+<script>
+  (function() {
+
+    function resizeHeader() {
+      var THRESHOLD = 500;
+      var headerElem = document.querySelector( ".header" );
+
+      if (document.body.scrollTop > THRESHOLD) {
+        if (headerElem.classList.contains( "large" )) {
+          headerElem.classList.remove( "large" );
+        }
+      } else {
+        headerElem.classList.add( "large" );
+      }
+    }
+
+    window.addEventListener( "scroll", resizeHeader );
+    resizeHeader();
+
+    setTimeout(function() {
+      var headerElem = document.querySelector( ".header" );
+      headerElem.classList.add( "animate" );
+    });
+  }());
+</script>
+
+    </div>
+    <div class="footer">
+      <div class="wrap">
+        <h2 class="footer-title">License and attributions</h2>
+        <p>Leonardo UI 0.9.0. © 2016 QlikTech International AB</p>
+        <p>Licensed under MIT</p>
+      </div>
+    </div>
+  </div>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

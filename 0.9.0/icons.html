@@ -1,0 +1,1670 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="leonardo-ui/leonardo-ui.css" type="text/css" />
+  <link rel="stylesheet" href="styles/docs.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <link rel="icon" href="resources/favicon.ico">
+  <title> UI Overview | Leonardo </title>
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="wrap">
+        <div class="logo">
+          <a href="index.html">
+            <img src="resources/logo.png" alt="LUI">
+            <span>Leonardo UI</span>
+          </a>
+        </div>
+        <div class="nav">
+          <ul class="navbar">
+            <li><a href="get-started.html" >Get started</a></li>
+            <li><a href="components.html"  class="selected" >Components</a></li>
+            <li><a href="https://github.com/qlik-oss/leonardo-ui">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="component-container wrap">
+  <div class="component-sidebar">
+    <ul class="sidebar-list">
+        <li>
+          <a>General</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="icons.html" class="selected">Icons</a>
+              </li>
+              <li>
+                <a href="palette.html">Palette</a>
+              </li>
+              <li>
+                <a href="classes.html">Classes</a>
+              </li>
+              <li>
+                <a href="list.html">List</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Buttons</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="button.html">Button</a>
+              </li>
+              <li>
+                <a href="buttongroup.html">Button Group</a>
+              </li>
+              <li>
+                <a href="tabset.html">Tabset</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Inputs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="input.html">Input</a>
+              </li>
+              <li>
+                <a href="textarea.html">Textarea</a>
+              </li>
+              <li>
+                <a href="input-group.html">Input Group</a>
+              </li>
+              <li>
+                <a href="search.html">Search</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Form Elements</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="checkbox.html">Checkbox</a>
+              </li>
+              <li>
+                <a href="radio-buttons.html">Radio Buttons</a>
+              </li>
+              <li>
+                <a href="select.html">Select</a>
+              </li>
+              <li>
+                <a href="switch.html">Switch</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Dialogs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="dialog.html">Dialog</a>
+              </li>
+              <li>
+                <a href="popover.html">Popover</a>
+              </li>
+              <li>
+                <a href="toast.html">Toast</a>
+              </li>
+              <li>
+                <a href="tooltip.html">Tooltip</a>
+              </li>
+          </ul>
+        </li>
+    </ul>
+  </div>
+  <div class="component-content">
+    <div class="component icons">
+  <h1>Icons</h1>
+  <p>
+    There are a number of icons that can be used by including the icon font.
+
+    To use the icons, create an element with the following markup:
+
+<div class='example-code  has-border'><pre><code class='html'>&lt;span class&#x3D;&quot;lui-icon  lui-icon--play&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
+</code></pre></div>  </p>
+
+  <h2>Standard icons</h2>
+
+  <div class="icon-list">
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--image'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--image</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--back'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--back</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--forward'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--forward</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--history'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--history</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--help'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--help</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--info'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--info</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--toggle-left'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--toggle-left</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--toggle-right'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--toggle-right</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--text'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--text</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--group'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--group</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--search'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--search</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--zoom-in'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--zoom-in</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--zoom-out'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--zoom-out</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--export'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--export</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--import'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--import</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--field'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--field</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--lock'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--lock</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--unlock'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--unlock</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--database'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--database</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--calendar'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--calendar</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--bookmark'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--bookmark</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--library'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--library</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--star'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--star</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--print'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--print</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--remove'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--remove</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--handle'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--handle</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--handle-horizontal'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--handle-horizontal</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--menu'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--menu</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--list'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--list</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--unordered-list'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--unordered-list</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--clock'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--clock</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--puzzle'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--puzzle</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--table'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--table</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--filterpane'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--filterpane</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--plus'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--plus</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--minus'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--minus</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--triangle-top'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--triangle-top</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--triangle-bottom'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--triangle-bottom</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--triangle-left'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--triangle-left</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--triangle-right'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--triangle-right</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--tick'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--tick</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--cogwheel'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--cogwheel</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--settings'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--settings</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--cut'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--cut</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--copy'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--copy</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--paste'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--paste</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--align-left'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--align-left</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--align-center'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--align-center</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--align-right'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--align-right</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--bold'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--bold</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--italic'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--italic</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--underline'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--underline</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--camera'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--camera</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--slide-show'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--slide-show</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--palette'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--palette</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--shapes'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--shapes</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--effects'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--effects</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--file'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--file</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--expand'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--expand</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--collapse'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--collapse</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--bin'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--bin</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--link'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--link</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--pivot'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--pivot</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--reload'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--reload</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--add'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--add</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--edit'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--edit</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--lasso'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--lasso</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--key'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--key</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--box'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--box</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--home'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--home</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--person'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--person</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--stream'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--stream</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--grid'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--grid</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--cloud'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--cloud</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--more'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--more</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--folder'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--folder</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--toggle-bottom'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--toggle-bottom</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--drop'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--drop</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--play'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--play</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--tag'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--tag</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--close'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--close</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--warning'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--warning</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--warning-triangle'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--warning-triangle</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--share'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--share</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--top'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--top</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--low-resolution'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--low-resolution</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--high-resolution'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--high-resolution</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--view'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--view</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--control'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--control</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--code'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--code</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--upload'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--upload</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--repair'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--repair</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--split'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--split</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--up-down'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--up-down</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--disconnect'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--disconnect</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--photo-library'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--photo-library</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--application'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--application</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--new-tab'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--new-tab</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--ascending'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--ascending</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--descending'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--descending</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--arrow-up'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--arrow-up</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--arrow-down'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--arrow-down</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--arrow-right'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--arrow-right</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--arrow-left'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--arrow-left</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--sync'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--sync</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--draggable'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--draggable</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--book'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--book</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--measure'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--measure</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--download'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--download</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--more-rounded'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--more-rounded</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--align-object-left'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--align-object-left</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--align-object-center'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--align-object-center</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--align-object-right'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--align-object-right</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--submit'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--submit</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--operators'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--operators</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--general-data-class'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--general-data-class</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--building'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--building</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--bell'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--bell</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--unlink'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--unlink</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--lightbulb'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--lightbulb</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--log-in'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--log-in</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--log-out'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--log-out</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--previous'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--previous</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--goto'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--goto</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--save'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--save</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--compass'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--compass</div>
+      </div>
+    </div>
+  </div>
+  
+  <h2>Analytics icons</h2>
+
+  <div class="icon-list">
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--sheet'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--sheet</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--object'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--object</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--clear-selections'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--clear-selections</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--selections-tool'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--selections-tool</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--selections-reload'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--selections-reload</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--selections-back'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--selections-back</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--selections-forward'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--selections-forward</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--expression'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--expression</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--select-alternative'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--select-alternative</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--select-possible'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--select-possible</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--select-excluded'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--select-excluded</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--select-all'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--select-all</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--bar-chart'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--bar-chart</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--bar-chart-horizontal'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--bar-chart-horizontal</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--clock'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--clock</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--line-chart'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--line-chart</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--pie-chart'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--pie-chart</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--gauge-chart'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--gauge-chart</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--kpi'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--kpi</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--scatter-chart'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--scatter-chart</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--map'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--map</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--table'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--table</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--pivot-table'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--pivot-table</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--filterpane'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--filterpane</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--treemap'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--treemap</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--combo-chart'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--combo-chart</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--direct-discovery'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--direct-discovery</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--data-model'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--data-model</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--script'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--script</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--run-script'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--run-script</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--script-ok'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--script-ok</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--debug'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--debug</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--associate'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--associate</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--break-association'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--break-association</div>
+      </div>
+    </div>
+    <div class='icon-box'>
+      <div class='icon-example'>
+        <span class='lui-icon lui-icon--auto-layout'></span>
+      </div>
+      <div class='icon-text'>
+        <div>lui-icon</div>
+        <div>lui-icon--auto-layout</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Icon sizing</h2>
+  <p>
+    Control the size of icons by adding a class. The following sizing options are available:
+    <ul>
+      <li>
+        small - 12px
+      </li>
+      <li>
+        (default) - 16px
+      </li>
+      <li>
+        large - 20px
+      </li>
+    </ul>
+  </p>
+  <p>
+    <span class="lui-icon  lui-icon--small  lui-icon--play"></span>
+    <span class="lui-icon  lui-icon--play"></span>
+    <span class="lui-icon  lui-icon--large  lui-icon--play"></span>
+  </p>
+  <p>
+<div class='example-code  has-border'><pre><code class='html'>&lt;span class&#x3D;&quot;lui-icon  lui-icon--large  lui-icon--play&quot;&gt;&lt;/span&gt;
+&lt;span class&#x3D;&quot;lui-icon  lui-icon--play&quot;&gt;&lt;/span&gt;
+&lt;span class&#x3D;&quot;lui-icon  lui-icon--small  lui-icon--play&quot;&gt;&lt;/span&gt;
+</code></pre></div>  </p>
+  
+
+  <h2>Using another icon font</h2>
+  <p>
+    You can use other icon fonts, like for example Font Awsome, where icons are used. Just replace the
+    "lui-icon" classes. Note that some components like search and checkbox will need additional overrides. 
+  </p>
+  <p>
+    For example:
+  </p>
+  <p>
+<div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-button&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--play&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+</code></pre></div>  </p>
+  <p>
+    with:
+  </p>
+  <p>
+<div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-button&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__icon  fa  fa-camera-retro  fa-lg&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+</code></pre></div>  </p>
+
+</div>
+
+  </div>
+</div>
+
+<script src="leonardo-ui/leonardo-ui.js"></script>
+
+<script>
+  (function() {
+    Array.prototype.slice.call( document.querySelectorAll( "[data-tabset]" ) ).forEach( function( tabsetElement ) {
+      leonardoui.tabset( {
+        element: tabsetElement
+      } );
+    } )
+  }());
+</script>
+
+    </div>
+    <div class="footer">
+      <div class="wrap">
+        <h2 class="footer-title">License and attributions</h2>
+        <p>Leonardo UI 0.9.0. © 2016 QlikTech International AB</p>
+        <p>Licensed under MIT</p>
+      </div>
+    </div>
+  </div>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

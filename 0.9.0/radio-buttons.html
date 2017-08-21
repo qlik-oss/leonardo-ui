@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="leonardo-ui/leonardo-ui.css" type="text/css" />
+  <link rel="stylesheet" href="styles/docs.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <link rel="icon" href="resources/favicon.ico">
+  <title> UI Overview | Leonardo </title>
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="wrap">
+        <div class="logo">
+          <a href="index.html">
+            <img src="resources/logo.png" alt="LUI">
+            <span>Leonardo UI</span>
+          </a>
+        </div>
+        <div class="nav">
+          <ul class="navbar">
+            <li><a href="get-started.html" >Get started</a></li>
+            <li><a href="components.html"  class="selected" >Components</a></li>
+            <li><a href="https://github.com/qlik-oss/leonardo-ui">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="component-container wrap">
+  <div class="component-sidebar">
+    <ul class="sidebar-list">
+        <li>
+          <a>General</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="icons.html">Icons</a>
+              </li>
+              <li>
+                <a href="palette.html">Palette</a>
+              </li>
+              <li>
+                <a href="classes.html">Classes</a>
+              </li>
+              <li>
+                <a href="list.html">List</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Buttons</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="button.html">Button</a>
+              </li>
+              <li>
+                <a href="buttongroup.html">Button Group</a>
+              </li>
+              <li>
+                <a href="tabset.html">Tabset</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Inputs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="input.html">Input</a>
+              </li>
+              <li>
+                <a href="textarea.html">Textarea</a>
+              </li>
+              <li>
+                <a href="input-group.html">Input Group</a>
+              </li>
+              <li>
+                <a href="search.html">Search</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Form Elements</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="checkbox.html">Checkbox</a>
+              </li>
+              <li>
+                <a href="radio-buttons.html" class="selected">Radio Buttons</a>
+              </li>
+              <li>
+                <a href="select.html">Select</a>
+              </li>
+              <li>
+                <a href="switch.html">Switch</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Dialogs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="dialog.html">Dialog</a>
+              </li>
+              <li>
+                <a href="popover.html">Popover</a>
+              </li>
+              <li>
+                <a href="toast.html">Toast</a>
+              </li>
+              <li>
+                <a href="tooltip.html">Tooltip</a>
+              </li>
+          </ul>
+        </li>
+    </ul>
+  </div>
+  <div class="component-content">
+    <div class="component">
+  <h1>Radio buttons</h1>
+  <p>Radio button component. Use it when the user need to select a value from multiple choises (typically 3-7).</p>
+<div class='example'><div class="example-tabset">
+      <ul class="lui-tabset" data-tabset>
+              <li class="lui-tab" data-tab-id="default">
+      <span class="lui-tab__text">
+        Default
+      </span>
+    </li>
+      <li class="lui-tab" data-tab-id="inverse">
+      <span class="lui-tab__text">
+        Inverse
+      </span>
+    </li>
+
+      </ul>
+    </div><div data-tab-content="default" style="display: none;">
+      <div class="example-box" style="">
+              <label class="lui-radiobutton">
+        <input class="lui-radiobutton__input" type="radio" aria-label="First button" name="myradio" value="1" checked>
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">First button</span>
+        </div>
+      </label>
+      <label class="lui-radiobutton">
+        <input class="lui-radiobutton__input" type="radio" aria-label="Second button" name="myradio" value="2">
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">Second button</span>
+        </div>
+      </label>
+      <label class="lui-radiobutton">
+        <input class="lui-radiobutton__input" type="radio" aria-label="Third button" name="myradiodisabled" value="3" disabled checked>
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">Third button</span>
+        </div>
+      </label>
+      <label class="lui-radiobutton">
+        <input class="lui-radiobutton__input" type="radio" aria-label="Fourth button" name="myradiodisabled" value="4" disabled>
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">Fourth button</span>
+        </div>
+      </label>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;label class&#x3D;&quot;lui-radiobutton&quot;&gt;
+  &lt;input class&#x3D;&quot;lui-radiobutton__input&quot; type&#x3D;&quot;radio&quot; aria-label&#x3D;&quot;First button&quot; name&#x3D;&quot;myradio&quot; value&#x3D;&quot;1&quot; checked&gt;
+  &lt;div class&#x3D;&quot;lui-radiobutton__radio-wrap&quot;&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio&quot;&gt;&lt;/span&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio-text&quot;&gt;First button&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+&lt;label class&#x3D;&quot;lui-radiobutton&quot;&gt;
+  &lt;input class&#x3D;&quot;lui-radiobutton__input&quot; type&#x3D;&quot;radio&quot; aria-label&#x3D;&quot;Second button&quot; name&#x3D;&quot;myradio&quot; value&#x3D;&quot;2&quot;&gt;
+  &lt;div class&#x3D;&quot;lui-radiobutton__radio-wrap&quot;&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio&quot;&gt;&lt;/span&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio-text&quot;&gt;Second button&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+&lt;label class&#x3D;&quot;lui-radiobutton&quot;&gt;
+  &lt;input class&#x3D;&quot;lui-radiobutton__input&quot; type&#x3D;&quot;radio&quot; aria-label&#x3D;&quot;Third button&quot; name&#x3D;&quot;myradiodisabled&quot; value&#x3D;&quot;3&quot; disabled checked&gt;
+  &lt;div class&#x3D;&quot;lui-radiobutton__radio-wrap&quot;&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio&quot;&gt;&lt;/span&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio-text&quot;&gt;Third button&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+&lt;label class&#x3D;&quot;lui-radiobutton&quot;&gt;
+  &lt;input class&#x3D;&quot;lui-radiobutton__input&quot; type&#x3D;&quot;radio&quot; aria-label&#x3D;&quot;Fourth button&quot; name&#x3D;&quot;myradiodisabled&quot; value&#x3D;&quot;4&quot; disabled&gt;
+  &lt;div class&#x3D;&quot;lui-radiobutton__radio-wrap&quot;&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio&quot;&gt;&lt;/span&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio-text&quot;&gt;Fourth button&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+</code></pre></div>
+      </div>
+    </div><div data-tab-content="inverse" style="display: none;">
+      <div class="example-box lui-bg-inverse" style="">
+              <label class="lui-radiobutton  lui-radiobutton--inverse">
+        <input class="lui-radiobutton__input" type="radio" aria-label="First button" name="mydarkradio" value="1" checked>
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">First button</span>
+        </div>
+      </label>
+      <label class="lui-radiobutton  lui-radiobutton--inverse">
+        <input class="lui-radiobutton__input" type="radio" aria-label="Second button" name="mydarkradio" value="2">
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">Second button</span>
+        </div>
+      </label>
+      <label class="lui-radiobutton  lui-radiobutton--inverse">
+        <input class="lui-radiobutton__input" type="radio" aria-label="Third button" name="mydarkradiodisabled" value="3" disabled checked>
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">Third button</span>
+        </div>
+      </label>
+      <label class="lui-radiobutton  lui-radiobutton--inverse">
+        <input class="lui-radiobutton__input" type="radio" aria-label="Fourth button" name="mydarkradiodisabled" value="4" disabled>
+        <div class="lui-radiobutton__radio-wrap">
+          <span class="lui-radiobutton__radio"></span>
+          <span class="lui-radiobutton__radio-text">Fourth button</span>
+        </div>
+      </label>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;label class&#x3D;&quot;lui-radiobutton  lui-radiobutton--inverse&quot;&gt;
+  &lt;input class&#x3D;&quot;lui-radiobutton__input&quot; type&#x3D;&quot;radio&quot; aria-label&#x3D;&quot;First button&quot; name&#x3D;&quot;mydarkradio&quot; value&#x3D;&quot;1&quot; checked&gt;
+  &lt;div class&#x3D;&quot;lui-radiobutton__radio-wrap&quot;&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio&quot;&gt;&lt;/span&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio-text&quot;&gt;First button&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+&lt;label class&#x3D;&quot;lui-radiobutton  lui-radiobutton--inverse&quot;&gt;
+  &lt;input class&#x3D;&quot;lui-radiobutton__input&quot; type&#x3D;&quot;radio&quot; aria-label&#x3D;&quot;Second button&quot; name&#x3D;&quot;mydarkradio&quot; value&#x3D;&quot;2&quot;&gt;
+  &lt;div class&#x3D;&quot;lui-radiobutton__radio-wrap&quot;&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio&quot;&gt;&lt;/span&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio-text&quot;&gt;Second button&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+&lt;label class&#x3D;&quot;lui-radiobutton  lui-radiobutton--inverse&quot;&gt;
+  &lt;input class&#x3D;&quot;lui-radiobutton__input&quot; type&#x3D;&quot;radio&quot; aria-label&#x3D;&quot;Third button&quot; name&#x3D;&quot;mydarkradiodisabled&quot; value&#x3D;&quot;3&quot; disabled checked&gt;
+  &lt;div class&#x3D;&quot;lui-radiobutton__radio-wrap&quot;&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio&quot;&gt;&lt;/span&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio-text&quot;&gt;Third button&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+&lt;label class&#x3D;&quot;lui-radiobutton  lui-radiobutton--inverse&quot;&gt;
+  &lt;input class&#x3D;&quot;lui-radiobutton__input&quot; type&#x3D;&quot;radio&quot; aria-label&#x3D;&quot;Fourth button&quot; name&#x3D;&quot;mydarkradiodisabled&quot; value&#x3D;&quot;4&quot; disabled&gt;
+  &lt;div class&#x3D;&quot;lui-radiobutton__radio-wrap&quot;&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio&quot;&gt;&lt;/span&gt;
+    &lt;span class&#x3D;&quot;lui-radiobutton__radio-text&quot;&gt;Fourth button&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+</code></pre></div>
+      </div>
+    </div></div></div>
+
+  </div>
+</div>
+
+<script src="leonardo-ui/leonardo-ui.js"></script>
+
+<script>
+  (function() {
+    Array.prototype.slice.call( document.querySelectorAll( "[data-tabset]" ) ).forEach( function( tabsetElement ) {
+      leonardoui.tabset( {
+        element: tabsetElement
+      } );
+    } )
+  }());
+</script>
+
+    </div>
+    <div class="footer">
+      <div class="wrap">
+        <h2 class="footer-title">License and attributions</h2>
+        <p>Leonardo UI 0.9.0. © 2016 QlikTech International AB</p>
+        <p>Licensed under MIT</p>
+      </div>
+    </div>
+  </div>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

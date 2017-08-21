@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="leonardo-ui/leonardo-ui.css" type="text/css" />
+  <link rel="stylesheet" href="styles/docs.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <link rel="icon" href="resources/favicon.ico">
+  <title> UI Overview | Leonardo </title>
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="wrap">
+        <div class="logo">
+          <a href="index.html">
+            <img src="resources/logo.png" alt="LUI">
+            <span>Leonardo UI</span>
+          </a>
+        </div>
+        <div class="nav">
+          <ul class="navbar">
+            <li><a href="get-started.html" >Get started</a></li>
+            <li><a href="components.html"  class="selected" >Components</a></li>
+            <li><a href="https://github.com/qlik-oss/leonardo-ui">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="component-container wrap">
+  <div class="component-sidebar">
+    <ul class="sidebar-list">
+        <li>
+          <a>General</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="icons.html">Icons</a>
+              </li>
+              <li>
+                <a href="palette.html">Palette</a>
+              </li>
+              <li>
+                <a href="classes.html">Classes</a>
+              </li>
+              <li>
+                <a href="list.html">List</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Buttons</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="button.html" class="selected">Button</a>
+              </li>
+              <li>
+                <a href="buttongroup.html">Button Group</a>
+              </li>
+              <li>
+                <a href="tabset.html">Tabset</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Inputs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="input.html">Input</a>
+              </li>
+              <li>
+                <a href="textarea.html">Textarea</a>
+              </li>
+              <li>
+                <a href="input-group.html">Input Group</a>
+              </li>
+              <li>
+                <a href="search.html">Search</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Form Elements</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="checkbox.html">Checkbox</a>
+              </li>
+              <li>
+                <a href="radio-buttons.html">Radio Buttons</a>
+              </li>
+              <li>
+                <a href="select.html">Select</a>
+              </li>
+              <li>
+                <a href="switch.html">Switch</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Dialogs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="dialog.html">Dialog</a>
+              </li>
+              <li>
+                <a href="popover.html">Popover</a>
+              </li>
+              <li>
+                <a href="toast.html">Toast</a>
+              </li>
+              <li>
+                <a href="tooltip.html">Tooltip</a>
+              </li>
+          </ul>
+        </li>
+    </ul>
+  </div>
+  <div class="component-content">
+    <div class="component">
+  <h1>Buttons</h1>
+  <p>Regular buttons with support for a mix of text / icon content.</p>
+<div class='example'><div class="example-tabset">
+      <ul class="lui-tabset" data-tabset>
+              <li class="lui-tab" data-tab-id="default">
+      <span class="lui-tab__text">
+        Default
+      </span>
+    </li>
+      <li class="lui-tab" data-tab-id="inverse">
+      <span class="lui-tab__text">
+        Inverse
+      </span>
+    </li>
+
+      </ul>
+    </div><div data-tab-content="default" style="display: none;">
+      <div class="example-box" style="">
+              <button class="lui-button">Default</button>
+      <button class="lui-button  lui-button--gradient">Toolbar</button>
+      <button class="lui-button  lui-button--info">Info</button>
+      <button class="lui-button  lui-button--danger">Error</button>
+      <button class="lui-button  lui-button--warning">Warning</button>
+      <button class="lui-button  lui-button--success">Success</button>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-button&quot;&gt;Default&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--gradient&quot;&gt;Toolbar&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--info&quot;&gt;Info&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--danger&quot;&gt;Error&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--success&quot;&gt;Success&lt;/button&gt;
+</code></pre></div>
+      </div>
+    </div><div data-tab-content="inverse" style="display: none;">
+      <div class="example-box lui-bg-inverse" style="">
+              <button class="lui-button  lui-button--inverse">Inverse</button>
+      <button class="lui-button  lui-button--gradient-inverse">Toolbar</button>
+      <button class="lui-button  lui-button--info">Info</button>
+      <button class="lui-button  lui-button--danger">Error</button>
+      <button class="lui-button  lui-button--warning">Warning</button>
+      <button class="lui-button  lui-button--success">Success</button>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-button  lui-button--inverse&quot;&gt;Inverse&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--gradient-inverse&quot;&gt;Toolbar&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--info&quot;&gt;Info&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--danger&quot;&gt;Error&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--success&quot;&gt;Success&lt;/button&gt;
+</code></pre></div>
+      </div>
+    </div></div>
+  <p>To create rounded buttons, add a variant class "lui-button--rounded".</p>
+<div class='example'><div class="example-tabset">
+      <ul class="lui-tabset" data-tabset>
+              <li class="lui-tab" data-tab-id="default-rounded">
+      <span class="lui-tab__text">
+        Default
+      </span>
+    </li>
+      <li class="lui-tab" data-tab-id="inverse-rounded">
+      <span class="lui-tab__text">
+        Inverse
+      </span>
+    </li>
+
+      </ul>
+    </div><div data-tab-content="default-rounded" style="display: none;">
+      <div class="example-box" style="">
+              <button class="lui-button  lui-button--rounded">Default</button>
+      <button class="lui-button  lui-button--rounded  lui-button--info">Info</button>
+      <button class="lui-button  lui-button--rounded  lui-button--danger">Error</button>
+      <button class="lui-button  lui-button--rounded  lui-button--warning">Warning</button>
+      <button class="lui-button  lui-button--rounded  lui-button--success">Success</button>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-button  lui-button--rounded&quot;&gt;Default&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--rounded  lui-button--info&quot;&gt;Info&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--rounded  lui-button--danger&quot;&gt;Error&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--rounded  lui-button--warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--rounded  lui-button--success&quot;&gt;Success&lt;/button&gt;
+</code></pre></div>
+      </div>
+    </div><div data-tab-content="inverse-rounded" style="display: none;">
+      <div class="example-box lui-bg-inverse" style="">
+              <button class="lui-button  lui-button--rounded  lui-button--inverse">Inverse</button>
+      <button class="lui-button  lui-button--rounded  lui-button--info">Info</button>
+      <button class="lui-button  lui-button--rounded  lui-button--danger">Error</button>
+      <button class="lui-button  lui-button--rounded  lui-button--warning">Warning</button>
+      <button class="lui-button  lui-button--rounded  lui-button--success">Success</button>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-button  lui-button--rounded  lui-button--inverse&quot;&gt;Inverse&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--rounded  lui-button--info&quot;&gt;Info&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--rounded  lui-button--danger&quot;&gt;Error&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--rounded  lui-button--warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--rounded  lui-button--success&quot;&gt;Success&lt;/button&gt;
+</code></pre></div>
+      </div>
+    </div></div>
+  <p>Buttons support adding the states active and disabled, which is done through the "lui-active" and "lui-disabled" classes.
+    It is recommended to use the "lui-disabled" class instead of the disabled attribute because the disabled attribute prevents
+    the element from receiving mouse events (needed for example when drag &amp; dropping) in Firefox. </p>
+<div class='example'><div class="example-tabset">
+      <ul class="lui-tabset" data-tabset>
+              <li class="lui-tab" data-tab-id="default-states">
+      <span class="lui-tab__text">
+        Default
+      </span>
+    </li>
+      <li class="lui-tab" data-tab-id="inverse-states">
+      <span class="lui-tab__text">
+        Inverse
+      </span>
+    </li>
+
+      </ul>
+    </div><div data-tab-content="default-states" style="display: none;">
+      <div class="example-box" style="">
+              <button class="lui-button  lui-active">Active</button>
+      <button class="lui-button  lui-button--gradient  lui-active">Active</button>
+      <button class="lui-button  lui-button--success  lui-active">Active</button>
+      <button class="lui-button  lui-disabled">Disabled</button>
+      <button class="lui-button  lui-button--gradient  lui-disabled">Disabled</button>
+      <button class="lui-button  lui-button--success  lui-disabled">Disabled</button>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-button  lui-active&quot;&gt;Active&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--gradient  lui-active&quot;&gt;Active&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--success  lui-active&quot;&gt;Active&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-disabled&quot;&gt;Disabled&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--gradient  lui-disabled&quot;&gt;Disabled&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--success  lui-disabled&quot;&gt;Disabled&lt;/button&gt;
+</code></pre></div>
+      </div>
+    </div><div data-tab-content="inverse-states" style="display: none;">
+      <div class="example-box lui-bg-inverse" style="">
+              <button class="lui-button  lui-button--inverse  lui-active">Active</button>
+      <button class="lui-button  lui-button--gradient-inverse  lui-active">Active</button>
+      <button class="lui-button  lui-button--success  lui-active">Active</button>
+      <button class="lui-button  lui-button--inverse  lui-disabled">Disabled</button>
+      <button class="lui-button  lui-button--gradient-inverse  lui-disabled">Disabled</button>
+      <button class="lui-button  lui-button--success  lui-disabled">Disabled</button>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-button  lui-button--inverse  lui-active&quot;&gt;Active&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--gradient-inverse  lui-active&quot;&gt;Active&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--success  lui-active&quot;&gt;Active&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--inverse  lui-disabled&quot;&gt;Disabled&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--gradient-inverse  lui-disabled&quot;&gt;Disabled&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--success  lui-disabled&quot;&gt;Disabled&lt;/button&gt;
+</code></pre></div>
+      </div>
+    </div></div>
+  <a id="ButtonsAndIcons"></a>
+  <h2>Buttons and icons</h2>
+  <p>Buttons can contain both text and icons. When combined, these requirements apply:</p>
+  <p>
+    <ul>
+      <li>The text must be enclosed within an element having the class <code>.lui-button__text</code>.</li>
+      <li>The elements representing icons must have the class <code>.lui-button__icon</code>.</li>
+      <li>The element representing a caret must have the class <code>.lui-button__caret</code>.</li>
+    </ul>
+  </p>
+  <p>Buttons support right-to-left, given that the <code>dir="rtl"</code> attribute is present on the button itself or any of its ancestors.</p>
+  <p class="lui-text-error">Don't place any spaces or line breaks between the elements in the button, since that will cause unwanted spacing to be added.</p>
+<div class='example'><div class="example-tabset">
+      <ul class="lui-tabset" data-tabset>
+              <li class="lui-tab" data-tab-id="icons-default">
+      <span class="lui-tab__text">
+        Default
+      </span>
+    </li>
+      <li class="lui-tab" data-tab-id="icons-inverse">
+      <span class="lui-tab__text">
+        Inverse
+      </span>
+    </li>
+
+      </ul>
+    </div><div data-tab-content="icons-default" style="display: none;">
+      <div class="example-box" style="">
+              <button class="lui-button">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span>
+      </button>
+      <button class="lui-button">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span><span class="lui-button__caret  lui-caret"></span>
+      </button>
+      <button class="lui-button  lui-button--rounded">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button  lui-button--rounded">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span><span class="lui-button__caret  lui-caret"></span>
+      </button>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-button&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--plus&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--plus&quot;&gt;&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__text&quot;&gt;Add item&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--plus&quot;&gt;&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__text&quot;&gt;Add item&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__caret  lui-caret&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--rounded&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--plus&quot;&gt;&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__text&quot;&gt;Add item&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--rounded&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--plus&quot;&gt;&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__text&quot;&gt;Add item&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__caret  lui-caret&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+</code></pre></div>
+      </div>
+    </div><div data-tab-content="icons-inverse" style="display: none;">
+      <div class="example-box lui-bg-inverse" style="">
+              <button class="lui-button  lui-button--inverse">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span>
+      </button>
+      <button class="lui-button  lui-button--inverse">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button  lui-button--inverse">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span><span class="lui-button__caret  lui-caret"></span>
+      </button>
+      <button class="lui-button  lui-button--rounded  lui-button--inverse">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button  lui-button--rounded  lui-button--inverse">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span><span class="lui-button__caret  lui-caret"></span>
+      </button>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-button  lui-button--inverse&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--plus&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--inverse&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--plus&quot;&gt;&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__text&quot;&gt;Add item&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--inverse&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--plus&quot;&gt;&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__text&quot;&gt;Add item&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__caret  lui-caret&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--rounded  lui-button--inverse&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--plus&quot;&gt;&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__text&quot;&gt;Add item&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--rounded  lui-button--inverse&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--plus&quot;&gt;&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__text&quot;&gt;Add item&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__caret  lui-caret&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+</code></pre></div>
+      </div>
+    </div></div>
+  <a id="BlockButton"></a>
+  <h2>Block style button</h2>
+  <p>Block style buttons takes up as much space it can, adding ellipsis to text that does not fit on one line.</p>
+<div class='example'><div class="example-tabset">
+      <ul class="lui-tabset" data-tabset>
+              <li class="lui-tab" data-tab-id="block-default">
+      <span class="lui-tab__text">
+        Default
+      </span>
+    </li>
+      <li class="lui-tab" data-tab-id="block-inverse">
+      <span class="lui-tab__text">
+        Inverse
+      </span>
+    </li>
+
+      </ul>
+    </div><div data-tab-content="block-default" style="display: none;">
+      <div class="example-box" style="">
+              <button class="lui-button  lui-button--block" style="margin-bottom: 5px;">
+        <span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button  lui-button--block" style="margin-bottom: 5px;">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button  lui-button--block  lui-button--rounded" style="margin-bottom: 5px;">
+        <span class="lui-button__text">Add item</span><span class="lui-button__icon  lui-icon  lui-icon--plus"></span>
+      </button>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-button  lui-button--block&quot; style&#x3D;&quot;margin-bottom: 5px;&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__text&quot;&gt;Add item&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--block&quot; style&#x3D;&quot;margin-bottom: 5px;&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--plus&quot;&gt;&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__text&quot;&gt;Add item&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--block  lui-button--rounded&quot; style&#x3D;&quot;margin-bottom: 5px;&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__text&quot;&gt;Add item&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--plus&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+</code></pre></div>
+      </div>
+    </div><div data-tab-content="block-inverse" style="display: none;">
+      <div class="example-box lui-bg-inverse" style="">
+              <button class="lui-button  lui-button--inverse  lui-button--block" style="margin-bottom: 5px;">
+        <span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button  lui-button--inverse  lui-button--block" style="margin-bottom: 5px;">
+        <span class="lui-button__icon  lui-icon  lui-icon--plus"></span><span class="lui-button__text">Add item</span>
+      </button>
+      <button class="lui-button  lui-button--inverse  lui-button--block  lui-button--rounded" style="margin-bottom: 5px;">
+        <span class="lui-button__text">Add item</span><span class="lui-button__icon  lui-icon  lui-icon--plus"></span>
+      </button>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-button  lui-button--inverse  lui-button--block&quot; style&#x3D;&quot;margin-bottom: 5px;&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__text&quot;&gt;Add item&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--inverse  lui-button--block&quot; style&#x3D;&quot;margin-bottom: 5px;&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--plus&quot;&gt;&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__text&quot;&gt;Add item&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--inverse  lui-button--block  lui-button--rounded&quot; style&#x3D;&quot;margin-bottom: 5px;&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-button__text&quot;&gt;Add item&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--plus&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+</code></pre></div>
+      </div>
+    </div></div>
+  <h2>Button sizing</h2>
+  <p>
+    You can control the size of buttons by adding a class. The following sizing options are available:
+    <ul>
+      <li>
+        default - 28px
+      </li>
+      <li>
+        large - 38px
+      </li>
+      <li>
+        extra large - 54px
+      </li>
+    </ul>
+  </p>
+  <p>
+    <button class="lui-button">Default</button>
+    <button class="lui-button  lui-button--large">Default</button>
+    <button class="lui-button  lui-button--x-large">Default</button>
+  </p>
+  <p>
+<div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-button&quot;&gt;Default&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--large&quot;&gt;Default&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-button  lui-button--x-large&quot;&gt;Default&lt;/button&gt;
+</code></pre></div>  </p>
+
+  <a id="OverlayButtons"></a>
+  <h2>Overlay buttons</h2>
+  <p>The overlay button is special type of button that can be used on top of dynamic background images.</p>
+  <div class="example">
+    <div class="example-box  lui-bg-dynamic">
+      <button class="lui-overlay-button">Overlay button</button>
+      <button class="lui-overlay-button">
+        <span class="lui-overlay-button__icon  lui-icon  lui-icon--tick  lui-text-success"></span>
+      </button>
+      <button class="lui-overlay-button">
+        <span class="lui-overlay-button__icon  lui-icon  lui-icon--plus"></span>
+        <span class="lui-overlay-button__text">Text</span>
+        <span class="lui-overlay-button__caret  lui-caret"></span>
+      </button>
+      <button class="lui-overlay-button  lui-disabled">Overlay button</button>
+    </div>
+<div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-overlay-button&quot;&gt;Overlay button&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-overlay-button&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-overlay-button__icon  lui-icon  lui-icon--tick  lui-text-success&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-overlay-button&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-overlay-button__icon  lui-icon  lui-icon--plus&quot;&gt;&lt;/span&gt;
+  &lt;span class&#x3D;&quot;lui-overlay-button__text&quot;&gt;Text&lt;/span&gt;
+  &lt;span class&#x3D;&quot;lui-overlay-button__caret  lui-caret&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-overlay-button  lui-disabled&quot;&gt;Overlay button&lt;/button&gt;
+</code></pre></div>  </div>
+
+  <a id="FadeButtons"></a>
+  <h2>Fade buttons</h2>
+  <p>Fade buttons are typically used inside other components like lists and popovers
+    to create functional layouts.</p>
+<div class='example'><div class="example-tabset">
+      <ul class="lui-tabset" data-tabset>
+              <li class="lui-tab" data-tab-id="fade-default">
+      <span class="lui-tab__text">
+        Default
+      </span>
+    </li>
+      <li class="lui-tab" data-tab-id="fade-inverse">
+      <span class="lui-tab__text">
+        Inverse
+      </span>
+    </li>
+
+      </ul>
+    </div><div data-tab-content="fade-default" style="display: none;">
+      <div class="example-box" style="">
+              <button class="lui-fade-button">Default</button>
+      <button class="lui-fade-button">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-active">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-disabled">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--warning">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--success">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--info">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--danger">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--large">
+        <span class="lui-fade-button__icon  lui-icon  lui-icon--large  lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--large  lui-active">
+        <span class="lui-fade-button__icon  lui-icon  lui-icon--large  lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button">
+        <span class="lui-fade-button__text">Text n </span>
+        <span class="lui-fade-button__icon  lui-icon  lui-icon--home"></span>
+      </button>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-fade-button&quot;&gt;Default&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-active&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-disabled&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--warning&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--success&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--info&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--danger&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--large&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon  lui-icon--large  lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--large  lui-active&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon  lui-icon--large  lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__text&quot;&gt;Text n &lt;/span&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon  lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+</code></pre></div>
+      </div>
+    </div><div data-tab-content="fade-inverse" style="display: none;">
+      <div class="example-box lui-bg-inverse" style="">
+              <button class="lui-fade-button  lui-fade-button--inverse">Inverse</button>
+      <button class="lui-fade-button  lui-fade-button--inverse">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--inverse  lui-active">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--inverse  lui-disabled">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--warning">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--success">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--info">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--danger">
+        <span class="lui-fade-button__icon  lui-icon lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--inverse  lui-fade-button--large">
+        <span class="lui-fade-button__icon  lui-icon  lui-icon--large  lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--inverse  lui-fade-button--large  lui-active">
+        <span class="lui-fade-button__icon  lui-icon  lui-icon--large  lui-icon--home"></span>
+      </button>
+      <button class="lui-fade-button  lui-fade-button--inverse">
+        <span class="lui-fade-button__text">Text n </span>
+        <span class="lui-fade-button__icon  lui-icon  lui-icon--home"></span>
+      </button>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--inverse&quot;&gt;Inverse&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--inverse&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--inverse  lui-active&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--inverse  lui-disabled&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--warning&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--success&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--info&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--danger&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--inverse  lui-fade-button--large&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon  lui-icon--large  lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--inverse  lui-fade-button--large  lui-active&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon  lui-icon--large  lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;lui-fade-button  lui-fade-button--inverse&quot;&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__text&quot;&gt;Text n &lt;/span&gt;
+  &lt;span class&#x3D;&quot;lui-fade-button__icon  lui-icon  lui-icon--home&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+</code></pre></div>
+      </div>
+    </div></div>
+</div>
+
+  </div>
+</div>
+
+<script src="leonardo-ui/leonardo-ui.js"></script>
+
+<script>
+  (function() {
+    Array.prototype.slice.call( document.querySelectorAll( "[data-tabset]" ) ).forEach( function( tabsetElement ) {
+      leonardoui.tabset( {
+        element: tabsetElement
+      } );
+    } )
+  }());
+</script>
+
+    </div>
+    <div class="footer">
+      <div class="wrap">
+        <h2 class="footer-title">License and attributions</h2>
+        <p>Leonardo UI 0.9.0. © 2016 QlikTech International AB</p>
+        <p>Licensed under MIT</p>
+      </div>
+    </div>
+  </div>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

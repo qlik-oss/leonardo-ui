@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="leonardo-ui/leonardo-ui.css" type="text/css" />
+  <link rel="stylesheet" href="styles/docs.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <link rel="icon" href="resources/favicon.ico">
+  <title> UI Overview | Leonardo </title>
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="wrap">
+        <div class="logo">
+          <a href="index.html">
+            <img src="resources/logo.png" alt="LUI">
+            <span>Leonardo UI</span>
+          </a>
+        </div>
+        <div class="nav">
+          <ul class="navbar">
+            <li><a href="get-started.html" >Get started</a></li>
+            <li><a href="components.html"  class="selected" >Components</a></li>
+            <li><a href="https://github.com/qlik-oss/leonardo-ui">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="component-container wrap">
+  <div class="component-sidebar">
+    <ul class="sidebar-list">
+        <li>
+          <a>General</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="icons.html">Icons</a>
+              </li>
+              <li>
+                <a href="palette.html">Palette</a>
+              </li>
+              <li>
+                <a href="classes.html">Classes</a>
+              </li>
+              <li>
+                <a href="list.html">List</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Buttons</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="button.html">Button</a>
+              </li>
+              <li>
+                <a href="buttongroup.html">Button Group</a>
+              </li>
+              <li>
+                <a href="tabset.html">Tabset</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Inputs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="input.html">Input</a>
+              </li>
+              <li>
+                <a href="textarea.html">Textarea</a>
+              </li>
+              <li>
+                <a href="input-group.html">Input Group</a>
+              </li>
+              <li>
+                <a href="search.html">Search</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Form Elements</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="checkbox.html">Checkbox</a>
+              </li>
+              <li>
+                <a href="radio-buttons.html">Radio Buttons</a>
+              </li>
+              <li>
+                <a href="select.html">Select</a>
+              </li>
+              <li>
+                <a href="switch.html">Switch</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Dialogs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="dialog.html">Dialog</a>
+              </li>
+              <li>
+                <a href="popover.html">Popover</a>
+              </li>
+              <li>
+                <a href="toast.html">Toast</a>
+              </li>
+              <li>
+                <a href="tooltip.html">Tooltip</a>
+              </li>
+          </ul>
+        </li>
+    </ul>
+  </div>
+  <div class="component-content">
+    <div class="component">
+  <h1>Components</h1>
+	<p>The current components of Leonardo UI are listed in the navigation menu. Components support RTL by default
+    and most components are accessible. For the components requiring JS, there is a "JS" tab in the code examples.
+  </p>
+  <p>Components marked as "Experimental" are less stable. These components can still be used, but their API:s are subject to change more often than other components.
+    Components marked as "Deprecated" should not be used and may be removed in a future version.</p>
+  <h2>BEM</h2>
+  <p><a href="http://getbem.com/">BEM</a> (Block Element Modifier) is used for class names which is why you will see classes like "lui-button--rounded" and "lui-button__icon".
+    One exception from the BEM style has been made and that's the quite general "lui-active", "lui-disabled" etc. classes which do not contain the
+    prefix of the component.</p>
+</div>
+
+  </div>
+</div>
+
+<script src="leonardo-ui/leonardo-ui.js"></script>
+
+<script>
+  (function() {
+    Array.prototype.slice.call( document.querySelectorAll( "[data-tabset]" ) ).forEach( function( tabsetElement ) {
+      leonardoui.tabset( {
+        element: tabsetElement
+      } );
+    } )
+  }());
+</script>
+
+    </div>
+    <div class="footer">
+      <div class="wrap">
+        <h2 class="footer-title">License and attributions</h2>
+        <p>Leonardo UI 0.9.0. © 2016 QlikTech International AB</p>
+        <p>Licensed under MIT</p>
+      </div>
+    </div>
+  </div>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

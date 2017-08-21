@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="leonardo-ui/leonardo-ui.css" type="text/css" />
+  <link rel="stylesheet" href="styles/docs.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <link rel="icon" href="resources/favicon.ico">
+  <title> UI Overview | Leonardo </title>
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="wrap">
+        <div class="logo">
+          <a href="index.html">
+            <img src="resources/logo.png" alt="LUI">
+            <span>Leonardo UI</span>
+          </a>
+        </div>
+        <div class="nav">
+          <ul class="navbar">
+            <li><a href="get-started.html" >Get started</a></li>
+            <li><a href="components.html"  class="selected" >Components</a></li>
+            <li><a href="https://github.com/qlik-oss/leonardo-ui">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="component-container wrap">
+  <div class="component-sidebar">
+    <ul class="sidebar-list">
+        <li>
+          <a>General</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="icons.html">Icons</a>
+              </li>
+              <li>
+                <a href="palette.html">Palette</a>
+              </li>
+              <li>
+                <a href="classes.html">Classes</a>
+              </li>
+              <li>
+                <a href="list.html">List</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Buttons</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="button.html">Button</a>
+              </li>
+              <li>
+                <a href="buttongroup.html">Button Group</a>
+              </li>
+              <li>
+                <a href="tabset.html">Tabset</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Inputs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="input.html">Input</a>
+              </li>
+              <li>
+                <a href="textarea.html">Textarea</a>
+              </li>
+              <li>
+                <a href="input-group.html">Input Group</a>
+              </li>
+              <li>
+                <a href="search.html">Search</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Form Elements</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="checkbox.html">Checkbox</a>
+              </li>
+              <li>
+                <a href="radio-buttons.html">Radio Buttons</a>
+              </li>
+              <li>
+                <a href="select.html">Select</a>
+              </li>
+              <li>
+                <a href="switch.html">Switch</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Dialogs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="dialog.html">Dialog</a>
+              </li>
+              <li>
+                <a href="popover.html">Popover</a>
+              </li>
+              <li>
+                <a href="toast.html">Toast</a>
+              </li>
+              <li>
+                <a href="tooltip.html" class="selected">Tooltip</a>
+              </li>
+          </ul>
+        </li>
+    </ul>
+  </div>
+  <div class="component-content">
+    <div class="component">
+  <h1>Tooltip</h1>
+  <p>The tooltip component can display a simple text or more advanced HTML content.
+    It is typically used to display a small amount of complementary information.</p>
+
+  <div class="example">
+    <div class="example-box">
+      <div class="lui-tooltip">
+        Simple tooltip
+        <div class="lui-tooltip__arrow lui-tooltip__arrow--right"></div>
+      </div>
+      <div class="lui-tooltip" style="width: 200px;">
+        This tooltip has <b>HTML content</b> and is displayed over multiple lines.
+        <div class="lui-tooltip__arrow lui-tooltip__arrow--right"></div>
+      </div>
+    </div>
+<div class='example-code  has-border'><pre><code class='html'>&lt;div class&#x3D;&quot;lui-tooltip&quot;&gt;
+  Simple tooltip
+  &lt;div class&#x3D;&quot;lui-tooltip__arrow lui-tooltip__arrow--right&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;lui-tooltip&quot; style&#x3D;&quot;width: 200px;&quot;&gt;
+  This tooltip has &lt;b&gt;HTML content&lt;/b&gt; and is displayed over multiple lines.
+  &lt;div class&#x3D;&quot;lui-tooltip__arrow lui-tooltip__arrow--right&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div>  </div>
+
+  <h2>Tooltip JS</h2>
+
+<div class='example'><div class="example-tabset">
+      <ul class="lui-tabset" data-tabset>
+              <li class="lui-tab" data-tab-id="markup">
+      <span class="lui-tab__text">
+        Markup
+      </span>
+    </li>
+      <li class="lui-tab" data-tab-id="js">
+      <span class="lui-tab__text">
+        JS
+      </span>
+    </li>
+
+      </ul>
+    </div><div data-tab-content="markup" style="display: none;">
+      <div class="example-box" style="">
+              <div>
+        <a class="tooltip-trigger" aria-haspopup="true" title="This is the tooltip text to be displayed">Hover me (top)</a>
+      </div>
+      <div>
+        <a class="tooltip-trigger" aria-haspopup="true" title="This is the tooltip text to be displayed">Hover me (right)</a>
+      </div>
+      <div>
+        <a class="tooltip-trigger" aria-haspopup="true" title="This is the tooltip text to be displayed">Hover me (bottom)</a>
+      </div>
+      <div>
+        <a class="tooltip-trigger" aria-haspopup="true" title="This is the tooltip text to be displayed">Hover me (left)</a>
+      </div>
+      <div>
+        <a class="tooltip-trigger" aria-haspopup="true">Hover me (HTML content)</a>
+      </div>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;div&gt;
+  &lt;a class&#x3D;&quot;tooltip-trigger&quot; aria-haspopup&#x3D;&quot;true&quot; title&#x3D;&quot;This is the tooltip text to be displayed&quot;&gt;Hover me (top)&lt;/a&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;a class&#x3D;&quot;tooltip-trigger&quot; aria-haspopup&#x3D;&quot;true&quot; title&#x3D;&quot;This is the tooltip text to be displayed&quot;&gt;Hover me (right)&lt;/a&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;a class&#x3D;&quot;tooltip-trigger&quot; aria-haspopup&#x3D;&quot;true&quot; title&#x3D;&quot;This is the tooltip text to be displayed&quot;&gt;Hover me (bottom)&lt;/a&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;a class&#x3D;&quot;tooltip-trigger&quot; aria-haspopup&#x3D;&quot;true&quot; title&#x3D;&quot;This is the tooltip text to be displayed&quot;&gt;Hover me (left)&lt;/a&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;a class&#x3D;&quot;tooltip-trigger&quot; aria-haspopup&#x3D;&quot;true&quot;&gt;Hover me (HTML content)&lt;/a&gt;
+&lt;/div&gt;
+</code></pre></div>
+      </div>
+    </div><div data-tab-content="js" style="display: none;">
+      <div class="example-box" style="display: none;">
+              <script>
+        var docks = ["top", ["right", "left"], "bottom", ["left", "right"], "right"];
+        var tooltipTriggers = Array.prototype.slice.apply( document.querySelectorAll( ".tooltip-trigger" ) );
+        tooltipTriggers.forEach( function( element, idx ) {
+          var dock = docks[idx];
+          var tooltip;
+          element.addEventListener( "mouseover", function() {
+            var options = {
+              alignTo: element,
+              dock: dock
+            };
+            if ( idx === 4 ) {
+              options.content = "<span>This text is bold and italic: <b><i>1337</i></b></span>"
+            }
+            tooltip = leonardoui.tooltip( options );
+          } );
+          element.addEventListener( "mouseout", function() {
+            if ( tooltip ) {
+              tooltip.close();
+            }
+          } );
+        } );
+      </script>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;script&gt;
+  var docks &#x3D; [&quot;top&quot;, [&quot;right&quot;, &quot;left&quot;], &quot;bottom&quot;, [&quot;left&quot;, &quot;right&quot;], &quot;right&quot;];
+  var tooltipTriggers &#x3D; Array.prototype.slice.apply( document.querySelectorAll( &quot;.tooltip-trigger&quot; ) );
+  tooltipTriggers.forEach( function( element, idx ) {
+    var dock &#x3D; docks[idx];
+    var tooltip;
+    element.addEventListener( &quot;mouseover&quot;, function() {
+      var options &#x3D; {
+        alignTo: element,
+        dock: dock
+      };
+      if ( idx &#x3D;&#x3D;&#x3D; 4 ) {
+        options.content &#x3D; &quot;&lt;span&gt;This text is bold and italic: &lt;b&gt;&lt;i&gt;1337&lt;/i&gt;&lt;/b&gt;&lt;/span&gt;&quot;
+      }
+      tooltip &#x3D; leonardoui.tooltip( options );
+    } );
+    element.addEventListener( &quot;mouseout&quot;, function() {
+      if ( tooltip ) {
+        tooltip.close();
+      }
+    } );
+  } );
+&lt;/script&gt;
+</code></pre></div>
+      </div>
+    </div></div>
+  <h3>Options</h3>
+
+  <table class="options">
+    <thead>
+      <th>Option</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>alignTo</td>
+        <td>Element / point</td>
+        <td>Element or point (Object with top, left) to dock the tooltip to.</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>dock</td>
+        <td>string | Array</td>
+        <td>Dock to side. Can be a string or an array of "top", "right", "bottom", "left".</td>
+        <td>"bottom"</td>
+      </tr>
+      <tr>
+        <td>content</td>
+        <td>string | Element</td>
+        <td>HTML content as a string or a Element element. If left empty, the title attribute of the alignTo element will be used.</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  </div>
+</div>
+
+<script src="leonardo-ui/leonardo-ui.js"></script>
+
+<script>
+  (function() {
+    Array.prototype.slice.call( document.querySelectorAll( "[data-tabset]" ) ).forEach( function( tabsetElement ) {
+      leonardoui.tabset( {
+        element: tabsetElement
+      } );
+    } )
+  }());
+</script>
+
+    </div>
+    <div class="footer">
+      <div class="wrap">
+        <h2 class="footer-title">License and attributions</h2>
+        <p>Leonardo UI 0.9.0. © 2016 QlikTech International AB</p>
+        <p>Licensed under MIT</p>
+      </div>
+    </div>
+  </div>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

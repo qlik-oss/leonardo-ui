@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="leonardo-ui/leonardo-ui.css" type="text/css" />
+  <link rel="stylesheet" href="styles/docs.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <link rel="icon" href="resources/favicon.ico">
+  <title> UI Overview | Leonardo </title>
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="wrap">
+        <div class="logo">
+          <a href="index.html">
+            <img src="resources/logo.png" alt="LUI">
+            <span>Leonardo UI</span>
+          </a>
+        </div>
+        <div class="nav">
+          <ul class="navbar">
+            <li><a href="get-started.html" >Get started</a></li>
+            <li><a href="components.html"  class="selected" >Components</a></li>
+            <li><a href="https://github.com/qlik-oss/leonardo-ui">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="component-container wrap">
+  <div class="component-sidebar">
+    <ul class="sidebar-list">
+        <li>
+          <a>General</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="icons.html">Icons</a>
+              </li>
+              <li>
+                <a href="palette.html" class="selected">Palette</a>
+              </li>
+              <li>
+                <a href="classes.html">Classes</a>
+              </li>
+              <li>
+                <a href="list.html">List</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Buttons</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="button.html">Button</a>
+              </li>
+              <li>
+                <a href="buttongroup.html">Button Group</a>
+              </li>
+              <li>
+                <a href="tabset.html">Tabset</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Inputs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="input.html">Input</a>
+              </li>
+              <li>
+                <a href="textarea.html">Textarea</a>
+              </li>
+              <li>
+                <a href="input-group.html">Input Group</a>
+              </li>
+              <li>
+                <a href="search.html">Search</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Form Elements</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="checkbox.html">Checkbox</a>
+              </li>
+              <li>
+                <a href="radio-buttons.html">Radio Buttons</a>
+              </li>
+              <li>
+                <a href="select.html">Select</a>
+              </li>
+              <li>
+                <a href="switch.html">Switch</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Dialogs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="dialog.html">Dialog</a>
+              </li>
+              <li>
+                <a href="popover.html">Popover</a>
+              </li>
+              <li>
+                <a href="toast.html">Toast</a>
+              </li>
+              <li>
+                <a href="tooltip.html">Tooltip</a>
+              </li>
+          </ul>
+        </li>
+    </ul>
+  </div>
+  <div class="component-content">
+    <div class="component palette">
+  <h1>Palette</h1>
+  <p>Colors from the palette can be used with the LESS variables below or by using the HEX value directly. A file
+    colors.less is generated and distributed together with the library.</p>
+
+  <div class="colors">
+    <div class="color-family">
+      <div class='color-box dark' style='background:#FFFFFF'>
+      <div class='color-name'>@greyscale-100</div>
+      <div class='color-hex'>#FFFFFF</div>
+    </div>
+      <div class='color-box dark' style='background:#FBFBFB'>
+      <div class='color-name'>@greyscale-98</div>
+      <div class='color-hex'>#FBFBFB</div>
+    </div>
+      <div class='color-box dark' style='background:#F2F2F2'>
+      <div class='color-name'>@greyscale-95</div>
+      <div class='color-hex'>#F2F2F2</div>
+    </div>
+      <div class='color-box dark' style='background:#E6E6E6'>
+      <div class='color-name'>@greyscale-90</div>
+      <div class='color-hex'>#E6E6E6</div>
+    </div>
+      <div class='color-box dark' style='background:#D9D9D9'>
+      <div class='color-name'>@greyscale-85</div>
+      <div class='color-hex'>#D9D9D9</div>
+    </div>
+      <div class='color-box dark' style='background:#CCCCCC'>
+      <div class='color-name'>@greyscale-80</div>
+      <div class='color-hex'>#CCCCCC</div>
+    </div>
+      <div class='color-box dark' style='background:#BFBFBF'>
+      <div class='color-name'>@greyscale-75</div>
+      <div class='color-hex'>#BFBFBF</div>
+    </div>
+      <div class='color-box dark' style='background:#B3B3B3'>
+      <div class='color-name'>@greyscale-70</div>
+      <div class='color-hex'>#B3B3B3</div>
+    </div>
+      <div class='color-box dark' style='background:#A6A6A6'>
+      <div class='color-name'>@greyscale-65</div>
+      <div class='color-hex'>#A6A6A6</div>
+    </div>
+      <div class='color-box dark' style='background:#999999'>
+      <div class='color-name'>@greyscale-60</div>
+      <div class='color-hex'>#999999</div>
+    </div>
+      <div class='color-box dark' style='background:#8C8C8C'>
+      <div class='color-name'>@greyscale-55</div>
+      <div class='color-hex'>#8C8C8C</div>
+    </div>
+      <div class='color-box light' style='background:#808080'>
+      <div class='color-name'>@greyscale-50</div>
+      <div class='color-hex'>#808080</div>
+    </div>
+      <div class='color-box light' style='background:#737373'>
+      <div class='color-name'>@greyscale-45</div>
+      <div class='color-hex'>#737373</div>
+    </div>
+      <div class='color-box light' style='background:#666666'>
+      <div class='color-name'>@greyscale-40</div>
+      <div class='color-hex'>#666666</div>
+    </div>
+      <div class='color-box light' style='background:#595959'>
+      <div class='color-name'>@greyscale-35</div>
+      <div class='color-hex'>#595959</div>
+    </div>
+      <div class='color-box light' style='background:#4D4D4D'>
+      <div class='color-name'>@greyscale-30</div>
+      <div class='color-hex'>#4D4D4D</div>
+    </div>
+      <div class='color-box light' style='background:#474747'>
+      <div class='color-name'>@greyscale-28</div>
+      <div class='color-hex'>#474747</div>
+    </div>
+      <div class='color-box light' style='background:#404040'>
+      <div class='color-name'>@greyscale-25</div>
+      <div class='color-hex'>#404040</div>
+    </div>
+      <div class='color-box light' style='background:#333333'>
+      <div class='color-name'>@greyscale-20</div>
+      <div class='color-hex'>#333333</div>
+    </div>
+      <div class='color-box light' style='background:#262626'>
+      <div class='color-name'>@greyscale-15</div>
+      <div class='color-hex'>#262626</div>
+    </div>
+      <div class='color-box light' style='background:#1A1A1A'>
+      <div class='color-name'>@greyscale-10</div>
+      <div class='color-hex'>#1A1A1A</div>
+    </div>
+      <div class='color-box light' style='background:#0D0D0D'>
+      <div class='color-name'>@greyscale-5</div>
+      <div class='color-hex'>#0D0D0D</div>
+    </div>
+      <div class='color-box light' style='background:#000000'>
+      <div class='color-name'>@greyscale-0</div>
+      <div class='color-hex'>#000000</div>
+    </div>
+    </div>
+    <div class="color-family">
+      <div class='color-box dark' style='background:#a8d7f0'>
+      <div class='color-name'>@blue-lighten-30</div>
+      <div class='color-hex'>#a8d7f0</div>
+    </div>
+      <div class='color-box dark' style='background:#68b5de'>
+      <div class='color-name'>@blue-lighten-15</div>
+      <div class='color-hex'>#68b5de</div>
+    </div>
+      <div class='color-box dark' style='background:#52a2cc'>
+      <div class='color-name'>@blue</div>
+      <div class='color-hex'>#52a2cc</div>
+    </div>
+      <div class='color-box light' style='background:#468bb0'>
+      <div class='color-name'>@blue-darken-15</div>
+      <div class='color-hex'>#468bb0</div>
+    </div>
+      <div class='color-box light' style='background:#3a7391'>
+      <div class='color-name'>@blue-darken-30</div>
+      <div class='color-hex'>#3a7391</div>
+    </div>
+      <div class='color-box light' style='background:#214152'>
+      <div class='color-name'>@blue-darken-60</div>
+      <div class='color-hex'>#214152</div>
+    </div>
+    </div>
+    <div class="color-family">
+      <div class='color-box dark' style='background:#c0dca9'>
+      <div class='color-name'>@green-lighten-30</div>
+      <div class='color-hex'>#c0dca9</div>
+    </div>
+      <div class='color-box dark' style='background:#91c26a'>
+      <div class='color-name'>@green-lighten-15</div>
+      <div class='color-hex'>#91c26a</div>
+    </div>
+      <div class='color-box dark' style='background:#61a729'>
+      <div class='color-name'>@green</div>
+      <div class='color-hex'>#61a729</div>
+    </div>
+      <div class='color-box light' style='background:#529a18'>
+      <div class='color-name'>@green-darken-15</div>
+      <div class='color-hex'>#529a18</div>
+    </div>
+      <div class='color-box light' style='background:#44751d'>
+      <div class='color-name'>@green-darken-30</div>
+      <div class='color-hex'>#44751d</div>
+    </div>
+      <div class='color-box light' style='background:#274310'>
+      <div class='color-name'>@green-darken-60</div>
+      <div class='color-hex'>#274310</div>
+    </div>
+    </div>
+    <div class="color-family">
+      <div class='color-box dark' style='background:#fcd6a5'>
+      <div class='color-name'>@orange-lighten-30</div>
+      <div class='color-hex'>#fcd6a5</div>
+    </div>
+      <div class='color-box dark' style='background:#fab761'>
+      <div class='color-name'>@orange-lighten-15</div>
+      <div class='color-hex'>#fab761</div>
+    </div>
+      <div class='color-box dark' style='background:#f8981d'>
+      <div class='color-name'>@orange</div>
+      <div class='color-hex'>#f8981d</div>
+    </div>
+      <div class='color-box light' style='background:#d38119'>
+      <div class='color-name'>@orange-darken-15</div>
+      <div class='color-hex'>#d38119</div>
+    </div>
+      <div class='color-box light' style='background:#ad6a14'>
+      <div class='color-name'>@orange-darken-30</div>
+      <div class='color-hex'>#ad6a14</div>
+    </div>
+      <div class='color-box light' style='background:#633d0c'>
+      <div class='color-name'>@orange-darken-60</div>
+      <div class='color-hex'>#633d0c</div>
+    </div>
+    </div>
+    <div class="color-family">
+      <div class='color-box dark' style='background:#db94ca'>
+      <div class='color-name'>@purple-lighten-30</div>
+      <div class='color-hex'>#db94ca</div>
+    </div>
+      <div class='color-box dark' style='background:#d47dbe'>
+      <div class='color-name'>@purple-lighten-15</div>
+      <div class='color-hex'>#d47dbe</div>
+    </div>
+      <div class='color-box dark' style='background:#cc66b3'>
+      <div class='color-name'>@purple</div>
+      <div class='color-hex'>#cc66b3</div>
+    </div>
+      <div class='color-box light' style='background:#ae5798'>
+      <div class='color-name'>@purple-darken-15</div>
+      <div class='color-hex'>#ae5798</div>
+    </div>
+      <div class='color-box light' style='background:#8e477d'>
+      <div class='color-name'>@purple-darken-30</div>
+      <div class='color-hex'>#8e477d</div>
+    </div>
+      <div class='color-box light' style='background:#522948'>
+      <div class='color-name'>@purple-darken-60</div>
+      <div class='color-hex'>#522948</div>
+    </div>
+    </div>
+    <div class="color-family">
+      <div class='color-box dark' style='background:#ffb0b0'>
+      <div class='color-name'>@red-lighten-30</div>
+      <div class='color-hex'>#ffb0b0</div>
+    </div>
+      <div class='color-box dark' style='background:#ff7373'>
+      <div class='color-name'>@red-lighten-15</div>
+      <div class='color-hex'>#ff7373</div>
+    </div>
+      <div class='color-box dark' style='background:#f05555'>
+      <div class='color-name'>@red</div>
+      <div class='color-hex'>#f05555</div>
+    </div>
+      <div class='color-box light' style='background:#c14444'>
+      <div class='color-name'>@red-darken-15</div>
+      <div class='color-hex'>#c14444</div>
+    </div>
+      <div class='color-box light' style='background:#a33939'>
+      <div class='color-name'>@red-darken-30</div>
+      <div class='color-hex'>#a33939</div>
+    </div>
+      <div class='color-box light' style='background:#522121'>
+      <div class='color-name'>@red-darken-60</div>
+      <div class='color-hex'>#522121</div>
+    </div>
+    </div>
+    <div class="color-family">
+      <div class='color-box dark' style='background:#ffdd68'>
+      <div class='color-name'>@yellow-lighten-30</div>
+      <div class='color-hex'>#ffdd68</div>
+    </div>
+      <div class='color-box dark' style='background:#ffd546'>
+      <div class='color-name'>@yellow-lighten-15</div>
+      <div class='color-hex'>#ffd546</div>
+    </div>
+      <div class='color-box dark' style='background:#ffce26'>
+      <div class='color-name'>@yellow</div>
+      <div class='color-hex'>#ffce26</div>
+    </div>
+      <div class='color-box light' style='background:#d9af20'>
+      <div class='color-name'>@yellow-darken-15</div>
+      <div class='color-hex'>#d9af20</div>
+    </div>
+      <div class='color-box light' style='background:#b2901b'>
+      <div class='color-name'>@yellow-darken-30</div>
+      <div class='color-hex'>#b2901b</div>
+    </div>
+      <div class='color-box light' style='background:#66520f'>
+      <div class='color-name'>@yellow-darken-60</div>
+      <div class='color-hex'>#66520f</div>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+</div>
+
+<script src="leonardo-ui/leonardo-ui.js"></script>
+
+<script>
+  (function() {
+    Array.prototype.slice.call( document.querySelectorAll( "[data-tabset]" ) ).forEach( function( tabsetElement ) {
+      leonardoui.tabset( {
+        element: tabsetElement
+      } );
+    } )
+  }());
+</script>
+
+    </div>
+    <div class="footer">
+      <div class="wrap">
+        <h2 class="footer-title">License and attributions</h2>
+        <p>Leonardo UI 0.9.0. © 2016 QlikTech International AB</p>
+        <p>Licensed under MIT</p>
+      </div>
+    </div>
+  </div>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

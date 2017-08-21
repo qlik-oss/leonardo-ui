@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="leonardo-ui/leonardo-ui.css" type="text/css" />
+  <link rel="stylesheet" href="styles/docs.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <link rel="icon" href="resources/favicon.ico">
+  <title> UI Overview | Leonardo </title>
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="wrap">
+        <div class="logo">
+          <a href="index.html">
+            <img src="resources/logo.png" alt="LUI">
+            <span>Leonardo UI</span>
+          </a>
+        </div>
+        <div class="nav">
+          <ul class="navbar">
+            <li><a href="get-started.html"  class="selected" >Get started</a></li>
+            <li><a href="components.html" >Components</a></li>
+            <li><a href="https://github.com/qlik-oss/leonardo-ui">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="get-started">
+  <div class="wrap">
+    <h1>Get started</h1>
+    <section>
+      <h2>Using NPM</h2>
+      <p>Run the following command:</p>
+<div class='example-code  has-border'><pre><code class='html'>npm install --save leonardo-ui
+</code></pre></div>      <p>
+        Add the following to your HTML:
+      </p>
+      <p>
+<div class='example-code  has-border'><pre><code class='html'>&lt;head&gt;
+  &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;node_modules/leonardo-ui/dist/leonardo-ui.css&quot; type&#x3D;&quot;text/css&quot;/&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Page content --&gt;
+  &lt;script src&#x3D;&quot;node_modules/leonardo-ui/dist/leonardo-ui.js&quot; type&#x3D;&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+</code></pre></div>      </p>
+      <p>
+        To use the icon font (optional), add this to your CSS:
+      </p>
+      <p>
+<div class='example-code  has-border'><pre><code class='html'>@font-face {
+  font-family: &quot;LUI icons&quot;;
+  src: url(node_modules/leonardo-ui/dist/lui-icons.woff) format(&#x27;woff&#x27;),
+     url(node_modules/leonardo-ui/dist/lui-icons.ttf) format(&#x27;truetype&#x27;);
+}
+</code></pre></div>      </p>
+    </section>
+    <section>
+      <h2>Artifacts</h2>
+      <p>You may include any version of these artifacts. Notice that using Javascripts is optional and you are
+        free to provide your own custom implementation.</p>
+      <table class="options">
+        <thead>
+          <tr>
+            <th>Artifact</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>leonardo-ui.min.css</td>
+            <td>Minified CSS file to use in production</td>
+          </tr>
+          <tr>
+            <td>leonardo-ui.css</td>
+            <td>CSS</td>
+          </tr>
+          <tr>
+            <td>leonardo-ui.css.map</td>
+            <td>Source maps for CSS</td>
+          </tr>
+          <tr>
+            <td>leonardo-ui.min.js</td>
+            <td>Minified JS file to use in production</td>
+          </tr>
+          <tr>
+            <td>leonardo-ui.js</td>
+            <td>JS</td>
+          </tr>
+          <tr>
+            <td>leonardo-ui.js.map</td>
+            <td>Source maps for JS</td>
+          </tr>
+          <tr>
+            <td>colors.less</td>
+            <td>Color palette variables</td>
+          </tr>
+          <tr>
+            <td>variables.less</td>
+            <td>General variables plus component specific variables (work ongoing)</td>
+          </tr>
+          <tr>
+            <td>lui-icons.ttf</td>
+            <td>Truetype icon font</td>
+          </tr>
+          <tr>
+            <td>lui-icons.woff</td>
+            <td>WOFF icon font</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+</div>
+
+    </div>
+    <div class="footer">
+      <div class="wrap">
+        <h2 class="footer-title">License and attributions</h2>
+        <p>Leonardo UI 0.9.0. © 2016 QlikTech International AB</p>
+        <p>Licensed under MIT</p>
+      </div>
+    </div>
+  </div>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

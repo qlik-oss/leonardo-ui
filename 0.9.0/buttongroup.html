@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="leonardo-ui/leonardo-ui.css" type="text/css" />
+  <link rel="stylesheet" href="styles/docs.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <link rel="icon" href="resources/favicon.ico">
+  <title> UI Overview | Leonardo </title>
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="wrap">
+        <div class="logo">
+          <a href="index.html">
+            <img src="resources/logo.png" alt="LUI">
+            <span>Leonardo UI</span>
+          </a>
+        </div>
+        <div class="nav">
+          <ul class="navbar">
+            <li><a href="get-started.html" >Get started</a></li>
+            <li><a href="components.html"  class="selected" >Components</a></li>
+            <li><a href="https://github.com/qlik-oss/leonardo-ui">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="component-container wrap">
+  <div class="component-sidebar">
+    <ul class="sidebar-list">
+        <li>
+          <a>General</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="icons.html">Icons</a>
+              </li>
+              <li>
+                <a href="palette.html">Palette</a>
+              </li>
+              <li>
+                <a href="classes.html">Classes</a>
+              </li>
+              <li>
+                <a href="list.html">List</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Buttons</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="button.html">Button</a>
+              </li>
+              <li>
+                <a href="buttongroup.html" class="selected">Button Group</a>
+              </li>
+              <li>
+                <a href="tabset.html">Tabset</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Inputs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="input.html">Input</a>
+              </li>
+              <li>
+                <a href="textarea.html">Textarea</a>
+              </li>
+              <li>
+                <a href="input-group.html">Input Group</a>
+              </li>
+              <li>
+                <a href="search.html">Search</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Form Elements</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="checkbox.html">Checkbox</a>
+              </li>
+              <li>
+                <a href="radio-buttons.html">Radio Buttons</a>
+              </li>
+              <li>
+                <a href="select.html">Select</a>
+              </li>
+              <li>
+                <a href="switch.html">Switch</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Dialogs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="dialog.html">Dialog</a>
+              </li>
+              <li>
+                <a href="popover.html">Popover</a>
+              </li>
+              <li>
+                <a href="toast.html">Toast</a>
+              </li>
+              <li>
+                <a href="tooltip.html">Tooltip</a>
+              </li>
+          </ul>
+        </li>
+    </ul>
+  </div>
+  <div class="component-content">
+    <div class="component">
+  <h1>Button group</h1>
+  <p>The button group component can contain regular buttons. Note that fade-buttons and overlay-buttons are not supported.</p>
+
+  <div class="example">
+<div class="example-tabset">
+      <ul class="lui-tabset" data-tabset>
+              <li class="lui-tab" data-tab-id="default">
+      <span class="lui-tab__text">
+        Default
+      </span>
+    </li>
+      <li class="lui-tab" data-tab-id="inverse">
+      <span class="lui-tab__text">
+        Inverse
+      </span>
+    </li>
+
+      </ul>
+    </div><div data-tab-content="default" style="display: none;">
+      <div class="example-box" style="">
+              <div class="lui-buttongroup">
+        <button class="lui-button  lui-buttongroup__button">
+          First button
+        </button>
+        <button class="lui-button  lui-buttongroup__button">
+          Second button
+        </button>
+        <button class="lui-button  lui-buttongroup__button  lui-active">
+          Third button
+        </button>
+      </div>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;div class&#x3D;&quot;lui-buttongroup&quot;&gt;
+  &lt;button class&#x3D;&quot;lui-button  lui-buttongroup__button&quot;&gt;
+    First button
+  &lt;/button&gt;
+  &lt;button class&#x3D;&quot;lui-button  lui-buttongroup__button&quot;&gt;
+    Second button
+  &lt;/button&gt;
+  &lt;button class&#x3D;&quot;lui-button  lui-buttongroup__button  lui-active&quot;&gt;
+    Third button
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre></div>
+      </div>
+    </div><div data-tab-content="inverse" style="display: none;">
+      <div class="example-box lui-bg-inverse" style="">
+              <div class="lui-buttongroup">
+        <button class="lui-button  lui-buttongroup__button  lui-button--inverse">
+          First button
+        </button>
+        <button class="lui-button  lui-buttongroup__button  lui-button--inverse">
+          Second button
+        </button>
+        <button class="lui-button  lui-buttongroup__button  lui-button--inverse  lui-active">
+          Third button
+        </button>
+      </div>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;div class&#x3D;&quot;lui-buttongroup&quot;&gt;
+  &lt;button class&#x3D;&quot;lui-button  lui-buttongroup__button  lui-button--inverse&quot;&gt;
+    First button
+  &lt;/button&gt;
+  &lt;button class&#x3D;&quot;lui-button  lui-buttongroup__button  lui-button--inverse&quot;&gt;
+    Second button
+  &lt;/button&gt;
+  &lt;button class&#x3D;&quot;lui-button  lui-buttongroup__button  lui-button--inverse  lui-active&quot;&gt;
+    Third button
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre></div>
+      </div>
+    </div>  </div>
+
+  <p>Button groups can be used with different variants of buttons, including color and sizing variants.</p>
+
+  <div class="example">
+<div class="example-tabset">
+      <ul class="lui-tabset" data-tabset>
+              <li class="lui-tab" data-tab-id="variants-default">
+      <span class="lui-tab__text">
+        Default
+      </span>
+    </li>
+      <li class="lui-tab" data-tab-id="variants-inverse">
+      <span class="lui-tab__text">
+        Inverse
+      </span>
+    </li>
+
+      </ul>
+    </div><div data-tab-content="variants-default" style="display: none;">
+      <div class="example-box" style="">
+              <div class="lui-buttongroup">
+        <button class="lui-button  lui-buttongroup__button  lui-button--rounded">
+          <span class="lui-button__text">First button</span><span class="lui-button__icon  lui-icon  lui-icon--info"></span>
+        </button>
+        <button class="lui-button  lui-buttongroup__button  lui-button--rounded">
+          Second button
+        </button>
+        <button class="lui-button  lui-buttongroup__button  lui-button--rounded  lui-button--info">
+          Third button
+        </button>
+      </div>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;div class&#x3D;&quot;lui-buttongroup&quot;&gt;
+  &lt;button class&#x3D;&quot;lui-button  lui-buttongroup__button  lui-button--rounded&quot;&gt;
+    &lt;span class&#x3D;&quot;lui-button__text&quot;&gt;First button&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--info&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class&#x3D;&quot;lui-button  lui-buttongroup__button  lui-button--rounded&quot;&gt;
+    Second button
+  &lt;/button&gt;
+  &lt;button class&#x3D;&quot;lui-button  lui-buttongroup__button  lui-button--rounded  lui-button--info&quot;&gt;
+    Third button
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre></div>
+      </div>
+    </div><div data-tab-content="variants-inverse" style="display: none;">
+      <div class="example-box lui-bg-inverse" style="">
+              <div class="lui-buttongroup">
+        <button class="lui-button  lui-buttongroup__button  lui-button--rounded  lui-button--inverse">
+          <span class="lui-button__text">First button</span><span class="lui-button__icon  lui-icon  lui-icon--info"></span>
+        </button>
+        <button class="lui-button  lui-buttongroup__button  lui-button--rounded  lui-button--inverse">
+          Second button
+        </button>
+        <button class="lui-button  lui-buttongroup__button  lui-button--rounded  lui-button--info">
+          Third button
+        </button>
+      </div>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;div class&#x3D;&quot;lui-buttongroup&quot;&gt;
+  &lt;button class&#x3D;&quot;lui-button  lui-buttongroup__button  lui-button--rounded  lui-button--inverse&quot;&gt;
+    &lt;span class&#x3D;&quot;lui-button__text&quot;&gt;First button&lt;/span&gt;&lt;span class&#x3D;&quot;lui-button__icon  lui-icon  lui-icon--info&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class&#x3D;&quot;lui-button  lui-buttongroup__button  lui-button--rounded  lui-button--inverse&quot;&gt;
+    Second button
+  &lt;/button&gt;
+  &lt;button class&#x3D;&quot;lui-button  lui-buttongroup__button  lui-button--rounded  lui-button--info&quot;&gt;
+    Third button
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre></div>
+      </div>
+    </div>  </div>
+</div>
+
+  </div>
+</div>
+
+<script src="leonardo-ui/leonardo-ui.js"></script>
+
+<script>
+  (function() {
+    Array.prototype.slice.call( document.querySelectorAll( "[data-tabset]" ) ).forEach( function( tabsetElement ) {
+      leonardoui.tabset( {
+        element: tabsetElement
+      } );
+    } )
+  }());
+</script>
+
+    </div>
+    <div class="footer">
+      <div class="wrap">
+        <h2 class="footer-title">License and attributions</h2>
+        <p>Leonardo UI 0.9.0. © 2016 QlikTech International AB</p>
+        <p>Licensed under MIT</p>
+      </div>
+    </div>
+  </div>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

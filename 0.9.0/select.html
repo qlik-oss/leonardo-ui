@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="leonardo-ui/leonardo-ui.css" type="text/css" />
+  <link rel="stylesheet" href="styles/docs.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <link rel="icon" href="resources/favicon.ico">
+  <title> UI Overview | Leonardo </title>
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="wrap">
+        <div class="logo">
+          <a href="index.html">
+            <img src="resources/logo.png" alt="LUI">
+            <span>Leonardo UI</span>
+          </a>
+        </div>
+        <div class="nav">
+          <ul class="navbar">
+            <li><a href="get-started.html" >Get started</a></li>
+            <li><a href="components.html"  class="selected" >Components</a></li>
+            <li><a href="https://github.com/qlik-oss/leonardo-ui">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="component-container wrap">
+  <div class="component-sidebar">
+    <ul class="sidebar-list">
+        <li>
+          <a>General</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="icons.html">Icons</a>
+              </li>
+              <li>
+                <a href="palette.html">Palette</a>
+              </li>
+              <li>
+                <a href="classes.html">Classes</a>
+              </li>
+              <li>
+                <a href="list.html">List</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Buttons</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="button.html">Button</a>
+              </li>
+              <li>
+                <a href="buttongroup.html">Button Group</a>
+              </li>
+              <li>
+                <a href="tabset.html">Tabset</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Inputs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="input.html">Input</a>
+              </li>
+              <li>
+                <a href="textarea.html">Textarea</a>
+              </li>
+              <li>
+                <a href="input-group.html">Input Group</a>
+              </li>
+              <li>
+                <a href="search.html">Search</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Form Elements</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="checkbox.html">Checkbox</a>
+              </li>
+              <li>
+                <a href="radio-buttons.html">Radio Buttons</a>
+              </li>
+              <li>
+                <a href="select.html" class="selected">Select</a>
+              </li>
+              <li>
+                <a href="switch.html">Switch</a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a>Dialogs</a>
+          <ul class="sidebar-sublist">
+              <li>
+                <a href="dialog.html">Dialog</a>
+              </li>
+              <li>
+                <a href="popover.html">Popover</a>
+              </li>
+              <li>
+                <a href="toast.html">Toast</a>
+              </li>
+              <li>
+                <a href="tooltip.html">Tooltip</a>
+              </li>
+          </ul>
+        </li>
+    </ul>
+  </div>
+  <div class="component-content">
+    <div class="component">
+  <h1>Select</h1>
+  <p>Basic select component using the native select component of the browser.
+    The select component and its variants are styled as the button component.</p>
+<div class='example'><div class="example-tabset">
+      <ul class="lui-tabset" data-tabset>
+              <li class="lui-tab" data-tab-id="default">
+      <span class="lui-tab__text">
+        Default
+      </span>
+    </li>
+      <li class="lui-tab" data-tab-id="inverse">
+      <span class="lui-tab__text">
+        Inverse
+      </span>
+    </li>
+
+      </ul>
+    </div><div data-tab-content="default" style="display: none;">
+      <div class="example-box" style="">
+              <select class="lui-select">
+        <option value="1" selected>First</option>
+        <option value="2">Second</option>
+        <option value="3">Third</option>
+      </select>
+      <select class="lui-select  lui-select--gradient">
+        <option value="1" selected>First</option>
+        <option value="2">Second</option>
+        <option value="3">Third</option>
+      </select>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;select class&#x3D;&quot;lui-select&quot;&gt;
+  &lt;option value&#x3D;&quot;1&quot; selected&gt;First&lt;/option&gt;
+  &lt;option value&#x3D;&quot;2&quot;&gt;Second&lt;/option&gt;
+  &lt;option value&#x3D;&quot;3&quot;&gt;Third&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class&#x3D;&quot;lui-select  lui-select--gradient&quot;&gt;
+  &lt;option value&#x3D;&quot;1&quot; selected&gt;First&lt;/option&gt;
+  &lt;option value&#x3D;&quot;2&quot;&gt;Second&lt;/option&gt;
+  &lt;option value&#x3D;&quot;3&quot;&gt;Third&lt;/option&gt;
+&lt;/select&gt;
+</code></pre></div>
+      </div>
+    </div><div data-tab-content="inverse" style="display: none;">
+      <div class="example-box lui-bg-inverse" style="">
+              <select class="lui-select  lui-select--inverse">
+        <option value="1" selected>First</option>
+        <option value="2">Second</option>
+        <option value="3">Third</option>
+      </select>
+      <select class="lui-select lui-select--gradient-inverse">
+        <option value="1" selected>First</option>
+        <option value="2">Second</option>
+        <option value="3">Third</option>
+      </select>
+
+      </div>
+      <div class="example-code">
+        <div class='example-code  has-border'><pre><code class='html'>&lt;select class&#x3D;&quot;lui-select  lui-select--inverse&quot;&gt;
+  &lt;option value&#x3D;&quot;1&quot; selected&gt;First&lt;/option&gt;
+  &lt;option value&#x3D;&quot;2&quot;&gt;Second&lt;/option&gt;
+  &lt;option value&#x3D;&quot;3&quot;&gt;Third&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class&#x3D;&quot;lui-select lui-select--gradient-inverse&quot;&gt;
+  &lt;option value&#x3D;&quot;1&quot; selected&gt;First&lt;/option&gt;
+  &lt;option value&#x3D;&quot;2&quot;&gt;Second&lt;/option&gt;
+  &lt;option value&#x3D;&quot;3&quot;&gt;Third&lt;/option&gt;
+&lt;/select&gt;
+</code></pre></div>
+      </div>
+    </div></div>  <h2>Select sizing</h2>
+  <p>
+    You can control the size of selects by adding a class. The following sizing options are available:
+    <ul>
+      <li>
+        default - 28px
+      </li>
+      <li>
+        large - 38px
+      </li>
+    </ul>
+  </p>
+  <p>
+    <select class="lui-select  lui-select--large">
+      <option value="1" selected>First</option>
+      <option value="2">Second</option>
+      <option value="3">Third</option>
+    </select>
+  </p>
+  <p>
+<div class='example-code  has-border'><pre><code class='html'>&lt;select class&#x3D;&quot;lui-select  lui-select--large&quot;&gt;
+  &lt;option value&#x3D;&quot;1&quot; selected&gt;First&lt;/option&gt;
+  &lt;option value&#x3D;&quot;2&quot;&gt;Second&lt;/option&gt;
+  &lt;option value&#x3D;&quot;3&quot;&gt;Third&lt;/option&gt;
+&lt;/select&gt;
+</code></pre></div>  </p>
+</div>
+
+  </div>
+</div>
+
+<script src="leonardo-ui/leonardo-ui.js"></script>
+
+<script>
+  (function() {
+    Array.prototype.slice.call( document.querySelectorAll( "[data-tabset]" ) ).forEach( function( tabsetElement ) {
+      leonardoui.tabset( {
+        element: tabsetElement
+      } );
+    } )
+  }());
+</script>
+
+    </div>
+    <div class="footer">
+      <div class="wrap">
+        <h2 class="footer-title">License and attributions</h2>
+        <p>Leonardo UI 0.9.0. © 2016 QlikTech International AB</p>
+        <p>Licensed under MIT</p>
+      </div>
+    </div>
+  </div>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

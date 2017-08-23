@@ -5,10 +5,11 @@
 npm-debug.log
 .DS_Store
 
+.idea/
+.vscode/
 node_modules/
 dist/
 coverage/
-.idea/
 
 test/component/artifacts/*
 !test/component/artifacts/baseline/

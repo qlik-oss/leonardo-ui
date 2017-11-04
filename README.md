@@ -19,11 +19,11 @@ Add the following to your html:
 
 ```html
 <head>
-	<link rel="stylesheet" href="node_modules/leonardo-ui/dist/leonardo-ui.css" type="text/css"/>
+  <link rel="stylesheet" href="node_modules/leonardo-ui/dist/leonardo-ui.css" type="text/css"/>
 </head>
 <body>
-	<!-- Page content -->
-	<script src="node_modules/leonardo-ui/dist/leonardo-ui.js" type="text/javascript"></script>
+  <!-- Page content -->
+  <script src="node_modules/leonardo-ui/dist/leonardo-ui.js" type="text/javascript"></script>
 </body>
 ```
 
@@ -31,9 +31,9 @@ To use the icon font (optional), add this to your CSS:
 
 ```css
 @font-face {
-	font-family: "LUI icons";
-    src: url(node_modules/leonardo-ui/dist/lui-icons.woff) format('woff'),
-         url(node_modules/leonardo-ui/dist/lui-icons.ttf) format('truetype');
+  font-family: "LUI icons";
+  src: url(node_modules/leonardo-ui/dist/lui-icons.woff) format('woff'),
+       url(node_modules/leonardo-ui/dist/lui-icons.ttf) format('truetype');
 }
 ```
 

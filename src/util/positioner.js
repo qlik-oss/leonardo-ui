@@ -132,11 +132,9 @@ export function tryDock(elemRect, alignToRect, windowRect, dock, options = {}) {
 
 export function positionToRect(element, rect, dock = 'bottom', options = {}) {
   const elemRect = element.getBoundingClientRect();
-  const scrollTop = document.body.scrollTop;
-  const scrollLeft = document.body.scrollLeft;
   const windowRect = createRect(
-    -scrollTop,
-    -scrollLeft,
+    0,
+    0,
     document.body.scrollWidth,
     document.body.scrollHeight
   );
@@ -145,10 +143,6 @@ export function positionToRect(element, rect, dock = 'bottom', options = {}) {
   let firstResult = null;
   for (let i = 0; i < docks.length; i++) {
     const result = tryDock(elemRect, rect, windowRect, docks[i], options);
-    result.position.top += scrollTop;
-    result.toPosition.top += scrollTop;
-    result.position.left += scrollLeft;
-    result.toPosition.left += scrollLeft;
     if (result.fits) {
       return result;
     }
@@ -161,8 +155,28 @@ export function positionToRect(element, rect, dock = 'bottom', options = {}) {
 }
 
 export function positionToElement(element, alignToElement, dock = 'bottom', options = {}) {
-  const rect = alignToElement.getBoundingClientRect();
-  return positionToRect(element, rect, dock, options);
+  const elementRect = alignToElement.getBoundingClientRect();
+
+  const body = document.body;
+  const docEl = document.documentElement;
+
+  const scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+  const scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+  const clientTop = docEl.clientTop || body.clientTop || 0;
+  const clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+  const top = elementRect.top + scrollTop - clientTop;
+  const left = elementRect.left + scrollLeft - clientLeft;
+
+  const itemRect = createRect(
+    top,
+    left,
+    elementRect.width,
+    elementRect.height
+  );
+
+  return positionToRect(element, itemRect, dock, options);
 }
 
 export function positionToCoordinate(element, x, y, dock = 'bottom', options = {}) {

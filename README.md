@@ -2,7 +2,7 @@
 
 ![Logo](docs/src/img/logo.png?raw=true)
 
-A UI component framework with a slim and modern look & feel. Use it to enhance the UI of your web app! Works well with popular frameworks such as Bootstrap and Foundation.
+A UI component framework with a slim and modern look & feel. Use it to enhance the UI of your web app! Works well with popular frameworks such as Bootstrap and Foundation. View it in action https://qlik-oss.github.io/leonardo-ui
 
 [![CircleCI](https://circleci.com/gh/qlik-oss/leonardo-ui/tree/master.svg?style=shield)](https://circleci.com/gh/qlik-oss/leonardo-ui/tree/master)
 [![npm](https://badge.fury.io/js/leonardo-ui.svg?branch=master)](http://badge.fury.io/js/leonardo-ui)

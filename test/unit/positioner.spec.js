@@ -8,7 +8,17 @@ describe('Positioner', () => {
         scrollLeft: 0,
         scrollWidth: 500,
         scrollHeight: 500
+      },
+      documentElement: {
+        scrollTop: 0,
+        scrollLeft: 0,
+        scrollWidth: 500,
+        scrollHeight: 500
       }
+    };
+    global.window = {
+      pageYOffset: 0,
+      pageXOffset: 0
     };
   });
 

@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 1.4.0
+- Fix positioning problem for tooltip and popover when page is scrolled.
+- Simplify toast transition.
+- Add small variant for overlay-button.
+
 ## 1.3.0
 - Improve search component - BEM:ify and wrap the close icon in a `button` element.
 

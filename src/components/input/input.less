@@ -13,6 +13,10 @@
   box-shadow: none;
   transition: border-color 200ms ease-out;
 
+  &:focus {
+    box-shadow:  0 0 1px 1px fade(@blue, 70%);
+  }
+
   .input-mixin(
     @text-color: @greyscale-35;
     @background-color: @greyscale-100;

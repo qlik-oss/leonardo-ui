@@ -28,6 +28,11 @@
   &.lui-focused {
     .focus-style();
     transition: none;
+    box-shadow:  0 0 1px 1px fade(@blue, 70%);
+    &:active,
+    &.lui-active {
+      box-shadow: 0 1px 0 fade(@greyscale-100, 25);
+    }
   }
 }
 

@@ -37,7 +37,7 @@
     "eslint-plugin-import": "^1.16.0",
     "extend": "^3.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.9.0",
+    "file-loader": "^1.1.11",
     "glob": "^7.0.5",
     "handlebars": "^4.0.5",
     "less": "^2.5.0",

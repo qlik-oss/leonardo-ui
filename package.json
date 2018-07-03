@@ -45,7 +45,7 @@
     "postcss-loader": "^1.1.0",
     "protractor": "^5.1.1",
     "raw-loader": "^0.5.1",
-    "style-loader": "^0.13.0",
+    "style-loader": "^0.21.0",
     "webpack": "^1.12.2"
   }
 }

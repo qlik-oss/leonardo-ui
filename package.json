@@ -42,7 +42,7 @@
     "handlebars": "^4.0.5",
     "less": "^2.5.0",
     "less-loader": "^2.2.1",
-    "postcss-loader": "^1.1.0",
+    "postcss-loader": "^2.1.6",
     "protractor": "^5.1.1",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.0",

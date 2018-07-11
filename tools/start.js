@@ -26,13 +26,13 @@ webpack(config).watch({
   }
 });
 
-bs.watch(`${path.resolve(__dirname, '../docs/src')}/**/*.*`, (event/* , file*/) => {
+bs.watch(`${path.resolve(__dirname, '../docs/src')}/**/*.*`, (event/* , file */) => {
   if (event === 'change') {
     buildDocs();
   }
 });
 
-bs.watch(`${path.resolve(__dirname, '../test/fixtures/src')}/**/*.*`, (event/* , file*/) => {
+bs.watch(`${path.resolve(__dirname, '../test/fixtures/src')}/**/*.*`, (event/* , file */) => {
   if (event === 'change') {
     buildFixtures();
   }
@@ -51,4 +51,3 @@ bs.init({
     port: 8081
   }
 });
-

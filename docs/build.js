@@ -47,26 +47,23 @@ function indent(text) {
 }
 
 Handlebars.registerHelper('example', (options) => {
-  const result =
-    `<div class='example'>${
-      options.fn()
-    }</div>`;
+  const result = `<div class='example'>${
+    options.fn()
+  }</div>`;
   return result;
 });
 
 Handlebars.registerHelper('example-code', (options) => {
   const indentedContent = indent(options.fn());
   const content = Handlebars.escapeExpression(indentedContent);
-  const result =
-    `<div class='example-code  has-border'><pre><code class='html'>${
-      content
-    }</code></pre></div>`;
+  const result = `<div class='example-code  has-border'><pre><code class='html'>${
+    content
+  }</code></pre></div>`;
   return result;
 });
 
 Handlebars.registerHelper('example-tabset', (options) => {
-  const result =
-    `<div class="example-tabset">
+  const result = `<div class="example-tabset">
       <ul class="lui-tabset" data-tabset>
         ${options.fn()}
       </ul>
@@ -75,8 +72,7 @@ Handlebars.registerHelper('example-tabset', (options) => {
 });
 
 Handlebars.registerHelper('example-tab', (id, options) => {
-  const result =
-    `<li class="lui-tab" data-tab-id="${id}">
+  const result = `<li class="lui-tab" data-tab-id="${id}">
       <span class="lui-tab__text">
         ${options.fn()}
       </span>
@@ -95,8 +91,7 @@ Handlebars.registerHelper('example-tab-content', (id, options) => {
     exampleStyle = 'display: none;';
   }
 
-  const result =
-    `<div data-tab-content="${id}" style="display: none;">
+  const result = `<div data-tab-content="${id}" style="display: none;">
       <div class="${clazz}" style="${exampleStyle}">
         ${options.fn()}
       </div>
@@ -109,8 +104,7 @@ Handlebars.registerHelper('example-tab-content', (id, options) => {
 
 Handlebars.registerHelper('icon', (options) => {
   const content = options.fn();
-  const result =
-    `<div class='icon-box'>
+  const result = `<div class='icon-box'>
       <div class='icon-example'>
         <span class='lui-icon ${content}'></span>
       </div>
@@ -127,8 +121,7 @@ Handlebars.registerHelper('color', (options) => {
   const name = content[0];
   const hex = content[1];
   const textColorClass = content[2];
-  const result =
-    `<div class='color-box ${textColorClass}' style='background:${hex}'>
+  const result = `<div class='color-box ${textColorClass}' style='background:${hex}'>
       <div class='color-name'>${name}</div>
       <div class='color-hex'>${hex}</div>
     </div>`;
@@ -155,7 +148,8 @@ function compileLess() {
           console.log('Docs: failed to compile less:', e2); // eslint-disable-line no-console
         }
       }
-    });
+    }
+  );
 }
 
 // Compile Handlebars templates

@@ -1,7 +1,8 @@
-const Webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const srcDir = path.resolve(__dirname, '../src');
 const nodeDir = path.resolve(__dirname, '../node_modules');
@@ -9,9 +10,10 @@ const distDir = path.resolve(__dirname, '../dist');
 
 const createConfig = function createConfig(isDebug) {
   const config = {
-    context: path.resolve(__dirname, '../'),
+    mode: isDebug ? 'development' : 'production',
+    context: path.resolve(__dirname, '../src'),
     entry: {
-      'leonardo-ui': path.resolve(srcDir, 'leonardo-ui')
+      'leonardo-ui': './leonardo-ui'
     },
     output: {
       path: distDir,
@@ -21,49 +23,59 @@ const createConfig = function createConfig(isDebug) {
       publicPath: '/leonardo-ui/'
     },
     module: {
-      loaders: [{
+      rules: [{
         test: /\.js$/,
-        loader: 'babel',
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              'es2015'
+            ]
+          }
+        },
         include: [srcDir],
-        exclude: [nodeDir],
-        query: {
-          presets: ['es2015']
-        }
+        exclude: [nodeDir]
       }, {
         test: /\.less$/,
-        loader: isDebug ? 'style!css!postcss!less?strictMath' : 'style!css?minimize!postcss!less?strictMath',
-        include: [srcDir],
-        exclude: [
-          path.resolve(srcDir, 'leonardo-ui.less'),
-          path.resolve(srcDir, 'colors.less'),
-          path.resolve(srcDir, 'variables.less')
+        use: [
+          MiniCssExtractPlugin.loader, {
+            loader: 'css-loader',
+            options: { minimize: !isDebug }
+          }, {
+            loader: 'postcss-loader',
+            options: { plugins: [autoprefixer] }
+          }, {
+            loader: 'less-loader',
+            options: { strictMath: true }
+          }
         ]
-      }, {
-        test: /\.less$/,
-        loader: ExtractTextPlugin.extract(isDebug ? 'css!postcss!less?strictMath' : 'css?minimize!postcss!less?strictMath'),
-        include: [path.resolve(srcDir, 'leonardo-ui.less')]
       }]
     },
     plugins: [
-      new ExtractTextPlugin(isDebug ? '[name].css' : '[name].min.css')
-    ],
-    postcss: [autoprefixer({
-      browsers: [
-        'last 2 Chrome versions',
-        'last 2 Firefox versions',
-        'Explorer >= 10',
-        'Safari >= 8.0',
-        'iOS >= 9.0'
-      ]
-    })]
+      new MiniCssExtractPlugin({ filename: isDebug ? '[name].css' : '[name].min.css' }),
+      new CopyWebpackPlugin([{
+        from: 'colors.less',
+        to: 'colors.less'
+      }, {
+        from: 'variables.less',
+        to: 'variables.less'
+      }, {
+        from: 'resources/lui-icons.ttf',
+        to: 'lui-icons.ttf'
+      }, {
+        from: 'resources/lui-icons.woff',
+        to: 'lui-icons.woff'
+      }])
+    ]
   };
 
   if (isDebug) {
-    config.debug = true;
     config.devtool = 'source-map';
   } else {
     config.output.filename = '[name].min.js';
-    config.plugins.push(new Webpack.optimize.UglifyJsPlugin());
+    config.optimization = {
+      minimizer: [new UglifyJsPlugin()]
+    };
   }
 
   return config;

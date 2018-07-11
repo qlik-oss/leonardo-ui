@@ -1,4 +1,4 @@
-/* global browser*/
+/* global browser */
 const components = require('../fixtures/dist/fixtures'); // eslint-disable-line import/no-unresolved
 
 browser.ignoreSynchronization = true; // Must be set if the page doesn't use angular

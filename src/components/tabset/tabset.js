@@ -31,7 +31,7 @@ export default function tabset(options = {}) {
   Array.prototype.slice.call(element.querySelectorAll('[data-tab-id]')).forEach((tabElement, index) => {
     const id = tabElement.getAttribute('data-tab-id');
 
-    const listener = tabElement.addEventListener('click', (/* event*/) => {
+    const listener = tabElement.addEventListener('click', (/* event */) => {
       activate(index);
     });
 

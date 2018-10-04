@@ -1,7 +1,7 @@
 
 export default function tabset(options = {}) {
   const {
-    element
+    element,
   } = options;
 
   const tabs = []; // eslint-disable-line prefer-const
@@ -41,7 +41,7 @@ export default function tabset(options = {}) {
       element: tabElement,
       contentElements: Array.prototype.slice.call(document.querySelectorAll(`[data-tab-content="${id}"]`)),
       display: tabElement.style.display,
-      listener
+      listener,
     });
   });
 
@@ -50,6 +50,6 @@ export default function tabset(options = {}) {
   return {
     element,
     activate,
-    close
+    close,
   };
 }

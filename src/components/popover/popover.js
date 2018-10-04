@@ -26,7 +26,7 @@ export default function popover(options = {}) {
     dock = 'bottom',
     alignTo,
     content,
-    onClose
+    onClose,
   } = options;
 
   let containerElement;
@@ -52,7 +52,7 @@ export default function popover(options = {}) {
         alignTo.setAttribute('aria-expanded', 'false');
         alignTo.removeAttribute('aria-controls');
       }
-    }
+    },
   });
 
   containerElement = overlay.element; // eslint-disable-line prefer-const
@@ -76,7 +76,7 @@ export default function popover(options = {}) {
     posResult = positionToElement(element, alignTo, dock, {
       offset: ELEM_OFFSET,
       minWindowOffset: WINDOW_OFFSET,
-      minEdgeOffset: EDGE_OFFSET
+      minEdgeOffset: EDGE_OFFSET,
     });
     alignTo.setAttribute('aria-controls', id);
     alignTo.setAttribute('aria-expanded', 'true');
@@ -84,7 +84,7 @@ export default function popover(options = {}) {
     posResult = positionToCoordinate(element, alignTo.top, alignTo.left, dock, {
       offset: ELEM_OFFSET,
       minWindowOffset: WINDOW_OFFSET,
-      minEdgeOffset: EDGE_OFFSET
+      minEdgeOffset: EDGE_OFFSET,
     });
   }
   containerElement.style.left = `${posResult.position.left}px`;
@@ -103,6 +103,6 @@ export default function popover(options = {}) {
     element,
     close: () => {
       overlay.close();
-    }
+    },
   };
 }

@@ -10,5 +10,5 @@ export {
   dialog,
   popover,
   tabset,
-  tooltip
+  tooltip,
 };

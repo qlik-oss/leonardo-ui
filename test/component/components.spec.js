@@ -4,7 +4,7 @@ const components = require('../fixtures/dist/fixtures'); // eslint-disable-line 
 browser.ignoreSynchronization = true; // Must be set if the page doesn't use angular
 
 const settings = {
-  selector: '.component'
+  selector: '.component',
 };
 
 const test = typeof browser.params.test === 'string' ? browser.params.test : false;

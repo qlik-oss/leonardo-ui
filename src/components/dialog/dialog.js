@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring */
 import { createOverlay } from '../../util/overlay-manager';
 
 const ANIMATE_DELAY = 200;
@@ -6,7 +7,7 @@ export default function dialog(options) {
   const {
     content,
     closeOnEscape = true,
-    onClose
+    onClose,
   } = options;
   const oldOverflow = document.body.style.overflow;
 
@@ -32,7 +33,7 @@ export default function dialog(options) {
       if (typeof onClose === 'function') {
         onClose();
       }
-    }
+    },
   });
 
   containerElement = overlay.element; // eslint-disable-line prefer-const
@@ -67,6 +68,6 @@ export default function dialog(options) {
     element,
     close: () => {
       overlay.close();
-    }
+    },
   };
 }

@@ -23,7 +23,7 @@ export default function tooltip(options) {
   const {
     alignTo,
     dock,
-    content
+    content,
   } = options;
 
   let title;
@@ -40,7 +40,7 @@ export default function tooltip(options) {
     if (!title) { // Do not show if the title is empty
       return {
         element: null,
-        close: () => {}
+        close: () => {},
       };
     }
     element = document.createElement('div');
@@ -64,7 +64,7 @@ export default function tooltip(options) {
         }
         cb();
       }, ANIMATE_DELAY);
-    }
+    },
   });
   containerElement = overlay.element; // eslint-disable-line prefer-const
 
@@ -80,13 +80,13 @@ export default function tooltip(options) {
     posResult = positionToElement(element, alignTo, dock, {
       offset: ELEM_OFFSET,
       minWindowOffset: WINDOW_OFFSET,
-      minEdgeOffset: EDGE_OFFSET
+      minEdgeOffset: EDGE_OFFSET,
     });
   } else {
     posResult = positionToCoordinate(element, alignTo.top, alignTo.left, dock, {
       offset: ELEM_OFFSET,
       minWindowOffset: WINDOW_OFFSET,
-      minEdgeOffset: EDGE_OFFSET
+      minEdgeOffset: EDGE_OFFSET,
     });
   }
 
@@ -113,6 +113,6 @@ export default function tooltip(options) {
     element,
     close: () => {
       overlay.close();
-    }
+    },
   };
 }

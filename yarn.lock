@@ -1616,7 +1616,7 @@ browser-sync-ui@v1.0.1:
     socket.io-client "2.0.4"
     stream-throttle "^0.1.3"
 
-browser-sync@^2.18.2, browser-sync@^2.18.7:
+browser-sync@^2.18.7, browser-sync@^2.24.7:
   version "2.24.7"
   resolved "https://registry.yarnpkg.com/browser-sync/-/browser-sync-2.24.7.tgz#0f93bcaabfb84a35a5c98e07682c9e45c6251a93"
   integrity sha512-NqXek0cPNEayQm77VGnD+qrwcVBTKMIQ9bdP6IWDRUTU1Bk7tZeq5QR3OG5Rr36Rao1t+Vx1QnfolHvvr5qsTA==
@@ -2903,7 +2903,7 @@ eslint-visitor-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
   integrity sha512-qzm/XxIbxm/FHyH341ZrbnMUpe+5Bocte9xkmFMzPMjRaZMcXww+MpBptFvtU+79L362nqiLhekCxCxDPaUMBQ==
 
-eslint@^5.1.0:
+eslint@^5.6.1:
   version "5.6.1"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.6.1.tgz#348134e32ccc09abb2df1bf282b3f6eed8c7b480"
   integrity sha512-hgrDtGWz368b7Wqf+v1Z69O3ZebNR0+GA7PtDdbmuz4rInFVUV9uw7whjZEiWyLzCjVb5Rs5WRN1TAS6eo7AYA==
@@ -3087,7 +3087,7 @@ extend-shallow@^3.0.0, extend-shallow@^3.0.2:
     assign-symbols "^1.0.0"
     is-extendable "^1.0.1"
 
-extend@^3.0.0, extend@~3.0.2:
+extend@^3.0.0, extend@^3.0.2, extend@~3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
   integrity sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==
@@ -3500,7 +3500,7 @@ glob@^5.0.15, glob@^5.0.5:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.0.6, glob@^7.1.2:
+glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.0.6, glob@^7.1.2, glob@^7.1.3:
   version "7.1.3"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.3.tgz#3960832d3f1574108342dafd3a67b332c0969df1"
   integrity sha512-vcfuiIxogLV4DlGBHIUOwI0IbrJ8HWPc4MU7HzviGeNho/UJDfi6B5p3sHeWIQ0KGIU0Jpxi5ZHxemQfLkkAwQ==
@@ -3590,7 +3590,7 @@ growl@1.9.2:
   resolved "https://registry.yarnpkg.com/growl/-/growl-1.9.2.tgz#0ea7743715db8d8de2c5ede1775e1b45ac85c02f"
   integrity sha1-Dqd0NxXbjY3ixe3hd14bRayFwC8=
 
-handlebars@^4.0.3, handlebars@^4.0.5, handlebars@^4.0.6:
+handlebars@^4.0.12, handlebars@^4.0.3, handlebars@^4.0.6:
   version "4.0.12"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.12.tgz#2c15c8a96d46da5e266700518ba8cb8d919d5bc5"
   integrity sha512-RhmTekP+FZL+XNhwS1Wf+bTTZpdLougwt5pcgA1tuz6Jcx0fpH/7z0qd71RKnZHBCxIRBHfBOnio4gViPemNzA==
@@ -5927,7 +5927,7 @@ prop-types@^15.6.2:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
-protractor@^5.1.1:
+protractor@^5.4.1:
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/protractor/-/protractor-5.4.1.tgz#011a99e38df7aa45d22455b889ffbb13a6ce0bd9"
   integrity sha512-ORey5ewQMYiXQxcQohsqEiKYOg/r5yJoJbt0tuROmmgajdg/CA3gTOZNIFJncUVMAJIk5YFqBBLUjKVmQO6tfA==

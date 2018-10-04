@@ -26,12 +26,7 @@ const createConfig = function createConfig(isDebug) {
       rules: [{
         test: /\.js$/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              'es2015'
-            ]
-          }
+          loader: 'babel-loader'
         },
         include: [srcDir],
         exclude: [nodeDir]

@@ -70,27 +70,27 @@ Additional considerations:
 Start by installing all dependencies:
 
 ```sh
-$ npm install
+$ yarn
 ```
 
 Building the project with docs:
 
 ```sh
-$ npm run build
-$ npm run docs
+$ yarn build
+$ yarn docs
 ```
 
 Running unit tests and linting:
 
 ```sh
-$ npm run test
-$ npm run lint
+$ yarn test
+$ yarn lint
 ```
 
 Start the dev server:
 
 ```shell
-$ npm start
+$ yarn start
 ```
 
 Go to `localhost:8080` in your browser. The dev server will watch for file changes in the `src` and `docs/src` directories.

@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "qlik-oss",
+    "qlik-oss:groupMinorPatch"
+  ]
+}

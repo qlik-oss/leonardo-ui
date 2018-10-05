@@ -21,7 +21,6 @@
     "test": "aw -c ./test/unit/aw.config.js",
     "test:ci": "/*TODO*/ node ./tools/build-fixtures.js && webdriver-manager update --standalone false && aw-webdriver-test-runner ./test/circle.js --specs ./test/component/*.spec.js",
     "start": "node tools/start.js",
-    "coverage": "/*TODO*/ aw-test-coverage -- test/unit",
     "docs": "node ./tools/build-docs.js"
   },
   "devDependencies": {

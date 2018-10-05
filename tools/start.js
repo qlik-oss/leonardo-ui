@@ -7,7 +7,7 @@ const buildDocs = require('../docs/build').buildAll;
 const buildFixtures = require('../test/fixtures/build').buildAll;
 
 webpack(config).watch({
-  aggregateTimeout: 300
+  aggregateTimeout: 300,
 }, (err, stats) => {
   if (err) {
     console.log(err);
@@ -44,10 +44,10 @@ bs.init({
   notify: false,
   server: [
     path.resolve(__dirname, '../docs/dist'),
-    path.resolve(__dirname, '../test/fixtures/dist')
+    path.resolve(__dirname, '../test/fixtures/dist'),
   ],
   port: 8080,
   ui: {
-    port: 8081
-  }
+    port: 8081,
+  },
 });

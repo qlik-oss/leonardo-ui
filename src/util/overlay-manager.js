@@ -45,7 +45,7 @@ export function createOverlay(options = {}) {
     onClose,
     close,
     closeOnEscape = false,
-    closeOnOutside = false
+    closeOnOutside = false,
   } = options;
 
   const overlay = {
@@ -53,7 +53,7 @@ export function createOverlay(options = {}) {
     element,
     show: () => {
       element.style.visibility = '';
-    }
+    },
   };
 
   overlay.close = () => {
@@ -91,7 +91,7 @@ export function createOverlay(options = {}) {
   const res = {
     element: overlay.element,
     show: overlay.show,
-    close: overlay.close
+    close: overlay.close,
   };
 
   if (modal) {

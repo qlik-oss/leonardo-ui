@@ -1,0 +1,35 @@
+{
+  "extends": "airbnb/base",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-plusplus": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/**/__tests__/*.spec.js",
+        "test/**/*.spec.js"
+      ],
+      "env": {
+        "mocha": true
+      },
+      "globals": {
+        "expect": true,
+        "aw": true
+      }
+    }
+  ]
+}

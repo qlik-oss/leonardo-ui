@@ -1,4 +1,4 @@
-/* eslint import/no-extraneous-dependencies:0,no-var:0,vars-on-top:0 */
+/* eslint import/no-extraneous-dependencies:0,no-var:0,vars-on-top:0, no-undef: 0 */
 
 const fs = require('fs');
 const path = require('path');
@@ -16,13 +16,13 @@ const docsDir = path.resolve(__dirname);
 
 function indent(text) {
   const lines = text.split('\n');
-  var indentation = 1000;
+  let indentation = 1000;
   lines.forEach((line) => {
     if (!line) {
       return;
     }
-    var numSpaces = 0;
-    for (var i = 0; i < line.length; i++) {
+    let numSpaces = 0;
+    for (let i = 0; i < line.length; i++) {
       if (line[i] === ' ') {
         numSpaces = i + 1;
       } else {
@@ -35,8 +35,8 @@ function indent(text) {
   });
 
   if (indentation !== 1000) {
-    var regex = '^';
-    for (var i = 0; i < indentation; i++) {
+    let regex = '^';
+    for (let i = 0; i < indentation; i++) {
       regex += ' ';
     }
     const indentedText = text.replace(new RegExp(regex, 'gm'), '');
@@ -81,12 +81,12 @@ Handlebars.registerHelper('example-tab', (id, options) => {
 });
 
 Handlebars.registerHelper('example-tab-content', (id, options) => {
-  var clazz = 'example-box';
+  let clazz = 'example-box';
   if (id.indexOf('inverse') > -1) {
     clazz += ' lui-bg-inverse';
   }
 
-  var exampleStyle = '';
+  let exampleStyle = '';
   if (id === 'js') {
     exampleStyle = 'display: none;';
   }
@@ -130,13 +130,13 @@ Handlebars.registerHelper('color', (options) => {
 
 function compileLess() {
   const lessContent = fs.readFileSync(path.resolve(docsDir, 'src/docs.less'), {
-    encoding: 'utf8'
+    encoding: 'utf8',
   });
   less.render(
     lessContent,
     {
       paths: [path.resolve(__dirname, '../src')],
-      filename: 'docs.css'
+      filename: 'docs.css',
     },
     (e1, output) => {
       if (e1) {
@@ -148,14 +148,14 @@ function compileLess() {
           console.log('Docs: failed to compile less:', e2); // eslint-disable-line no-console
         }
       }
-    }
+    },
   );
 }
 
 // Compile Handlebars templates
 function compileTemplates() {
   const mainHtml = fs.readFileSync(path.resolve(docsDir, 'src/template.html'), {
-    encoding: 'utf8'
+    encoding: 'utf8',
   });
   const mainTemplate = Handlebars.compile(mainHtml);
 
@@ -164,21 +164,21 @@ function compileTemplates() {
       tabs: [{
         title: 'Get started',
         url: 'get-started.html',
-        selected: tab === 'get-started'
+        selected: tab === 'get-started',
       }, {
         title: 'Components',
         url: 'components.html',
-        selected: tab === 'components'
+        selected: tab === 'components',
       }],
       content,
-      luiVersion: LUI_VERSION
+      luiVersion: LUI_VERSION,
     });
     fileUtil.writeFile(path.resolve(docsDir, 'dist', fileName), html);
   }
 
   function createIndexPage() {
     const content = fs.readFileSync(path.resolve(docsDir, 'src/pages/index.html'), {
-      encoding: 'utf8'
+      encoding: 'utf8',
     });
     const template = Handlebars.compile(content);
     const html = template();
@@ -187,11 +187,11 @@ function compileTemplates() {
 
   function createGetStartedPage() {
     const content = fs.readFileSync(path.resolve(docsDir, 'src/pages/get-started.html'), {
-      encoding: 'utf8'
+      encoding: 'utf8',
     });
     const template = Handlebars.compile(content);
     const html = template({
-      luiVersion: LUI_VERSION
+      luiVersion: LUI_VERSION,
     });
     return createPage('get-started.html', 'get-started', html);
   }
@@ -204,15 +204,15 @@ function compileTemplates() {
         pages: section.pages.map(page => ({
           name: page.name,
           template: page.template,
-          selected: page.template === templateName
-        }))
-      }))
+          selected: page.template === templateName,
+        })),
+      })),
     }));
   }
 
   function createComponentPages() {
     const componentHtml = fs.readFileSync(path.resolve(docsDir, 'src/component-template.html'), {
-      encoding: 'utf8'
+      encoding: 'utf8',
     });
     const componentTemplate = Handlebars.compile(componentHtml);
 
@@ -220,7 +220,7 @@ function compileTemplates() {
       section.pages.forEach((page) => {
         const file = `src/pages/${page.template}`;
         const fileContent = fs.readFileSync(path.resolve(docsDir, file), {
-          encoding: 'utf8'
+          encoding: 'utf8',
         });
 
         const template = Handlebars.compile(fileContent);
@@ -232,7 +232,7 @@ function compileTemplates() {
 
     const file = 'src/pages/components.html';
     const fileContent = fs.readFileSync(path.resolve(docsDir, file), {
-      encoding: 'utf8'
+      encoding: 'utf8',
     });
     createComponentPage('components.html', componentTemplate, 'components', fileContent);
   }
@@ -280,5 +280,5 @@ module.exports = {
   compileTemplates,
   copyResources,
   createDirectories,
-  buildAll
+  buildAll,
 };

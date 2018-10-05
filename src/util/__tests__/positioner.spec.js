@@ -1,4 +1,4 @@
-import * as positioner from '../../src/util/positioner';
+import * as positioner from '../positioner';
 
 describe('Positioner', () => {
   beforeEach(() => {
@@ -7,18 +7,18 @@ describe('Positioner', () => {
         scrollTop: 0,
         scrollLeft: 0,
         scrollWidth: 500,
-        scrollHeight: 500
+        scrollHeight: 500,
       },
       documentElement: {
         scrollTop: 0,
         scrollLeft: 0,
         scrollWidth: 500,
-        scrollHeight: 500
-      }
+        scrollHeight: 500,
+      },
     };
     global.window = {
       pageYOffset: 0,
-      pageXOffset: 0
+      pageXOffset: 0,
     };
   });
 
@@ -43,7 +43,7 @@ describe('Positioner', () => {
       width: 10,
       height: 10,
       right: 10,
-      bottom: 10
+      bottom: 10,
     });
     rect = positioner.createRect(-10, -10, 20, 20);
     expect(rect).to.deep.equal({
@@ -52,7 +52,7 @@ describe('Positioner', () => {
       width: 20,
       height: 20,
       right: 10,
-      bottom: 10
+      bottom: 10,
     });
     rect = positioner.createRect(5, 5, 2.5, 2.5);
     expect(rect).to.deep.equal({
@@ -61,7 +61,7 @@ describe('Positioner', () => {
       width: 2.5,
       height: 2.5,
       right: 7.5,
-      bottom: 7.5
+      bottom: 7.5,
     });
   });
 
@@ -69,19 +69,19 @@ describe('Positioner', () => {
     const rect = positioner.createRect(10, 10, 30, 25);
     expect(positioner.getDockCenterPoint(rect, 'top')).to.deep.equal({
       left: 25,
-      top: 10
+      top: 10,
     });
     expect(positioner.getDockCenterPoint(rect, 'right')).to.deep.equal({
       left: 40,
-      top: 22.5
+      top: 22.5,
     });
     expect(positioner.getDockCenterPoint(rect, 'bottom')).to.deep.equal({
       left: 25,
-      top: 35
+      top: 35,
     });
     expect(positioner.getDockCenterPoint(rect, 'left')).to.deep.equal({
       left: 10,
-      top: 22.5
+      top: 22.5,
     });
   });
 
@@ -116,12 +116,12 @@ describe('Positioner', () => {
       element = {
         getBoundingClientRect() {
           return positioner.createRect(0, 0, 200, 200);
-        }
+        },
       };
       alignToElement = {
         getBoundingClientRect() {
           return positioner.createRect(50, 50, 50, 50);
-        }
+        },
       };
     });
 
@@ -132,12 +132,12 @@ describe('Positioner', () => {
         dock: 'bottom',
         position: {
           top: 100,
-          left: 0
+          left: 0,
         },
         toPosition: {
           top: 100,
-          left: 75
-        }
+          left: 75,
+        },
       });
     });
 
@@ -148,50 +148,50 @@ describe('Positioner', () => {
         dock: 'right',
         position: {
           top: 0,
-          left: 100
+          left: 100,
         },
         toPosition: {
           top: 75,
-          left: 100
-        }
+          left: 100,
+        },
       });
     });
 
     it('should position to "bottom" with an offset', () => {
       const result = positioner.positionToElement(element, alignToElement, 'bottom', {
         offset: 5,
-        minWindowOffset: 8
+        minWindowOffset: 8,
       });
       expect(result).to.deep.equal({
         fits: true,
         dock: 'bottom',
         position: {
           top: 105,
-          left: 8
+          left: 8,
         },
         toPosition: {
           top: 100,
-          left: 75
-        }
+          left: 75,
+        },
       });
     });
 
 
     it('should fail to position to "bottom" because of min edge offset', () => {
       const result = positioner.positionToElement(element, alignToElement, 'bottom', {
-        minEdgeOffset: 80
+        minEdgeOffset: 80,
       });
       expect(result).to.deep.equal({
         fits: false,
         dock: 'bottom',
         position: {
           top: 100,
-          left: -5
+          left: -5,
         },
         toPosition: {
           top: 100,
-          left: 75
-        }
+          left: 75,
+        },
       });
     });
   });

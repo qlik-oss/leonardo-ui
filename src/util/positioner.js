@@ -1,10 +1,10 @@
-/* eslint-disable no-mixed-operators */
+/* eslint-disable no-mixed-operators, prefer-destructuring */
 
 const oppositeDockMap = {
   top: 'bottom',
   right: 'left',
   bottom: 'top',
-  left: 'right'
+  left: 'right',
 };
 
 export function oppositeDock(dock) {
@@ -18,7 +18,7 @@ export function createRect(top = 0, left = 0, width = 0, height = 0) {
     bottom: top + height,
     left,
     width,
-    height
+    height,
   };
 }
 
@@ -40,7 +40,7 @@ export function getDockCenterPoint(rect, dock) {
   }
   return {
     top,
-    left
+    left,
   };
 }
 
@@ -54,7 +54,7 @@ export function tryPosition(rect, withinRect) {
     left,
     right,
     top,
-    bottom
+    bottom,
   };
 }
 
@@ -82,14 +82,14 @@ export function tryDock(elemRect, alignToRect, windowRect, dock, options = {}) {
   const {
     offset = 0,
     minWindowOffset = 0,
-    minEdgeOffset = 0
+    minEdgeOffset = 0,
   } = options;
 
   const windowOffsetRect = createRect(
     windowRect.top + minWindowOffset,
     windowRect.left + minWindowOffset,
     windowRect.width - minWindowOffset * 2,
-    windowRect.height - minWindowOffset * 2
+    windowRect.height - minWindowOffset * 2,
   );
 
   const toPosition = getDockCenterPoint(alignToRect, dock);
@@ -124,9 +124,9 @@ export function tryDock(elemRect, alignToRect, windowRect, dock, options = {}) {
     dock,
     position: {
       left: tryRect.left,
-      top: tryRect.top
+      top: tryRect.top,
     },
-    toPosition: getDockCenterPoint(alignToRect, dock)
+    toPosition: getDockCenterPoint(alignToRect, dock),
   };
 }
 
@@ -136,7 +136,7 @@ export function positionToRect(element, rect, dock = 'bottom', options = {}) {
     0,
     0,
     document.body.scrollWidth,
-    document.body.scrollHeight
+    document.body.scrollHeight,
   );
 
   const docks = Array.isArray(dock) ? dock : [dock];
@@ -173,7 +173,7 @@ export function positionToElement(element, alignToElement, dock = 'bottom', opti
     top,
     left,
     elementRect.width,
-    elementRect.height
+    elementRect.height,
   );
 
   return positionToRect(element, itemRect, dock, options);
@@ -186,7 +186,7 @@ export function positionToCoordinate(element, x, y, dock = 'bottom', options = {
     left: x,
     right: x,
     width: 0,
-    height: 0
+    height: 0,
   };
   return positionToRect(element, rect, dock, options);
 }

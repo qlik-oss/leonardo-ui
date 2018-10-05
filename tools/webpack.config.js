@@ -13,55 +13,55 @@ const createConfig = function createConfig(isDebug) {
     mode: isDebug ? 'development' : 'production',
     context: path.resolve(__dirname, '../src'),
     entry: {
-      'leonardo-ui': './leonardo-ui'
+      'leonardo-ui': './leonardo-ui',
     },
     output: {
       path: distDir,
       filename: '[name].js',
       library: 'leonardoui',
       libraryTarget: 'umd',
-      publicPath: '/leonardo-ui/'
+      publicPath: '/leonardo-ui/',
     },
     module: {
       rules: [{
         test: /\.js$/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
         },
         include: [srcDir],
-        exclude: [nodeDir]
+        exclude: [nodeDir],
       }, {
         test: /\.less$/,
         use: [
           MiniCssExtractPlugin.loader, {
             loader: 'css-loader',
-            options: { minimize: !isDebug }
+            options: { minimize: !isDebug },
           }, {
             loader: 'postcss-loader',
-            options: { plugins: [autoprefixer] }
+            options: { plugins: [autoprefixer] },
           }, {
             loader: 'less-loader',
-            options: { strictMath: true }
-          }
-        ]
-      }]
+            options: { strictMath: true },
+          },
+        ],
+      }],
     },
     plugins: [
       new MiniCssExtractPlugin({ filename: isDebug ? '[name].css' : '[name].min.css' }),
       new CopyWebpackPlugin([{
         from: 'colors.less',
-        to: 'colors.less'
+        to: 'colors.less',
       }, {
         from: 'variables.less',
-        to: 'variables.less'
+        to: 'variables.less',
       }, {
         from: 'resources/lui-icons.ttf',
-        to: 'lui-icons.ttf'
+        to: 'lui-icons.ttf',
       }, {
         from: 'resources/lui-icons.woff',
-        to: 'lui-icons.woff'
-      }])
-    ]
+        to: 'lui-icons.woff',
+      }]),
+    ],
   };
 
   if (isDebug) {
@@ -69,7 +69,7 @@ const createConfig = function createConfig(isDebug) {
   } else {
     config.output.filename = '[name].min.js';
     config.optimization = {
-      minimizer: [new UglifyJsPlugin()]
+      minimizer: [new UglifyJsPlugin()],
     };
   }
 
@@ -78,5 +78,5 @@ const createConfig = function createConfig(isDebug) {
 
 module.exports = [
   createConfig(true),
-  createConfig(false)
+  createConfig(false),
 ];

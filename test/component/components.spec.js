@@ -1,5 +1,5 @@
 /* global browser */
-const components = require('../fixtures/dist/fixtures');
+const components = require('../fixtures/dist/fixtures'); // eslint-disable-line import/no-unresolved
 
 const port = process.env.PORT || 19001;
 

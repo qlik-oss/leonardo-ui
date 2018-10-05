@@ -19,7 +19,7 @@
     "build": "webpack --config ./tools/webpack.config.js",
     "lint": "eslint .",
     "test": "aw -c ./test/unit/aw.config.js",
-    "test:ci": "node ./tools/build-fixtures.js && webdriver-manager update --standalone false && aw protractor -c ./test/component/aw.config.js",
+    "test:ci": "node ./tools/build-fixtures.js && webdriver-manager update && aw protractor -c ./test/component/aw.config.js",
     "start": "node tools/start.js",
     "docs": "node ./tools/build-docs.js"
   },

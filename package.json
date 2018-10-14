@@ -28,7 +28,7 @@
     "@babel/cli": "7.1.2",
     "@babel/core": "7.1.2",
     "@babel/preset-env": "7.1.0",
-    "autoprefixer": "9.1.5",
+    "autoprefixer": "9.2.0",
     "babel-loader": "8.0.4",
     "babel-plugin-istanbul": "5.1.0",
     "browser-sync": "2.26.3",

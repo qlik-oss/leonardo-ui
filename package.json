@@ -30,7 +30,7 @@
     "@babel/preset-env": "7.1.0",
     "autoprefixer": "9.1.5",
     "babel-loader": "8.0.4",
-    "babel-plugin-istanbul": "5.0.1",
+    "babel-plugin-istanbul": "5.1.0",
     "browser-sync": "2.26.3",
     "copy-webpack-plugin": "4.5.3",
     "css-loader": "1.0.0",

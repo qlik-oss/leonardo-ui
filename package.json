@@ -24,17 +24,17 @@
     "docs": "node ./tools/build-docs.js"
   },
   "devDependencies": {
-    "@after-work.js/aw": "5.0.2",
-    "@babel/cli": "7.1.2",
-    "@babel/core": "7.1.2",
-    "@babel/preset-env": "7.1.0",
+    "@after-work.js/aw": "5.1.1",
+    "@babel/cli": "7.1.5",
+    "@babel/core": "7.1.5",
+    "@babel/preset-env": "7.1.5",
     "autoprefixer": "9.3.1",
     "babel-loader": "8.0.4",
     "babel-plugin-istanbul": "5.1.0",
     "browser-sync": "2.26.3",
     "copy-webpack-plugin": "4.6.0",
     "css-loader": "1.0.1",
-    "eslint": "5.8.0",
+    "eslint": "5.9.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-react": "7.11.1",
@@ -46,7 +46,7 @@
     "postcss-loader": "3.0.0",
     "protractor": "5.4.1",
     "uglifyjs-webpack-plugin": "2.0.1",
-    "webpack": "4.24.0",
+    "webpack": "4.25.1",
     "webpack-cli": "3.1.2"
   }
 }

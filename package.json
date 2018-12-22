@@ -45,7 +45,7 @@
     "mini-css-extract-plugin": "0.5.0",
     "postcss-loader": "3.0.0",
     "protractor": "5.4.1",
-    "uglifyjs-webpack-plugin": "2.0.1",
+    "uglifyjs-webpack-plugin": "2.1.0",
     "webpack": "4.28.2",
     "webpack-cli": "3.1.2"
   }

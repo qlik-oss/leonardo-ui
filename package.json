@@ -46,7 +46,7 @@
     "postcss-loader": "3.0.0",
     "protractor": "5.4.2",
     "uglifyjs-webpack-plugin": "2.1.1",
-    "webpack": "4.28.2",
+    "webpack": "4.28.3",
     "webpack-cli": "3.1.2"
   }
 }

@@ -23,6 +23,7 @@ Object.keys(components).forEach((component) => {
       before(() => browser.get(file));
 
       it('should match baseline', () => {
+        browser.wait(protractor.ExpectedConditions.presenceOf($('body.ready'), 5 * 1000, 'Page was not ready to render'));
         const img = browser.takeImageOf(settings);
         expect(img).to.eventually.matchImageOf(fixture, component);
       });

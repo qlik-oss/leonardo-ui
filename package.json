@@ -13,7 +13,7 @@
   ],
   "main": "dist/leonardo-ui.min.js",
   "engines": {
-    "node": ">=10.11.0"
+    "node": ">=8.0.0"
   },
   "scripts": {
     "build": "webpack --config ./tools/webpack.config.js",

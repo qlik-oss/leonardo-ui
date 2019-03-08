@@ -13,9 +13,9 @@ jobs:
             NVM_DIR="/opt/circleci/.nvm"
             curl -ogit  https://raw.githubusercontent.com/creationix/nvm/v0.33.6n/install.sh | bash
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            echo "Installing Node 10.11.0"
-            nvm install 10.11.0
-            nvm alias default 10.11.0
+            echo "Installing Node 8"
+            nvm install 8
+            nvm alias default 8
             # Each step uses the same `$BASH_ENV`, so need to modify it
             echo 'export NVM_DIR="/opt/circleci/.nvm"' >> $BASH_ENV
             echo "[ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\"" >> $BASH_ENV

@@ -43,7 +43,7 @@
     "handlebars": "4.1.2",
     "less": "3.9.0",
     "less-loader": "4.1.0",
-    "mini-css-extract-plugin": "0.6.0",
+    "mini-css-extract-plugin": "2.9.1",
     "postcss-loader": "3.0.0",
     "protractor": "5.4.2",
     "uglifyjs-webpack-plugin": "2.1.2",

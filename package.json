@@ -29,7 +29,7 @@
     "@babel/core": "7.4.3",
     "@babel/preset-env": "7.4.3",
     "autoprefixer": "9.5.1",
-    "babel-loader": "8.0.5",
+    "babel-loader": "9.2.1",
     "babel-plugin-istanbul": "5.1.2",
     "browser-sync": "2.26.3",
     "copy-webpack-plugin": "5.0.2",
